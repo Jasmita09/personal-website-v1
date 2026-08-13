@@ -3,33 +3,35 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Graphics & Design | Jasmita Iragam</title>
+  <title>Graphics | Jasmita Iragam</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
   <div id="skipnav">
-    <a href="#main" class="button">Skip to main content</a>
+    <a href="#main">Skip to main content</a>
   </div>
 
-  <header>
-    <h1>Graphics & Visual Media</h1> 
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">Jasmita <span>Iragam</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Data Projects</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="usability.html">Usability</a></li>
+          <li><a href="graphics.html" class="active">Graphics</a></li>
+          <li><a href="javascript.html">Javascript</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav> 
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="accessibility.html">Accessibility</a></li>
-      <li><a href="usability.html">Usability</a></li>
-      <li><a href="graphics.html" class="active">Graphics</a></li>
-      <li><a href="javascript.html">Javascript</a></li>
-      <li><a href="tools.html">Tools</a></li>
-    </ul>
-  </nav>
+  <main id="main" class="container" style="padding-top: 2rem;">
 
-  <main id="main">
     <section class="card">
       <h2>Visual Communication Evaluation</h2>
       <p>
@@ -39,41 +41,53 @@
 
     <section class="card">
       <h2>Web Image Formats Breakdown</h2>
-      <p>
-        <strong>PNG:</strong> Lossless format optimal for transparent backgrounds, line art, and diagrams.<br>
-        <strong>JPEG:</strong> Lossy compression best suited for complex photographic images with rich color gradients.<br>
-        <strong>GIF:</strong> Low-color format designed for simple animated graphics.<br>
-        <strong>SVG:</strong> Vector format that resizes smoothly across displays without loss of quality.
-      </p>
+      <div class="grid-2">
+        <div class="focus-card">
+          <h3>PNG</h3>
+          <p>Lossless format optimal for transparent backgrounds, line art, and diagrams.</p>
+        </div>
+        <div class="focus-card">
+          <h3>SVG</h3>
+          <p>Vector format that resizes smoothly across displays without loss of quality.</p>
+        </div>
+        <div class="focus-card">
+          <h3>JPEG</h3>
+          <p>Lossy compression best suited for complex photographic images with rich color gradients.</p>
+        </div>
+        <div class="focus-card">
+          <h3>GIF</h3>
+          <p>Low-color format designed for simple animated graphics.</p>
+        </div>
+      </div>
     </section>
 
     <section class="card">
       <h2>Visual Photo Gallery</h2>
-      
-      <div class="album-item">
-        <img class="left-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80" alt="Forest canopy">
-        <p class="caption">Natural forest scenery representing environmental metrics and ecological harmony.</p>
+      <div class="grid-3">
+        <div class="focus-card">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80" alt="Forest canopy">
+          <h3>Forest Ecosystem</h3>
+          <p>Representing environmental data metrics and ecology imagery.</p>
+        </div>
+        <div class="focus-card">
+          <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=500&q=80" alt="Colorful peacock">
+          <h3>RGB Spectrum</h3>
+          <p>Testing visual color fidelity and heatmap rendering.</p>
+        </div>
+        <div class="focus-card">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=500&q=80" alt="Plant sapling">
+          <h3>Trend Forecasting</h3>
+          <p>Symbolizing resilience, growth, and statistical forecasting.</p>
+        </div>
       </div>
-
-      <div class="album-item">
-        <img class="left-img" src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=400&q=80" alt="Colorful peacock">
-        <p class="caption">A colorful peacock demonstrating RGB visual spectrum fidelity and color accuracy.</p>
-      </div>
-
-      <div class="album-item">
-        <img class="left-img" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=400&q=80" alt="Plant sapling">
-        <p class="caption">A growing sapling symbolizing resilience, continuous learning, and statistical growth trends.</p>
-      </div>
-
-      <h2>Interactive Contact Trigger</h2>
-      <a href="mailto:jasmita.iragam09@gmail.com">
-        <button>Contact Me</button>
-      </a>
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; Jasmita R. Iragam | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    <div class="container">
+      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    </div>
   </footer>
 
 </body>
