@@ -1,5 +1,5 @@
-// Security Tip Generator
-const facts = [
+// 1. SECURITY TIP GENERATOR
+var facts = [
   "Use strong, unique passwords for every online account.",
   "Enable Multi-Factor Authentication (MFA) whenever possible.",
   "Never click on suspicious links or unexpected email attachments.",
@@ -7,17 +7,17 @@ const facts = [
   "Always lock your workstation screen when stepping away."
 ];
 
-let factCount = 0;
+var factCount = 0;
 
 function showNextFact() {
-  const factDisplay = document.getElementById('fact-display');
+  var factDisplay = document.getElementById('fact-display');
   if (factDisplay) {
     factDisplay.innerHTML = facts[factCount];
     factCount = (factCount + 1) % facts.length;
   }
 }
 
-// Personality Quiz Logic
+// 2. PERSONALITY QUIZ LOGIC
 var hardwareScore = 0;
 var softwareScore = 0;
 var questionCount = 0;
@@ -42,9 +42,9 @@ function updateResult() {
   var result = document.getElementById("result");
   if (result) {
     if (hardwareScore >= 2) {
-      result.innerHTML = "Result: You align with Data Engineering & Infrastructure!";
+      result.innerHTML = "Result: You match Data Engineering & Infrastructure!";
     } else if (softwareScore >= 2) {
-      result.innerHTML = "Result: You align with Data Science & Analytics!";
+      result.innerHTML = "Result: You match Data Science & Predictive Analytics!";
     }
   }
 }
@@ -59,7 +59,7 @@ function restartQuiz() {
   questionCount = 0;
 }
 
-// Clock & Alert Utilities
+// 3. CLOCK & ALERT UTILITIES
 function showAlert() {
   alert("Welcome to Jasmita's Data Science Web Portfolio!");
 }
@@ -98,7 +98,7 @@ function toggleClock() {
   }
 }
 
-// Video Controls API
+// 4. VIDEO PLAYER API
 function playVideo() {
   var video = document.getElementById('myvideo');
   if (video) video.play();
@@ -125,7 +125,7 @@ function changeVolume(direction) {
   }
 }
 
-// Event Setup
+// SETUP EVENT LISTENERS
 document.addEventListener("DOMContentLoaded", function() {
   var factBtn = document.getElementById('fact-btn');
   if (factBtn) {
