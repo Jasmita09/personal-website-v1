@@ -1,175 +1,155 @@
-// 1. DATA PRIVACY TIP GENERATOR
+// Security Tip Generator
 const facts = [
-  "Data Tip 1: Apply differential privacy techniques when querying sensitive datasets.",
-  "Data Tip 2: Use strong end-to-end encryption (AES-256) for data in transit and at rest.",
-  "Data Tip 3: Regularly audit automated data pipelines for access privilege drift.",
-  "Data Tip 4: Enforce Multi-Factor Authentication (MFA) across analytics platforms.",
-  "Data Tip 5: Anonymize Personally Identifiable Information (PII) before model training."
+  "Use strong, unique passwords for every online account.",
+  "Enable Multi-Factor Authentication (MFA) whenever possible.",
+  "Never click on suspicious links or unexpected email attachments.",
+  "Keep your software and operating systems regularly updated.",
+  "Always lock your workstation screen when stepping away."
 ];
 
-let factIndex = 0;
+let factCount = 0;
 
-function setupFactGenerator() {
-  const factBtn = document.getElementById('fact-btn');
+function showNextFact() {
   const factDisplay = document.getElementById('fact-display');
-
-  if (factBtn && factDisplay) {
-    factBtn.addEventListener('click', () => {
-      factDisplay.innerText = facts[factIndex];
-      factIndex = (factIndex + 1) % facts.length;
-    });
+  if (factDisplay) {
+    factDisplay.innerHTML = facts[factCount];
+    factCount = (factCount + 1) % facts.length;
   }
 }
 
-// 2. DATA SCIENCE PERSONA QUIZ
-let analyticsScore = 0;
-let engineeringScore = 0;
-let answeredQuestions = 0;
+// Personality Quiz Logic
+var hardwareScore = 0;
+var softwareScore = 0;
+var questionCount = 0;
 
-function setupQuiz() {
-  const q1a1 = document.getElementById("q1a1");
-  const q1a2 = document.getElementById("q1a2");
-  const q2a1 = document.getElementById("q2a1");
-  const q2a2 = document.getElementById("q2a2");
-  const q3a1 = document.getElementById("q3a1");
-  const q3a2 = document.getElementById("q3a2");
-  const restartBtn = document.getElementById("restart");
-
-  if (!q1a1) return;
-
-  q1a1.addEventListener("click", () => recordAnswer('analytics', q1a1, q1a2));
-  q1a2.addEventListener("click", () => recordAnswer('engineering', q1a2, q1a1));
-
-  q2a1.addEventListener("click", () => recordAnswer('analytics', q2a1, q2a2));
-  q2a2.addEventListener("click", () => recordAnswer('engineering', q2a2, q2a1));
-
-  q3a1.addEventListener("click", () => recordAnswer('analytics', q3a1, q3a2));
-  q3a2.addEventListener("click", () => recordAnswer('engineering', q3a2, q3a1));
-
-  if (restartBtn) {
-    restartBtn.addEventListener("click", resetQuiz);
+function Builder() {
+  hardwareScore += 1;
+  questionCount += 1;
+  if (questionCount === 3) {
+    updateResult();
   }
 }
 
-function recordAnswer(type, selectedBtn, otherBtn) {
-  if (selectedBtn.disabled) return;
-
-  if (type === 'analytics') analyticsScore++;
-  else engineeringScore++;
-
-  selectedBtn.disabled = true;
-  otherBtn.disabled = true;
-  selectedBtn.style.opacity = "0.5";
-  otherBtn.style.opacity = "0.2";
-
-  answeredQuestions++;
-
-  if (answeredQuestions === 3) {
-    updateQuizResult();
+function Thinker() {
+  softwareScore += 1;
+  questionCount += 1;
+  if (questionCount === 3) {
+    updateResult();
   }
 }
 
-function updateQuizResult() {
-  const resultDisplay = document.getElementById("result");
-  if (!resultDisplay) return;
-
-  if (analyticsScore > engineeringScore) {
-    resultDisplay.innerText = "Match: Data Analytics & Predictive Modeling Specialist!";
-  } else {
-    resultDisplay.innerText = "Match: Data Engineering & Security Systems Architect!";
-  }
-}
-
-function resetQuiz() {
-  analyticsScore = 0;
-  engineeringScore = 0;
-  answeredQuestions = 0;
-
-  const buttons = document.querySelectorAll('.quiz-question button.btn-outline');
-  buttons.forEach(btn => {
-    btn.disabled = false;
-    btn.style.opacity = "1";
-  });
-
-  const resultDisplay = document.getElementById("result");
-  if (resultDisplay) {
-    resultDisplay.innerText = "Your result will appear here...";
-  }
-}
-
-// 3. REAL-TIME DIGITAL CLOCK
-function startClock() {
-  updateTime();
-  setInterval(updateTime, 1000);
-}
-
-function updateTime() {
-  const clockElement = document.getElementById('clock');
-  if (!clockElement) return;
-
-  const now = new Date();
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  let seconds = now.getSeconds();
-  const timeOfDay = hours >= 12 ? 'pm' : 'am';
-
-  hours = hours % 12 || 12;
-  minutes = minutes < 10 ? '0' + minutes : minutes;
-  seconds = seconds < 10 ? '0' + seconds : seconds;
-
-  clockElement.innerText = `${hours}:${minutes}:${seconds} ${timeOfDay}`;
-}
-
-function toggleClock() {
-  const clock = document.getElementById('clock');
-  const clockBtn = document.getElementById('clockButton');
-
-  if (clock && clockBtn) {
-    if (clock.style.display === 'none') {
-      clock.style.display = 'inline-block';
-      clockBtn.innerText = 'Hide Clock';
-    } else {
-      clock.style.display = 'none';
-      clockBtn.innerText = 'Show Clock';
+function updateResult() {
+  var result = document.getElementById("result");
+  if (result) {
+    if (hardwareScore >= 2) {
+      result.innerHTML = "Result: You align with Data Engineering & Infrastructure!";
+    } else if (softwareScore >= 2) {
+      result.innerHTML = "Result: You align with Data Science & Analytics!";
     }
   }
 }
 
-// 4. VIDEO PLAYER CONTROLS
-let video;
-
-function setupVideo() {
-  video = document.getElementById('myvideo');
+function restartQuiz() {
+  var result = document.getElementById("result");
+  if (result) {
+    result.innerHTML = "Your result will appear here...";
+  }
+  hardwareScore = 0;
+  softwareScore = 0;
+  questionCount = 0;
 }
 
+// Clock & Alert Utilities
+function showAlert() {
+  alert("Welcome to Jasmita's Data Science Web Portfolio!");
+}
+
+function updateTime() {
+  var now = new Date();
+  var hours = now.getHours();
+  var minutes = now.getMinutes();
+  var seconds = now.getSeconds();
+  var timeofday = hours >= 12 ? 'pm' : 'am';
+
+  if (hours > 12) hours = hours - 12;
+  if (hours === 0) hours = 12;
+  if (minutes < 10) minutes = '0' + minutes;
+  if (seconds < 10) seconds = '0' + seconds;
+
+  var currentTime = hours + ':' + minutes + ':' + seconds + ' ' + timeofday;
+  var myClock = document.getElementById('clock');
+  if (myClock) {
+    myClock.innerHTML = currentTime;
+  }
+}
+
+function toggleClock() {
+  var myClock = document.getElementById('clock');
+  var clockButton = document.getElementById('clockButton');
+
+  if (myClock && clockButton) {
+    if (myClock.style.display === 'none') {
+      myClock.style.display = 'block';
+      clockButton.innerHTML = 'Hide Clock';
+    } else {
+      myClock.style.display = 'none';
+      clockButton.innerHTML = 'Show Clock';
+    }
+  }
+}
+
+// Video Controls API
 function playVideo() {
+  var video = document.getElementById('myvideo');
   if (video) video.play();
 }
 
 function pauseVideo() {
+  var video = document.getElementById('myvideo');
   if (video) video.pause();
 }
 
 function changeSpeed(direction) {
-  if (!video) return;
-  if (direction === 'up' && video.playbackRate < 4.0) {
-    video.playbackRate += 0.25;
-  } else if (direction === 'down' && video.playbackRate > 0.5) {
-    video.playbackRate -= 0.25;
+  var video = document.getElementById('myvideo');
+  if (video) {
+    if (direction === 'up') video.playbackRate += 0.25;
+    else if (direction === 'down') video.playbackRate -= 0.25;
   }
 }
 
 function changeVolume(direction) {
-  if (!video) return;
-  if (direction === 'up' && video.volume < 0.9) {
-    video.volume += 0.1;
-  } else if (direction === 'down' && video.volume > 0.1) {
-    video.volume -= 0.1;
+  var video = document.getElementById('myvideo');
+  if (video) {
+    if (direction === 'up' && video.volume < 0.9) video.volume += 0.1;
+    else if (direction === 'down' && video.volume > 0.1) video.volume -= 0.1;
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  setupFactGenerator();
-  setupQuiz();
-  setupVideo();
+// Event Setup
+document.addEventListener("DOMContentLoaded", function() {
+  var factBtn = document.getElementById('fact-btn');
+  if (factBtn) {
+    factBtn.addEventListener('click', showNextFact);
+  }
+
+  var q1a1 = document.getElementById("q1a1");
+  var q1a2 = document.getElementById("q1a2");
+  var q2a1 = document.getElementById("q2a1");
+  var q2a2 = document.getElementById("q2a2");
+  var q3a1 = document.getElementById("q3a1");
+  var q3a2 = document.getElementById("q3a2");
+  var restartBtn = document.getElementById("restart");
+
+  if (q1a1) {
+    q1a1.addEventListener("click", Builder);
+    q1a2.addEventListener("click", Thinker);
+    q2a1.addEventListener("click", Builder);
+    q2a2.addEventListener("click", Thinker);
+    q3a1.addEventListener("click", Builder);
+    q3a2.addEventListener("click", Thinker);
+  }
+
+  if (restartBtn) {
+    restartBtn.addEventListener("click", restartQuiz);
+  }
 });
