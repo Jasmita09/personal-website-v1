@@ -1,131 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Web Portfolio: Jasmita's Accessibility HTML</title>
-  <style>
-table {
-  border-collapse: collapse;
-  border: 1px solid black;
-} 
-
-th{
-  border: 1px solid black;
-  background-color: gray;
-}
-td {
-  border: 1px solid black;
-}
-tbody {
-  background-color: lightgray;
-  border: 1px solid;
-  padding: 10px;
-  box-shadow: 5px 10px rgb(37, 39, 41);
-}
-
-  </style>
-  <link rel="shortcut icon" href="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/1100847/788561_588291.png">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessibility Standards | Jasmita Iragam</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <img src="https://media.istockphoto.com/id/2151072399/vector/welcome-ink-lettering-sign-handwritten-modern-brush-lettering-on-white-background-text-for.jpg?s=612x612&w=0&k=20&c=lPOz1QCLHvKQboECKfIfPidw-sIzpNQRSNhtjR6s00E=" alt ="Introducing Jasmita, the creator of this website!">
- <header>
-        <h1> Web Portfolio: Accessibility Page</h1> 
-</header>
-<main id="main">
+
   <div id="skipnav">
-      <a href="#main">Skip to main content</a>
-   </div>
-<nav> 
-	<ul>
-    <li> <a href="index.html">Home</a></li>
-		<li> <a href="accessibility.html">Accessibility</a> </li>
-		<li> <a href="usability.html">Usability</a></li>
-		<li> <a href="graphics.html">Graphics</a> </li>
-		<li> <a href="javascript.html">Javascript</a> </li>
-		<li> <a href="tools.html">Tools</a></li>
-		<li> <a href="video.html">Video</a> </li>
-	</ul>
-</nav>
+    <a href="#main" class="button">Skip to main content</a>
+  </div>
 
-<table>
-  <caption><b> Web Accessibilty Checklist</b></caption> 
-  
+  <header>
+    <h1>Web Accessibility Standards</h1> 
+  </header>
 
-  <tbody>
-  <th scope="col">User characteristic</th>
-  <th scope="col">Accesible design tip</th>
-      <tr>
-      <td>Unable to see</td>
-      <td>Code all images with ALT text</td>
-      </tr> 
+  <nav> 
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="accessibility.html" class="active">Accessibility</a></li>
+      <li><a href="usability.html">Usability</a></li>
+      <li><a href="graphics.html">Graphics</a></li>
+      <li><a href="javascript.html">Javascript</a></li>
+      <li><a href="tools.html">Tools</a></li>
+    </ul>
+  </nav>
 
-      <tr>
-      <td>Unable to perceive colors</td>
-      <td>Avoid using color alone to convey information</td>
-      </tr>
+  <main id="main">
+    <section class="card">
+      <h2>WCAG Universal Design Guidelines</h2>
+      <table>
+        <caption><b>Web Accessibility Design Best Practices</b></caption> 
+        <thead>
+          <tr>
+            <th scope="col">User Need</th>
+            <th scope="col">Accessible Design Solution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Visual Impairments</td>
+            <td>Provide descriptive alternative text (ALT attributes) for images.</td>
+          </tr> 
+          <tr>
+            <td>Color Vision Deficiencies</td>
+            <td>Rely on text labels and pattern fills alongside color indicators.</td>
+          </tr>
+          <tr>
+            <td>Motor Disabilities</td>
+            <td>Ensure all interactive components support full tab-key navigation.</td>
+          </tr>
+          <tr>
+            <td>Hearing Impairments</td>
+            <td>Provide synchronized captions and written transcripts for audio/video.</td>
+          </tr>
+          <tr>
+            <td>Photosensitivity</td>
+            <td>Avoid content that flashes rapidly to prevent seizure triggers.</td>
+          </tr>
+          <tr>
+            <td>Cognitive Distractions</td>
+            <td>Maintain predictable page hierarchy and straightforward visual layouts.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-      <tr>
-      <td>Unable to use mouse</td>
-      <td>Be sure all website features can be accessed using keyboard</td>
-      </tr>
+    <section class="card">
+      <h2>Web System Accessibility Review</h2>
+      <table>
+        <caption><b>System Audit Remediation Findings</b></caption> 
+        <thead>
+          <tr>
+            <th scope="col">Audit Metric</th>
+            <th scope="col">Remediation Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Missing Attributes</td>
+            <td>Corrected unlabelled form inputs, unlinked images, and broken ARIA elements.</td>
+          </tr> 
+          <tr>
+            <td>Contrast Ratios</td>
+            <td>Adjusted text color schemes to exceed the WCAG AA standard (4.5:1 ratio).</td>
+          </tr>
+          <tr>
+            <td>Alert Fixes</td>
+            <td>Removed redundant links, small text sizes, and added video captions.</td>
+          </tr>
+          <tr>
+            <td>Media Features</td>
+            <td>Configured video transcripts and alternative captions for screen readers.</td>
+          </tr>
+          <tr>
+            <td>Semantic Elements</td>
+            <td>Organized content using structured HTML5 semantic tags.</td>
+          </tr>
+          <tr>
+            <td>ARIA Roles</td>
+            <td>Implemented accessible ARIA live regions, alert dialogs, and popups.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-      <tr>
-      <td>Unable to hear</td>
-      <td>Add captions to multimedia </td>
-      </tr>
+  <footer>
+    <p>&copy; Jasmita R. Iragam | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+  </footer>
 
-      <tr>
-      <td>Prone to having seizures</td>
-      <td>Avoid content that flashes</td>
-      </tr>
-
-      <tr>
-      <td>Easily distractible</td>
-      <td>Keep the design simple </td>
-        </tr>
-
-  </tbody>
-</table>
-</main>
-<br>
-<h2>Accessibility Review of the North Springs High School Home Page</h2>
-<table>
-  
-  <caption><b> Web Accessibilty Checklist</b></caption> 
-  
-
-  <tbody>
-  <th scope="col">Problems </th>
-  <th scope="col">Reasons</th>
-      <tr>
-      <td>7 Errors</td>
-      <td> Missing an alternative text, 5 missing form labels and 1 broken ARIA menu.</td>
-      </tr> 
-
-      <tr>
-      <td>Contrast Error</td>
-      <td>Unable to percieve colors due to very low contrast</td>
-      </tr>
-
-      <tr>
-      <td>26 Alerts</td>
-      <td>Suspicious links, very small text, few videos without transcript and many useless link that no longer work or are needed.</td>
-      </tr>
-
-      <tr>
-      <td>57 Features</td>
-      <td>34 images and videos with alternative texts and more linked images with alternative texts.</td>
-      </tr>
-
-      <tr>
-      <td>135 Elements</td>
-      <td>Adds as much content as possible with less code but it's organized.</td>
-      </tr>
-
-      <tr>
-      <td>657 Aria</td>
-      <td>Consists of ARIA Buttons, Alert, popup and etc.</td>
-        </tr>
-</tbody>
-</table>
 </body>
 </html>
