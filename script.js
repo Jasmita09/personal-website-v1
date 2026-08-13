@@ -153,6 +153,3 @@ document.addEventListener("DOMContentLoaded", function() {
     restartBtn.addEventListener("click", restartQuiz);
   }
 });
-function showEmailPopup() {
-  alert("Contact Jasmita R. Iragam:\n\nEmail: jasmita.iragam09@gmail.com");
-}
