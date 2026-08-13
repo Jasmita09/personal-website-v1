@@ -1,100 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Portfolio | Jasmita Iragam</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js" defer></script>
-  </head>
-  
-  <body>
-    
-    <header>
-      <h1>My Projects & Focus Areas</h1>
-    </header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects & Quiz | Jasmita Iragam</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
 
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-      </ul>
-    </nav>
+  <div id="skipnav">
+    <a href="#main" class="button">Skip to main content</a>
+  </div>
 
-    <main>
-      <h2>Academic Focus Areas</h2>
+  <header>
+    <h1>Projects & Focus Areas</h1>
+  </header>
 
-      <section class="topic-section">
-        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data analytics charts">
-        <p><strong>Data Science:</strong> Focusing on statistical modeling, data visual story-telling, predictive analytics, and converting raw datasets into meaningful intelligence.</p>
-      </section>
+  <nav> 
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="usability.html">Usability</a></li>
+      <li><a href="graphics.html">Graphics</a></li>
+      <li><a href="javascript.html">Javascript</a></li>
+      <li><a href="tools.html">Tools</a></li>
+    </ul>
+  </nav>
 
-      <section class="topic-section">
-        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity lock icon">
-        <p><strong>Cybersecurity:</strong> Studying system vulnerabilities, network protection, privacy-preserving techniques, and building resilient security architectures.</p>
-      </section>
+  <main id="main">
+    <section class="card">
+      <h2>Primary Academic Disciplines</h2>
 
-      <section class="topic-section">
-        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Artificial intelligence 3D render">
-        <p><strong>Artificial Intelligence:</strong> Exploring machine learning algorithms, model ethics, and neural networks to solve complex automation problems.</p>
-      </section>
-
-      <hr class="section-divider">
-
-      <h2>Data Security Tip Generator</h2>
-      <button id="tip-btn">Generate Security Tip</button>
-      <p id="tip-display">Click the button above to load a data security tip.</p>
-
-      <hr class="section-divider">
-
-      <h2>Data Science Focus Quiz</h2>
-      <p class="quiz-instruction">Select your preferred choices to discover your data science alignment.</p>
-
-      <h2>1. Choose your preferred workspace environment</h2>
-      <div class="quiz-grid">
-        <div class="quiz-card">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Analytics dashboard">
-          <br>
-          <button id="btn-option1a">Analytics Dashboard</button>
-        </div>
-        <div class="quiz-card">
-          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80" alt="Server rack infrastructure">
-          <br>
-          <button id="btn-option1b">Pipeline Infrastructure</button>
-        </div>
+      <div class="topic-item">
+        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Data analytics graphs">
+        <p><strong>Data Science:</strong> Converting unstructured data into actionable insights through statistical analysis, trend forecasting, and interactive data visualization.</p>
       </div>
+
+      <div class="topic-item">
+        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity shield padlock">
+        <p><strong>Cybersecurity:</strong> Safeguarding digital infrastructure, understanding system threat vectors, and implementing robust privacy protocols.</p>
+      </div>
+
+      <div class="topic-item">
+        <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Artificial intelligence 3D render">
+        <p><strong>Artificial Intelligence:</strong> Developing machine learning models, exploring neural network logic, and automating decision-making systems.</p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Data Science Focus Quiz</h2>
+      <p>Select your choices to discover whether your strengths align with <strong>Data Analytics</strong> or <strong>Data Engineering</strong>.</p>
+
+      <h2>1. Select your ideal workspace environment</h2>
+      <div class="question">
+        <div class="answer-choice">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Analytics dashboard">
+          <br><button id="q1a1">Analytics Dashboard</button>
+        </div>
+        <div class="answer-choice">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80" alt="Server rack">
+          <br><button id="q1a2">Pipeline Infrastructure</button>
+        </div>
+      </div> 
 
       <h2>2. Which challenge interests you more?</h2>
-      <div class="quiz-grid">
-        <div class="quiz-card">
-          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Predictive modeling code">
-          <br>
-          <button id="btn-option2a">Predictive Modeling</button>
+      <div class="question">
+        <div class="answer-choice">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Predictive analytics code">
+          <br><button id="q2a1">Predictive Analytics</button>
         </div>
-        <div class="quiz-card">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Data security shield">
-          <br>
-          <button id="btn-option2b">Data Security Architecture</button>
+        <div class="answer-choice">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Security shield">
+          <br><button id="q2a2">Data Security Architecture</button>
         </div>
-      </div>
+      </div> 
 
       <h2>3. What output do you prefer creating?</h2>
-      <div class="quiz-grid">
-        <div class="quiz-card">
-          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Visual data chart report">
-          <br>
-          <button id="btn-option3a">Visual Data Reports</button>
+      <div class="question">
+        <div class="answer-choice">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Visual data chart">
+          <br><button id="q3a1">Visual Data Reports</button>
         </div>
-        <div class="quiz-card">
-          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Scalable data processor chip">
-          <br>
-          <button id="btn-option3b">Scalable Data Pipelines</button>
+        <div class="answer-choice">
+          <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Hardware chip">
+          <br><button id="q3a2">Scalable Data Pipelines</button>
         </div>
-      </div>
+      </div> 
 
-      <h2 id="quiz-result">Your result will appear here...</h2>
-      <button id="btn-reset">Reset Quiz</button>
-    </main>
+      <h2 id="result">Your result will appear here...</h2>
+      <button id="restart">Reset Quiz</button>
+    </section>
+  </main>
 
-  </body>
+  <footer>
+    <p>&copy; Jasmita R. Iragam | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+  </footer>
+
+</body>
 </html>
