@@ -1,12 +1,10 @@
-// ==========================================
-// 1. DATA PRIVACY & SECURITY FACT GENERATOR
-// ==========================================
+// 1. DATA PRIVACY TIP GENERATOR
 const facts = [
-  "Data Tip 1: Implement differential privacy techniques when analyzing sensitive datasets.",
-  "Data Tip 2: Use strong end-to-end encryption (AES-256) for data both in transit and at rest.",
-  "Data Tip 3: Regularly audit data pipelines for access privilege drift and compliance risks.",
-  "Data Tip 4: Enforce Multi-Factor Authentication (MFA) across all cloud analytics platforms.",
-  "Data Tip 5: Anonymize or pseudonomize Personally Identifiable Information (PII) before model training."
+  "Data Tip 1: Apply differential privacy techniques when querying sensitive datasets.",
+  "Data Tip 2: Use strong end-to-end encryption (AES-256) for data in transit and at rest.",
+  "Data Tip 3: Regularly audit automated data pipelines for access privilege drift.",
+  "Data Tip 4: Enforce Multi-Factor Authentication (MFA) across analytics platforms.",
+  "Data Tip 5: Anonymize Personally Identifiable Information (PII) before model training."
 ];
 
 let factIndex = 0;
@@ -23,9 +21,7 @@ function setupFactGenerator() {
   }
 }
 
-// ==========================================
 // 2. DATA SCIENCE PERSONA QUIZ
-// ==========================================
 let analyticsScore = 0;
 let engineeringScore = 0;
 let answeredQuestions = 0;
@@ -39,17 +35,14 @@ function setupQuiz() {
   const q3a2 = document.getElementById("q3a2");
   const restartBtn = document.getElementById("restart");
 
-  if (!q1a1) return; // Exit if not on quiz page
+  if (!q1a1) return;
 
-  // Question 1
   q1a1.addEventListener("click", () => recordAnswer('analytics', q1a1, q1a2));
   q1a2.addEventListener("click", () => recordAnswer('engineering', q1a2, q1a1));
 
-  // Question 2
   q2a1.addEventListener("click", () => recordAnswer('analytics', q2a1, q2a2));
   q2a2.addEventListener("click", () => recordAnswer('engineering', q2a2, q2a1));
 
-  // Question 3
   q3a1.addEventListener("click", () => recordAnswer('analytics', q3a1, q3a2));
   q3a2.addEventListener("click", () => recordAnswer('engineering', q3a2, q3a1));
 
@@ -66,8 +59,8 @@ function recordAnswer(type, selectedBtn, otherBtn) {
 
   selectedBtn.disabled = true;
   otherBtn.disabled = true;
-  selectedBtn.style.opacity = "0.6";
-  otherBtn.style.opacity = "0.3";
+  selectedBtn.style.opacity = "0.5";
+  otherBtn.style.opacity = "0.2";
 
   answeredQuestions++;
 
@@ -81,9 +74,9 @@ function updateQuizResult() {
   if (!resultDisplay) return;
 
   if (analyticsScore > engineeringScore) {
-    resultDisplay.innerText = "Persona Match: Data Scientist / Business Intelligence Specialist!";
+    resultDisplay.innerText = "Match: Data Analytics & Predictive Modeling Specialist!";
   } else {
-    resultDisplay.innerText = "Persona Match: Data Engineer / Data Security Architect!";
+    resultDisplay.innerText = "Match: Data Engineering & Security Systems Architect!";
   }
 }
 
@@ -92,7 +85,7 @@ function resetQuiz() {
   engineeringScore = 0;
   answeredQuestions = 0;
 
-  const buttons = document.querySelectorAll('.quiz-section button.btn-outline');
+  const buttons = document.querySelectorAll('.quiz-question button.btn-outline');
   buttons.forEach(btn => {
     btn.disabled = false;
     btn.style.opacity = "1";
@@ -104,9 +97,7 @@ function resetQuiz() {
   }
 }
 
-// ==========================================
 // 3. REAL-TIME DIGITAL CLOCK
-// ==========================================
 function startClock() {
   updateTime();
   setInterval(updateTime, 1000);
@@ -144,9 +135,7 @@ function toggleClock() {
   }
 }
 
-// ==========================================
-// 4. VIDEO PLAYER CONTROLS API
-// ==========================================
+// 4. VIDEO PLAYER CONTROLS
 let video;
 
 function setupVideo() {
@@ -179,7 +168,6 @@ function changeVolume(direction) {
   }
 }
 
-// Initialize scripts
 document.addEventListener('DOMContentLoaded', () => {
   setupFactGenerator();
   setupQuiz();
