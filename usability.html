@@ -3,60 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Usability Study | Jasmita Iragam</title>
+  <title>Usability | Jasmita Iragam</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
   <div id="skipnav">
-    <a href="#main" class="button">Skip to main content</a>
+    <a href="#main">Skip to main content</a>
   </div>
 
-  <header>
-    <h1>E-Commerce Usability Study</h1> 
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">Jasmita <span>Iragam</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Data Projects</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="usability.html" class="active">Usability</a></li>
+          <li><a href="graphics.html">Graphics</a></li>
+          <li><a href="javascript.html">Javascript</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav> 
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="accessibility.html">Accessibility</a></li>
-      <li><a href="usability.html" class="active">Usability</a></li>
-      <li><a href="graphics.html">Graphics</a></li>
-      <li><a href="javascript.html">Javascript</a></li>
-      <li><a href="tools.html">Tools</a></li>
-    </ul>
-  </nav>
+  <main id="main" class="container" style="padding-top: 2rem;">
 
-  <main id="main">
     <section class="card">
-      <h2>User Navigation Task Evaluation</h2>
-      <ol>
-        <li>
-          <strong>Study Protocol:</strong>
-          <ul>
-            <li><strong>Target System:</strong> Amazon E-Commerce Platform</li>
-            <li><strong>Target User Group:</strong> General internet users</li>
-            <li><strong>Evaluated Navigation Tasks:</strong>
-              <ul>
-                <li>Search for a specialized or rare product online.</li>
-                <li>Initiate order checkout and complete a cancellation.</li>
-                <li>Discover customer service support options.</li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+      <h2>E-Commerce Usability Study</h2>
+      <div style="margin-top: 10px;">
+        <p><strong>Evaluation Platform:</strong> Amazon E-Commerce System</p>
+        <p><strong>Target User Group:</strong> General web users</p>
         <br>
-        <li><strong>Study Results:</strong> Participants averaged 10 minutes and 8 distinct navigation clicks due to deep sub-menu structures.</li>
-        <br>
-        <li><strong>Design Recommendations:</strong> Integrating a persistent floating customer support button would streamline user assistance and reduce workflow drop-off.</li>
-      </ol>
+        <div class="grid-2">
+          <div class="focus-card">
+            <h3>Study Findings</h3>
+            <p>Users took an average of 8 distinct steps and 10 minutes to locate customer support, indicating friction in deep navigation menus.</p>
+          </div>
+          <div class="focus-card">
+            <h3>Recommendation</h3>
+            <p>Implement a persistent floating support button to streamline user assistance and reduce task completion drop-off.</p>
+          </div>
+        </div>
+      </div>
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; Jasmita R. Iragam | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    <div class="container">
+      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    </div>
   </footer>
 
 </body>
