@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Projects & Demos | Jasmita I.</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body onload="startClock()">
+
+  <div id="skipnav">
+    <a href="#main">Skip to main content</a>
+  </div>
+
+  <header>
+    <h1>Data Science Projects & Demos</h1>
+    <p class="subtitle">Interactive Tools, Analytics Persona Quiz, and Media API Control</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html" class="active">Data Projects & Demos</a></li>
+      <li><a href="graphics.html">Data Visualization & Design</a></li>
+      <li><a href="research.html">Data Accessibility & UX Audit</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+
+    <!-- 1. Data Privacy & Security Fact Generator -->
+    <section class="card">
+      <h2>Project 1: Data Privacy & Security Tip Generator</h2>
+      <p>An interactive utility delivering essential guidance on data governance, encryption, and privacy compliance.</p>
+      <div class="toolkit-box">
+        <button id="fact-btn" class="btn">Generate Security Tip</button>
+        <p id="fact-display">Click the button above to load a data security tip!</p>
+      </div>
+    </section>
+
+    <!-- 2. Data Science Persona Quiz -->
+    <section class="card quiz-section">
+      <h2>Project 2: Data Science & Tech Persona Quiz</h2>
+      <p>Discover whether your strengths align more with <strong>Data Analytics & Modeling</strong> or <strong>Data Engineering & Security</strong>!</p>
+
+      <!-- Question 1 -->
+      <div class="question-container">
+        <h3>1. Which workstation environment suits your workflow?</h3>
+        <div class="question-grid">
+          <div class="answer-choice">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Workspace displaying interactive data analytics dashboards.">
+            <button id="q1a1" class="btn btn-outline">Analytics Dashboard (Data Analyst)</button>
+          </div>
+          <div class="answer-choice">
+            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80" alt="Server room and network rack layout for infrastructure data pipelines.">
+            <button id="q1a2" class="btn btn-outline">Pipeline Server Rack (Data Engineer)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="question-container">
+        <h3>2. What type of technical challenge excites you most?</h3>
+        <div class="question-grid">
+          <div class="answer-choice">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Statistical modeling code on computer screens.">
+            <button id="q2a1" class="btn btn-outline">Predictive Modeling & ML</button>
+          </div>
+          <div class="answer-choice">
+            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Cybersecurity shield protecting enterprise data flows.">
+            <button id="q2a2" class="btn btn-outline">Data Architecture & Security</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="question-container">
+        <h3>3. What output do you prefer delivering?</h3>
+        <div class="question-grid">
+          <div class="answer-choice">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Executive data visualization report showing trend forecasts.">
+            <button id="q3a1" class="btn btn-outline">Visual Data Insights</button>
+          </div>
+          <div class="answer-choice">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Secure ETL pipeline infrastructure connecting hardware systems.">
+            <button id="q3a2" class="btn btn-outline">Scalable Data Pipelines</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz-results">
+        <h3 id="result">Your result will appear here...</h3>
+        <button id="restart" class="btn">Restart Quiz</button>
+      </div>
+    </section>
+
+    <!-- 3. JS Clock & Media API Controls -->
+    <section class="card">
+      <h2>Project 3: Media & Time Utility Dashboard</h2>
+      
+      <div class="clock-wrapper">
+        <button onclick="toggleClock()" id="clockButton" class="btn">Hide Clock</button>
+        <div id="clock">00:00:00 am</div>
+      </div>
+
+      <hr class="divider">
+
+      <h3>HTML5 Video Player API Controls</h3>
+      <div class="video-container">
+        <video id="myvideo" controls width="100%">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+          <track src="WEBVTT_captions.vtt" kind="captions" srclang="en" label="English" default>
+          Your browser does not support HTML5 video.
+        </video>
+
+        <div class="video-controls">
+          <button class="btn" onclick="playVideo()">Play</button>
+          <button class="btn" onclick="pauseVideo()">Pause</button>
+          <button class="btn" onclick="changeSpeed('up')">Speed +</button>
+          <button class="btn" onclick="changeSpeed('down')">Speed -</button>
+          <button class="btn" onclick="changeVolume('up')">Volume +</button>
+          <button class="btn" onclick="changeVolume('down')">Volume -</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
