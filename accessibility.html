@@ -3,114 +3,121 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Accessibility Standards | Jasmita Iragam</title>
+  <title>Accessibility | Jasmita Iragam</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
   <div id="skipnav">
-    <a href="#main" class="button">Skip to main content</a>
+    <a href="#main">Skip to main content</a>
   </div>
 
-  <header>
-    <h1>Web Accessibility Standards</h1> 
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">Jasmita <span>Iragam</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Data Projects</a></li>
+          <li><a href="accessibility.html" class="active">Accessibility</a></li>
+          <li><a href="usability.html">Usability</a></li>
+          <li><a href="graphics.html">Graphics</a></li>
+          <li><a href="javascript.html">Javascript</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav> 
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="accessibility.html" class="active">Accessibility</a></li>
-      <li><a href="usability.html">Usability</a></li>
-      <li><a href="graphics.html">Graphics</a></li>
-      <li><a href="javascript.html">Javascript</a></li>
-      <li><a href="tools.html">Tools</a></li>
-    </ul>
-  </nav>
+  <main id="main" class="container" style="padding-top: 2rem;">
 
-  <main id="main">
     <section class="card">
       <h2>WCAG Universal Design Guidelines</h2>
-      <table>
-        <caption><b>Web Accessibility Design Best Practices</b></caption> 
-        <thead>
-          <tr>
-            <th scope="col">User Need</th>
-            <th scope="col">Accessible Design Solution</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Visual Impairments</td>
-            <td>Provide descriptive alternative text (ALT attributes) for images.</td>
-          </tr> 
-          <tr>
-            <td>Color Vision Deficiencies</td>
-            <td>Rely on text labels and pattern fills alongside color indicators.</td>
-          </tr>
-          <tr>
-            <td>Motor Disabilities</td>
-            <td>Ensure all interactive components support full tab-key navigation.</td>
-          </tr>
-          <tr>
-            <td>Hearing Impairments</td>
-            <td>Provide synchronized captions and written transcripts for audio/video.</td>
-          </tr>
-          <tr>
-            <td>Photosensitivity</td>
-            <td>Avoid content that flashes rapidly to prevent seizure triggers.</td>
-          </tr>
-          <tr>
-            <td>Cognitive Distractions</td>
-            <td>Maintain predictable page hierarchy and straightforward visual layouts.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">User Need</th>
+              <th scope="col">Accessible Design Solution</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Visual Impairments</td>
+              <td>Provide descriptive alternative text (ALT attributes) for images.</td>
+            </tr> 
+            <tr>
+              <td>Color Vision Deficiencies</td>
+              <td>Rely on text labels and pattern fills alongside color indicators.</td>
+            </tr>
+            <tr>
+              <td>Motor Disabilities</td>
+              <td>Ensure all interactive components support full tab-key navigation.</td>
+            </tr>
+            <tr>
+              <td>Hearing Impairments</td>
+              <td>Provide synchronized captions and written transcripts for audio/video.</td>
+            </tr>
+            <tr>
+              <td>Photosensitivity</td>
+              <td>Avoid content that flashes rapidly to prevent seizure triggers.</td>
+            </tr>
+            <tr>
+              <td>Cognitive Distractions</td>
+              <td>Maintain predictable page hierarchy and straightforward visual layouts.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="card">
       <h2>Web System Accessibility Review</h2>
-      <table>
-        <caption><b>System Audit Remediation Findings</b></caption> 
-        <thead>
-          <tr>
-            <th scope="col">Audit Metric</th>
-            <th scope="col">Remediation Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Missing Attributes</td>
-            <td>Corrected unlabelled form inputs, unlinked images, and broken ARIA elements.</td>
-          </tr> 
-          <tr>
-            <td>Contrast Ratios</td>
-            <td>Adjusted text color schemes to exceed the WCAG AA standard (4.5:1 ratio).</td>
-          </tr>
-          <tr>
-            <td>Alert Fixes</td>
-            <td>Removed redundant links, small text sizes, and added video captions.</td>
-          </tr>
-          <tr>
-            <td>Media Features</td>
-            <td>Configured video transcripts and alternative captions for screen readers.</td>
-          </tr>
-          <tr>
-            <td>Semantic Elements</td>
-            <td>Organized content using structured HTML5 semantic tags.</td>
-          </tr>
-          <tr>
-            <td>ARIA Roles</td>
-            <td>Implemented accessible ARIA live regions, alert dialogs, and popups.</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Audit Metric</th>
+              <th scope="col">Remediation Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Missing Attributes</td>
+              <td>Corrected unlabelled form inputs, unlinked images, and broken ARIA elements.</td>
+            </tr> 
+            <tr>
+              <td>Contrast Ratios</td>
+              <td>Adjusted text color schemes to exceed the WCAG AA standard (4.5:1 ratio).</td>
+            </tr>
+            <tr>
+              <td>Alert Fixes</td>
+              <td>Removed redundant links, small text sizes, and added video captions.</td>
+            </tr>
+            <tr>
+              <td>Media Features</td>
+              <td>Configured video transcripts and alternative captions for screen readers.</td>
+            </tr>
+            <tr>
+              <td>Semantic Elements</td>
+              <td>Organized content using structured HTML5 semantic tags.</td>
+            </tr>
+            <tr>
+              <td>ARIA Roles</td>
+              <td>Implemented accessible ARIA live regions, alert dialogs, and popups.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; Jasmita R. Iragam | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    <div class="container">
+      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    </div>
   </footer>
 
 </body>
