@@ -275,4 +275,85 @@ button:hover, .btn:hover {
 
 .choice-box img {
   width: 100%;
-  h
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.quiz-result-box {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #090d16;
+  border-radius: 8px;
+  border: 1px solid #0d9c90;
+}
+
+#result {
+  color: #38bdf8;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+/* CLOCK BANNER */
+.clock-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #090d16;
+  padding: 15px 20px;
+  border-radius: 8px;
+  border: 1px solid #1e293b;
+  margin-bottom: 1.5rem;
+}
+
+#clock {
+  font-family: monospace;
+  font-size: 1.3rem;
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* TABLES */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #090d16;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 14px 18px;
+  text-align: left;
+}
+
+th {
+  background-color: #1a2744;
+  color: #38bdf8;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: 1px solid #1e293b;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #1e293b;
+  color: #94a3b8;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #38bdf8;
+  text-decoration: none;
+}
