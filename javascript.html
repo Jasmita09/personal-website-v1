@@ -1,146 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<style>
-  button {
-    font-size: 1.1em;
-    background-color: #EBF5FF;
-    color: #f32585;
-    border: 2px solid black;
-    box-shadow: 4px 4px 4px #5a5858;
+// Security Tips Array
+var securityTips = [
+  "Use strong, unique passwords for every account.",
+  "Enable Multi-Factor Authentication (MFA) on all primary accounts.",
+  "Be cautious of suspicious links or unknown email attachments.",
+  "Keep your software and operating systems regularly updated.",
+  "Always lock your workstation screen when stepping away."
+];
+
+var currentTipIndex = 0;
+
+function displayNextTip() {
+  var tipDisplay = document.getElementById("tip-display");
+  if (tipDisplay) {
+    tipDisplay.innerHTML = securityTips[currentTipIndex];
+    currentTipIndex = (currentTipIndex + 1) % securityTips.length;
   }
-  button:hover, button:focus, button:active {
+}
 
-    color: #EBF5FF;
-    background-color: #f32585;
-    cursor: pointer; /* displays a hand */
-  }
- div#clock {
-	width: 8em;
-	background-color:#000000;
-	top: 5px;
-  	left: 1px;
-  	position: relative;
-  	right: 12.5%;
-  	border: 15px solid 	rgb(92, 88, 88);
-  	padding: 50px;
-  	margin: 20px;
-	font-size: large;
-	font-weight: bold;
-	color:green;
-	font-family: 'Courier New', Courier, monospace;
-	text-align: center;
-	font-size: 2.5em;
-	border-width: 0.25em;
-	}
-	  
+// Quiz Scoring
+var analyticsCount = 0;
+var engineeringCount = 0;
+var selectedAnswers = 0;
 
+function selectAnalytics() {
+  analyticsCount += 1;
+  selectedAnswers += 1;
+  evaluateQuiz();
+}
 
-	</style>
-    <meta charset="utf-8">
-    <title>Web Portfolio: Jasmita's Javascript Page</title>
-    <link rel="shortcut icon" href="https://user-images.strikinglycdn.com/res/hrscywv4p/image/upload/c_limit,fl_lossy,h_630,w_1200,f_auto,q_auto/1100847/788561_588291.png">
-	<script>
-        function showAlert() {
-        var myText = "Hello! Welcome to Jasmita's Introduction page!";
-        alert (myText);
-        }
-        </script>
-</head>
-<body onload="setInterval('updateTime()',1000)">
-	<img src="https://media.istockphoto.com/id/2151072399/vector/welcome-ink-lettering-sign-handwritten-modern-brush-lettering-on-white-background-text-for.jpg?s=612x612&w=0&k=20&c=lPOz1QCLHvKQboECKfIfPidw-sIzpNQRSNhtjR6s00E=" alt ="Introducing Jasmita, the creator of this website!"><br>
-    <br><button onclick="showAlert()">Show alert</button><br>
-	<br><button onclick="toggleClock()" id="clockButton">Show clock</button>
-	<br><div id="clock">
-		<script>
+function selectEngineering() {
+  engineeringCount += 1;
+  selectedAnswers += 1;
+  evaluateQuiz();
+}
 
-function updateTime() {
-	// get all parts of the current time
-	var now = new Date();
-	var hours = now.getHours();
-	var minutes = now.getMinutes();
-	var seconds = now.getSeconds();
-
-
-	// add leading zero's to minutes and seconds
-		 if (minutes < 10) {
-    minutes = '0' + minutes;
-  }
-  if (seconds < 10) {
-    seconds = '0' + seconds;
-  }
-
-  // get time of day (am or pm)
-  if (hours >= 12 && hours < 24) {
-    var timeofday = 'pm';
-  }
-  else {
-    var timeofday = 'am';
-  }
-
-  // convert hours from 24-hour time to 12-hour time
-  if (hours > 12) {
-    hours = hours - 12;
-  }
-
-
-	// splice them together into a character string named "currentTime"
-	var currentTime = hours + ':' + minutes + ':' + seconds + '  ' + timeofday;
-
-	// get the clock div
-	var myClock = document.getElementById('clock');
-
-	// write the currentTime string to the clock div
-	myClock.innerHTML = currentTime;
-
-
-	}
-	function toggleClock() {
-    // get the clock
-    var myClock = document.getElementById('clock');
-
-    // get the current value of the clock's display property
-    var displaySetting = myClock.style.display;
-
-    // also get the clock button, so we can change what it says
-    var clockButton = document.getElementById('clockButton');
-
-    // now toggle the clock and the button text, depending on current state
-    if (displaySetting == 'block') {
-      // clock is visible. hide it
-      myClock.style.display = 'none';
-      // change button text
-      clockButton.innerHTML = 'Show clock';
-    }
-    else {
-      // clock is hidden. show it
-      myClock.style.display = 'block';
-      // change button text
-      clockButton.innerHTML = 'Hide clock';
+function evaluateQuiz() {
+  var resultElement = document.getElementById("quiz-result");
+  if (resultElement && selectedAnswers === 3) {
+    if (analyticsCount >= 2) {
+      resultElement.innerHTML = "Result: You align with Data Analytics & Predictive Modeling!";
+    } else {
+      resultElement.innerHTML = "Result: You align with Data Engineering & Infrastructure!";
     }
   }
- 
-		</script>
-	</div><br>
-	
- <header>
-        <h1>Web Portfolio: Javascript page</h1> 
-</header>
-<main id="main">
-  <div id="skipnav">
-      <a href="#main">Skip to main content</a>
-   </div>
-<nav> 
-	<ul>
-		<li> <a href="index.html">Home</a></li>
-		<li> <a href="accessibility.html">Accessibility</a> </li>
-		<li> <a href="usability.html">Usability</a></li>
-		<li> <a href="graphics.html">Graphics</a> </li>
-		<li> <a href="javascript.html">Javascript</a> </li>
-		<li> <a href="tools.html">Tools</a></li>
-		<li> <a href="video.html">Video</a> </li>
-	</ul>
-</nav>
-</main>
-</body>
-</html>
+}
+
+function resetQuizState() {
+  analyticsCount = 0;
+  engineeringCount = 0;
+  selectedAnswers = 0;
+  var resultElement = document.getElementById("quiz-result");
+  if (resultElement) {
+    resultElement.innerHTML = "Your result will appear here...";
+  }
+}
+
+// Initialize Page Listeners
+document.addEventListener("DOMContentLoaded", function() {
+  var tipButton = document.getElementById("tip-btn");
+  if (tipButton) {
+    tipButton.addEventListener("click", displayNextTip);
+  }
+
+  var btn1a = document.getElementById("btn-option1a");
+  var btn1b = document.getElementById("btn-option1b");
+  var btn2a = document.getElementById("btn-option2a");
+  var btn2b = document.getElementById("btn-option2b");
+  var btn3a = document.getElementById("btn-option3a");
+  var btn3b = document.getElementById("btn-option3b");
+  var resetBtn = document.getElementById("btn-reset");
+
+  if (btn1a) {
+    btn1a.addEventListener("click", selectAnalytics);
+    btn1b.addEventListener("click", selectEngineering);
+    btn2a.addEventListener("click", selectAnalytics);
+    btn2b.addEventListener("click", selectEngineering);
+    btn3a.addEventListener("click", selectAnalytics);
+    btn3b.addEventListener("click", selectEngineering);
+  }
+
+  if (resetBtn) {
+    resetBtn.addEventListener("click", resetQuizState);
+  }
+});
