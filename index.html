@@ -10,46 +10,71 @@
 <body>
 
   <div id="skipnav">
-    <a href="#main" class="button">Skip to main content</a>
+    <a href="#main">Skip to main content</a>
   </div>
 
-  <header>
-    <h1>Jasmita R. Iragam</h1>
-    <img id="glaciers" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80" alt="Mountain landscape with turquoise lake">
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="logo">Jasmita <span>Iragam</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="portfolio.html">Data Projects</a></li>
+          <li><a href="accessibility.html">Accessibility</a></li>
+          <li><a href="usability.html">Usability</a></li>
+          <li><a href="graphics.html">Graphics</a></li>
+          <li><a href="javascript.html">Javascript</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav> 
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="accessibility.html">Accessibility</a></li>
-      <li><a href="usability.html">Usability</a></li>
-      <li><a href="graphics.html">Graphics</a></li>
-      <li><a href="javascript.html">Javascript</a></li>
-      <li><a href="tools.html">Tools</a></li>
-    </ul>
-  </nav>
-
-  <main id="main">
-    <div class="card">
-      <h2>Student Information</h2>
-      <ul>
-        <li><strong>Name:</strong> Jasmita R. Iragam</li>
-        <li><strong>Academic Major:</strong> Data Science</li>
-        <li><strong>Focus Disciplines:</strong> Cybersecurity, AI & Data Analytics</li>
-        <li><strong>Email:</strong> <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></li>
-      </ul>
-    </div>
-
-    <section id="overview" class="card">
-      <h2>About Me & Goals</h2>
-      <p class="cool">
-        Welcome to my site! My name is <strong>Jasmita</strong>. As a <strong>Data Science major</strong>, I am passionate about analyzing large datasets, constructing secure cloud architectures, and developing artificial intelligence applications. My career goal is to work as a Software Engineer and Data Analyst.
-      </p>
+  <main id="main" class="container">
+    
+    <!-- Hero Section -->
+    <section class="hero-container">
+      <div class="hero-text">
+        <h1>Data Science Major & <span>Software Developer</span></h1>
+        <p class="hero-subtitle">Specializing in Machine Learning, Security Analytics & AI</p>
+        <p class="cool">Welcome! My name is <strong>Jasmita</strong>. I focus on analyzing complex datasets, building secure data pipelines, and engineering artificial intelligence applications.</p>
+        <div style="margin-top: 15px;">
+          <a href="portfolio.html" class="btn">View Data Projects</a>
+          <a href="mailto:jasmita.iragam09@gmail.com" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Turquoise glacial lake symbolizing data clarity">
+      </div>
     </section>
 
+    <!-- Core Areas -->
     <section class="card">
-      <h2>Technical Skill Overview</h2>
+      <h2>Primary Academic Disciplines</h2>
+      <div class="grid-3">
+        <div class="focus-card">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Data visualization dashboard">
+          <h3>Data Analytics</h3>
+          <p>Statistical modeling, trend forecasting, data wrangling, and transforming raw datasets into executive insights.</p>
+        </div>
+
+        <div class="focus-card">
+          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Cybersecurity shield">
+          <h3>Data Security</h3>
+          <p>Threat detection analytics, data privacy standards, and protecting digital infrastructure against vulnerabilities.</p>
+        </div>
+
+        <div class="focus-card">
+          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80" alt="AI network render">
+          <h3>Artificial Intelligence</h3>
+          <p>Supervised machine learning algorithms, neural networks, and model ethics for responsible automation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="card">
+      <h2>Technical Skill Summary</h2>
       
       <h3>Front-End Web Design</h3>
       <p>Building clean HTML5 page structures, styling web interfaces using custom CSS3, and engineering flexible menu layouts.</p>
@@ -57,17 +82,19 @@
       <h3>Data Layouts & Tables</h3>
       <p>Structuring accessible HTML tables, applying custom padding, managing DOM elements via classes and IDs, and organizing complex metrics visually.</p>
 
-      <h3>Visual Media Optimization</h3>
+      <h3>Graphics & Image Processing</h3>
       <p>Selecting appropriate visual graphic formats (PNG, JPEG, GIF, SVG), embedding video assets, and styling photo galleries.</p>
 
-      <h3>Interactive Client-Side Scripting</h3>
+      <h3>Client-Side Scripting</h3>
       <p>Writing vanilla JavaScript functions, handling user DOM events, constructing dynamic quizzes, real-time clocks, and media control buttons.</p>
     </section>
+
   </main>
 
   <footer>
-    <h2>Contact Information</h2>
-    <p>Reach out at: <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    <div class="container">
+      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    </div>
   </footer>
 
 </body>
