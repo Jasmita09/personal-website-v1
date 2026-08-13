@@ -1,95 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Visualization & Design | Jasmita R. Iragam</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Graphics & Design | Jasmita Iragam</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
   <div id="skipnav">
-    <a href="#main">Skip to main content</a>
+    <a href="#main" class="button">Skip to main content</a>
   </div>
 
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-logo">Jasmita <span>Iragam</span></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Data Projects</a></li>
-          <li><a href="graphics.html" class="active">Visualization</a></li>
-          <li><a href="research.html">UX & Audits</a></li>
-        </ul>
-      </nav>
-    </div>
+  <header>
+    <h1>Graphics & Visual Media</h1> 
   </header>
 
-  <main id="main" class="container" style="padding-top: 2rem;">
+  <nav> 
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="usability.html">Usability</a></li>
+      <li><a href="graphics.html" class="active">Graphics</a></li>
+      <li><a href="javascript.html">Javascript</a></li>
+      <li><a href="tools.html">Tools</a></li>
+    </ul>
+  </nav>
 
+  <main id="main">
     <section class="card">
-      <h2>Visual Data Communication Principles</h2>
-      <p>In Data Science, effective visual communication balances color fidelity, typography, and clean graphic formats to present quantitative metrics clearly without confusing the user.</p>
+      <h2>Visual Communication Evaluation</h2>
+      <p>
+        Evaluating corporate homepage visual design: Strategic placement of high-resolution visual imagery establishes immediate visual hierarchy. Balancing typography contrast and image optimization highlights key product details clearly.
+      </p>
     </section>
 
     <section class="card">
-      <h2>Graphic Format Evaluation</h2>
-      <div class="grid-2">
-        <div class="focus-card">
-          <h3>PNG (Portable Network Graphics)</h3>
-          <p>Lossless compression optimized for transparent chart exports, scatter plots, and vector graphics.</p>
-        </div>
-        <div class="focus-card">
-          <h3>SVG (Scalable Vector Graphics)</h3>
-          <p>Resolution-independent format ideal for responsive chart UI elements and interactive dashboards.</p>
-        </div>
-        <div class="focus-card">
-          <h3>JPEG (Joint Photographic Experts Group)</h3>
-          <p>Lossy compression ideal for complex photographic imagery and rich background textures.</p>
-        </div>
-        <div class="focus-card">
-          <h3>GIF (Graphics Interchange Format)</h3>
-          <p>Supports low-color animated loops suitable for step-by-step data workflow demonstrations.</p>
-        </div>
+      <h2>Web Image Formats Breakdown</h2>
+      <p>
+        <strong>PNG:</strong> Lossless format optimal for transparent backgrounds, line art, and diagrams.<br>
+        <strong>JPEG:</strong> Lossy compression best suited for complex photographic images with rich color gradients.<br>
+        <strong>GIF:</strong> Low-color format designed for simple animated graphics.<br>
+        <strong>SVG:</strong> Vector format that resizes smoothly across displays without loss of quality.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Visual Photo Gallery</h2>
+      
+      <div class="album-item">
+        <img class="left-img" src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=400&q=80" alt="Forest canopy">
+        <p class="caption">Natural forest scenery representing environmental metrics and ecological harmony.</p>
       </div>
-    </section>
 
-    <section class="card">
-      <h2>Visual Data Gallery</h2>
-      <div class="grid-3">
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80" alt="Forest canopy data visualization.">
-          <div class="gallery-card-body">
-            <h3>Environmental Analytics</h3>
-            <p>Visualizing ecological metrics and satellite sensor data.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=500&q=80" alt="Peacock showing rich color palette.">
-          <div class="gallery-card-body">
-            <h3>RGB Spectrum Fidelity</h3>
-            <p>Testing color accuracy across high-density heatmap visualizations.</p>
-          </div>
-        </div>
-
-        <div class="gallery-card">
-          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=500&q=80" alt="Growing plant sapling.">
-          <div class="gallery-card-body">
-            <h3>Trend Forecasting</h3>
-            <p>Symbolizing predictive statistical growth and time-series modeling.</p>
-          </div>
-        </div>
+      <div class="album-item">
+        <img class="left-img" src="https://images.unsplash.com/photo-1534567153574-2b12153a87f0?auto=format&fit=crop&w=400&q=80" alt="Colorful peacock">
+        <p class="caption">A colorful peacock demonstrating RGB visual spectrum fidelity and color accuracy.</p>
       </div>
-    </section>
 
+      <div class="album-item">
+        <img class="left-img" src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=400&q=80" alt="Plant sapling">
+        <p class="caption">A growing sapling symbolizing resilience, continuous learning, and statistical growth trends.</p>
+      </div>
+
+      <h2>Interactive Contact Trigger</h2>
+      <a href="mailto:jasmita.iragam09@gmail.com">
+        <button>Contact Me</button>
+      </a>
+    </section>
   </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
-    </div>
+    <p>&copy; Jasmita R. Iragam | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
   </footer>
 
 </body>
