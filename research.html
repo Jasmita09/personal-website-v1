@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Data Accessibility & UX Audit | Jasmita I.</title>
+  <title>UX & Audits | Jasmita R. Iragam</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,51 +12,52 @@
     <a href="#main">Skip to main content</a>
   </div>
 
-  <header>
-    <h1>Data Accessibility & Usability Audits</h1>
-    <p class="subtitle">Ensuring Universal Access to Data Dashboards and Analytics</p>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">Jasmita <span>Iragam</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">Data Projects</a></li>
+          <li><a href="graphics.html">Visualization</a></li>
+          <li><a href="research.html" class="active">UX & Audits</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="portfolio.html">Data Projects & Demos</a></li>
-      <li><a href="graphics.html">Data Visualization & Design</a></li>
-      <li><a href="research.html" class="active">Data Accessibility & UX Audit</a></li>
-    </ul>
-  </nav>
+  <main id="main" class="container" style="padding-top: 2rem;">
 
-  <main id="main">
     <section class="card">
-      <h2>Accessible Data Visualization (WCAG Guidelines)</h2>
-      <div class="table-responsive">
+      <h2>Accessible Data Visualization (WCAG Checklist)</h2>
+      <div class="table-wrapper">
         <table>
           <thead>
             <tr>
               <th scope="col">User Need</th>
-              <th scope="col">Accessible Data Design Requirement</th>
+              <th scope="col">Accessible Design Implementation</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Visual Impairment</td>
-              <td>Provide detailed ALT text and data table alternatives for all charts and graphs.</td>
+              <td>Provide detailed alternative text (`alt`) and accessible data tables for charts.</td>
             </tr>
             <tr>
-              <td>Color Vision Deficiency</td>
-              <td>Use colorblind-safe palettes (e.g., Viridis, ColorBrewer) and pattern fills on charts.</td>
+              <td>Color Blindness</td>
+              <td>Use colorblind-safe palettes (e.g., Viridis) paired with distinct visual patterns.</td>
             </tr>
             <tr>
               <td>Motor Impairment</td>
-              <td>Ensure interactive dashboard filters and data selectors are full keyboard navigable.</td>
+              <td>Ensure dynamic dashboard filters are keyboard operable with visible focus states.</td>
             </tr>
             <tr>
-              <td>Auditory Disability</td>
-              <td>Provide closed captions and transcripts for multimedia data presentations.</td>
+              <td>Auditory Loss</td>
+              <td>Provide captions, subtitles, and text transcripts for multimedia content.</td>
             </tr>
             <tr>
-              <td>Cognitive / Distraction</td>
-              <td>Maintain high contrast ratios and clear data visual hierarchy without clutter.</td>
+              <td>Cognitive Focus</td>
+              <td>Maintain visual contrast ratios (WCAG AA standard) and predictable dashboard layouts.</td>
             </tr>
           </tbody>
         </table>
@@ -64,8 +65,8 @@
     </section>
 
     <section class="card">
-      <h2>Web System Accessibility Audit Findings</h2>
-      <div class="table-responsive">
+      <h2>Technical System Audit Remediation</h2>
+      <div class="table-wrapper">
         <table>
           <thead>
             <tr>
@@ -76,15 +77,15 @@
           <tbody>
             <tr>
               <td>Missing Attributes</td>
-              <td>Remediated missing form labels, alt tags, and broken ARIA table descriptions.</td>
+              <td>Remediated unlabelled form elements, missing alt attributes, and broken ARIA roles.</td>
             </tr>
             <tr>
-              <td>Color Contrast</td>
-              <td>Upgraded color contrast ratios on data labels to meet WCAG AA standards (4.5:1).</td>
+              <td>Contrast Ratios</td>
+              <td>Corrected text-to-background contrast to meet the minimum 4.5:1 ratio requirement.</td>
             </tr>
             <tr>
-              <td>Aria Integration</td>
-              <td>Configured ARIA live regions to announce dynamic chart data updates to screen readers.</td>
+              <td>Dynamic Live Regions</td>
+              <td>Integrated ARIA live regions to notify screen readers of real-time data table updates.</td>
             </tr>
           </tbody>
         </table>
@@ -92,23 +93,30 @@
     </section>
 
     <section class="card">
-      <h2>E-Commerce Data Usability Study (Task Analysis)</h2>
-      <ol class="styled-list">
-        <li>
-          <strong>Study Overview:</strong>
-          <ul>
-            <li><strong>Target System:</strong> Enterprise E-Commerce Platform (Amazon)</li>
-            <li><strong>Objective:</strong> Evaluate user navigation efficiency when locating rare items and initiating customer support requests.</li>
-          </ul>
-        </li>
-        <li><strong>Analytics Result:</strong> Users required an average of 8 steps and 10 minutes, revealing friction points in deep menu structures.</li>
-        <li><strong>Recommendation:</strong> Integrate a persistent floating customer service chat widget to streamline support access and improve conversion metrics.</li>
-      </ol>
+      <h2>E-Commerce Usability Study (Task Analysis)</h2>
+      <div style="margin-top: 10px;">
+        <p><strong>Evaluation Platform:</strong> Amazon E-Commerce Navigation Flow</p>
+        <p><strong>Methodology:</strong> User task analysis focused on search efficiency and support access.</p>
+        <br>
+        <div class="grid-2">
+          <div class="focus-card">
+            <h3>Findings</h3>
+            <p>Users took an average of 8 distinct steps and 10 minutes to locate customer support, indicating friction in deep navigation layers.</p>
+          </div>
+          <div class="focus-card">
+            <h3>Recommendation</h3>
+            <p>Implement a persistent floating support button to streamline user assistance and reduce task completion drop-off.</p>
+          </div>
+        </div>
+      </div>
     </section>
+
   </main>
 
   <footer>
-    <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    <div class="container">
+      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+    </div>
   </footer>
 
 </body>
