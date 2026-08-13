@@ -1,85 +1,66 @@
-// Security Tips Array
-var securityTips = [
-  "Use strong, unique passwords for every account.",
-  "Enable Multi-Factor Authentication (MFA) on all primary accounts.",
-  "Be cautious of suspicious links or unknown email attachments.",
-  "Keep your software and operating systems regularly updated.",
-  "Always lock your workstation screen when stepping away."
-];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Demos | Jasmita Iragam</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body onload="setInterval('updateTime()',1000)">
 
-var currentTipIndex = 0;
+  <div id="skipnav">
+    <a href="#main" class="button">Skip to main content</a>
+  </div>
 
-function displayNextTip() {
-  var tipDisplay = document.getElementById("tip-display");
-  if (tipDisplay) {
-    tipDisplay.innerHTML = securityTips[currentTipIndex];
-    currentTipIndex = (currentTipIndex + 1) % securityTips.length;
-  }
-}
+  <header>
+    <h1>Client-Side JavaScript Demos</h1> 
+  </header>
 
-// Quiz Scoring
-var analyticsCount = 0;
-var engineeringCount = 0;
-var selectedAnswers = 0;
+  <nav> 
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="accessibility.html">Accessibility</a></li>
+      <li><a href="usability.html">Usability</a></li>
+      <li><a href="graphics.html">Graphics</a></li>
+      <li><a href="javascript.html" class="active">Javascript</a></li>
+      <li><a href="tools.html">Tools</a></li>
+    </ul>
+  </nav>
 
-function selectAnalytics() {
-  analyticsCount += 1;
-  selectedAnswers += 1;
-  evaluateQuiz();
-}
+  <main id="main">
+    <section class="card">
+      <h2>Interactive Scripting Controls</h2>
+      
+      <button onclick="showAlert()">Trigger Welcome Alert</button>
+      <br><br>
+      <button onclick="toggleClock()" id="clockButton">Show Clock</button>
+      
+      <div id="clock">00:00:00 am</div>
+    </section>
 
-function selectEngineering() {
-  engineeringCount += 1;
-  selectedAnswers += 1;
-  evaluateQuiz();
-}
+    <section class="card">
+      <h2>HTML5 Video Player Controls</h2>
+      <video id="myvideo" width="100%" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <track src="WEBVTT_captions.vtt" kind="captions" srclang="en" label="English" default>
+      </video>
 
-function evaluateQuiz() {
-  var resultElement = document.getElementById("quiz-result");
-  if (resultElement && selectedAnswers === 3) {
-    if (analyticsCount >= 2) {
-      resultElement.innerHTML = "Result: You align with Data Analytics & Predictive Modeling!";
-    } else {
-      resultElement.innerHTML = "Result: You align with Data Engineering & Infrastructure!";
-    }
-  }
-}
+      <div style="margin-top: 15px;">
+        <button onclick="playVideo()">Play</button>
+        <button onclick="pauseVideo()">Pause</button>
+        <button onclick="changeSpeed('up')">Faster</button>
+        <button onclick="changeSpeed('down')">Slower</button>
+        <button onclick="changeVolume('up')">Louder</button>
+        <button onclick="changeVolume('down')">Softer</button>
+      </div>
+    </section>
+  </main>
 
-function resetQuizState() {
-  analyticsCount = 0;
-  engineeringCount = 0;
-  selectedAnswers = 0;
-  var resultElement = document.getElementById("quiz-result");
-  if (resultElement) {
-    resultElement.innerHTML = "Your result will appear here...";
-  }
-}
+  <footer>
+    <p>&copy; Jasmita R. Iragam | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
+  </footer>
 
-// Initialize Page Listeners
-document.addEventListener("DOMContentLoaded", function() {
-  var tipButton = document.getElementById("tip-btn");
-  if (tipButton) {
-    tipButton.addEventListener("click", displayNextTip);
-  }
-
-  var btn1a = document.getElementById("btn-option1a");
-  var btn1b = document.getElementById("btn-option1b");
-  var btn2a = document.getElementById("btn-option2a");
-  var btn2b = document.getElementById("btn-option2b");
-  var btn3a = document.getElementById("btn-option3a");
-  var btn3b = document.getElementById("btn-option3b");
-  var resetBtn = document.getElementById("btn-reset");
-
-  if (btn1a) {
-    btn1a.addEventListener("click", selectAnalytics);
-    btn1b.addEventListener("click", selectEngineering);
-    btn2a.addEventListener("click", selectAnalytics);
-    btn2b.addEventListener("click", selectEngineering);
-    btn3a.addEventListener("click", selectAnalytics);
-    btn3b.addEventListener("click", selectEngineering);
-  }
-
-  if (resetBtn) {
-    resetBtn.addEventListener("click", resetQuizState);
-  }
-});
+</body>
+</html>
