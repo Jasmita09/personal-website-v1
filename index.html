@@ -3,108 +3,272 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jasmita R. Iragam | Data Science Portfolio</title>
+  <title>Jasmita R. Iragam | CS & Data Science Portfolio</title>
+
+  <!-- Google Fonts: Editorial Serif + Modern Sans + Technical Monospace -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
+  <!-- Skip Link for Accessibility -->
   <div id="skipnav">
-    <a href="#main">Skip to main content</a>
+    <a href="#main-content">Skip to content</a>
   </div>
 
+  <!-- Editorial Top Navigation -->
   <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="index.html" class="logo">Jasmita <span>Iragam</span></a>
-      <nav>
-        <ul>
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        Jasmita <span>Iragam</span>
+      </a>
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="portfolio.html">Data Science Quiz</a></li>
-          <li><a href="accessibility.html">Accessibility</a></li>
-          <li><a href="usability.html">Usability</a></li>
-          <li><a href="graphics.html">Graphics</a></li>
-          <li><a href="javascript.html">Javascript</a></li>
-          <li><a href="tools.html">Tools</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="writing.html">Writing</a></li>
+          <li><a href="coursework.html">Coursework</a></li>
+          <li><a href="activities.html">Activities</a></li>
+          <li><a href="#connect" class="nav-cta">Let's Connect</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main id="main" class="container">
-    
-    <!-- Hero Section -->
-    <section class="hero-container">
-      <div class="hero-text">
-        <h1>Data Science Major & <span>Software Developer</span></h1>
-        <p class="hero-subtitle">Specializing in Data Science, Machine Learning, Security Analytics & AI</p>
-        <p class="cool">Welcome! My name is <strong>Jasmita</strong>. As a Computer Science major, I focus on analyzing complex datasets, building secure data pipelines, and engineering artificial intelligence applications.</p>
-        <div style="margin-top: 15px;">
-          <a href="portfolio.html" class="btn">View Data Science Quiz</a>
-          <button onclick="alert('Contact Jasmita R. Iragam at:\n\nEmail: jasmita.iragam09@gmail.com')" class="btn btn-secondary">Get in Touch</button>
+  <main id="main-content">
+
+    <section class="hero-wrapper">
+      <div class="hero-layout">
+        
+        <!-- Left: Statement & Narrative -->
+        <div class="hero-left">
+          <div class="hero-tag">
+            <span class="square-bullet">■</span>
+            <span>COMPUTER SCIENCE STUDENT · FOCUS: DATA SCIENCE & ML</span>
+          </div>
+
+          <h1 class="hero-title">
+            Building at<br>
+            the<br>
+            <span class="serif-italic">intersection.</span>
+          </h1>
+
+          <p class="hero-description">
+            Computer Science major specializing in Data Science and Machine Learning. 
+            I focus on turning raw datasets into interpretable predictive models, 
+            engineering full-stack prototypes, and understanding how data shapes behavior.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-dark">
+              VIEW MY WORK <span class="arrow">↘</span>
+            </a>
+            <a href="writing.html" class="link-underlined">READ MY WRITING</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="link-plain">LINKEDIN</a>
+          </div>
         </div>
+
+        <!-- Middle: Vertical Text Ribbon -->
+        <div class="hero-vertical-divider" aria-hidden="true">
+          <span>CURIOSITY / ANALYSIS / MACHINE LEARNING</span>
+        </div>
+
+        <!-- Right: Technical Orbital Graphic Card -->
+        <div class="hero-right">
+          <div class="graphic-card">
+            <div class="card-header">
+              <span class="mono-label">CS / 2026</span>
+              <span class="status-indicator"><span class="dot"></span> ACTIVE</span>
+            </div>
+
+            <!-- CSS Orbital Graphic -->
+            <div class="orbital-stage">
+              <div class="orbit ring-3"></div>
+              <div class="orbit ring-2">
+                <span class="planet planet-small"></span>
+              </div>
+              <div class="orbit ring-1">
+                <span class="planet planet-medium"></span>
+              </div>
+              <div class="center-core">
+                <span>IN PROGRESS</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <p class="card-italic-quote">Curiosity, cultivated.</p>
+              <p class="card-sub">A STUDENT PORTFOLIO EXPLORING DATA, ALGORITHMS, AND BECOMING.</p>
+            </div>
+          </div>
+
+          <!-- Floating Status Pill -->
+          <div class="floating-status-card">
+            <span class="status-subtitle">CURRENTLY</span>
+            <p class="status-content">training models & reading papers</p>
+          </div>
+        </div>
+
       </div>
-      <div class="hero-image">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Turquoise glacial lake symbolizing data clarity">
+
+      <!-- Hero Footer Indicator -->
+      <div class="hero-footer-bar">
+        <div>01 — THE SHORT VERSION</div>
+        <div class="scroll-hint">
+          <a href="#focus">SCROLL TO READ BETWEEN THE LINES <span>↓</span></a>
+        </div>
+        <div class="text-right">© 2026</div>
       </div>
     </section>
 
-    <!-- Student Profile Information -->
-    <section class="card">
-      <h2>Student Information</h2>
-      <ul>
-        <li><strong>Name:</strong> Jasmita R. Iragam</li>
-        <li><strong>Academic Major:</strong> Computer Science</li>
-        <li><strong>Focus Disciplines:</strong> Data Science, AI & Data Analytics</li>
-        <li><strong>Email:</strong> <button onclick="alert('Contact Jasmita R. Iragam at:\n\nEmail: jasmita.iragam09@gmail.com')" class="btn btn-secondary" style="margin: 0; padding: 4px 10px;">View Email</button></li>
-      </ul>
-    </section>
+    <section id="focus" class="section-container">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2>Core Disciplines</h2>
+        <p class="section-subtext">The pillars anchoring my coursework and independent research.</p>
+      </div>
 
-    <!-- Core Academic Disciplines -->
-    <section class="card">
-      <h2>Primary Academic Disciplines</h2>
       <div class="grid-3">
-        <div class="focus-card">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Data visualization dashboard">
-          <h3>Data Analytics</h3>
-          <p>Statistical modeling, trend forecasting, data wrangling, and transforming raw datasets into executive insights.</p>
+        <div class="editorial-card">
+          <span class="card-kicker">ANALYSIS & MODELING</span>
+          <h3>Data Science & Analytics</h3>
+          <p>Statistical inference, exploratory data analysis (EDA), predictive regression, and transforming noisy records into actionable intelligence using Python and SQL.</p>
+          <div class="tech-tags">
+            <span>Python</span><span>Pandas</span><span>SQL</span><span>Tableau</span>
+          </div>
         </div>
 
-        <div class="focus-card">
-          <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Cybersecurity shield">
-          <h3>Data Security</h3>
-          <p>Threat detection analytics, data privacy standards, and protecting digital infrastructure against vulnerabilities.</p>
+        <div class="editorial-card">
+          <span class="card-kicker">INTELLIGENT SYSTEMS</span>
+          <h3>Machine Learning & AI</h3>
+          <p>Supervised and unsupervised learning, feature engineering, loss optimization, neural network architectures, and evaluating model fairness.</p>
+          <div class="tech-tags">
+            <span>Scikit-Learn</span><span>PyTorch</span><span>NumPy</span>
+          </div>
         </div>
 
-        <div class="focus-card">
-          <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=500&q=80" alt="AI network render">
-          <h3>Artificial Intelligence</h3>
-          <p>Supervised machine learning algorithms, neural networks, and model ethics for responsible automation.</p>
+        <div class="editorial-card">
+          <span class="card-kicker">INFRASTRUCTURE</span>
+          <h3>Systems & Data Security</h3>
+          <p>Data privacy protocols, secure API architectures, web systems usability, and writing efficient system-level code for performance-critical applications.</p>
+          <div class="tech-tags">
+            <span>HTML5/CSS3</span><span>Git</span><span>Security Analytics</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Technical Skills Summary -->
-    <section class="card">
-      <h2>Technical Skill Summary</h2>
-      
-      <h3>Front-End Web Design</h3>
-      <p>Building clean HTML5 page structures, styling web interfaces using custom CSS3, and engineering flexible menu layouts.</p>
+    <section id="projects" class="section-container">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2>Selected Builds</h2>
+        <p class="section-subtext">Recent projects spanning financial data modeling and interactive web apps.</p>
+      </div>
 
-      <h3>Databases & Data Analytics</h3>
-      <p>Currently learning SQL to query databases, manage relational data, and organize complex metrics visually.</p>
+      <div class="project-showcase-grid">
+        <!-- Project 1 -->
+        <article class="project-card">
+          <div class="project-content">
+            <span class="project-type">DATA TOOL & TIME-SERIES</span>
+            <h3>Financial Market Analytics Engine</h3>
+            <p>An interactive data tool that tracks, models, and visualizes market volatility and historic price distributions using automated data ingestion pipelines.</p>
+            <div class="project-links">
+              <a href="projects.html" class="link-arrow">Read Case Study <span>→</span></a>
+              <a href="https://github.com/jasmita09" target="_blank" rel="noopener noreferrer" class="link-subtle">GitHub Repo ↗</a>
+            </div>
+          </div>
+        </article>
 
-      <h3>Graphics & Image Processing</h3>
-      <p>Selecting appropriate visual graphic formats (PNG, JPEG, GIF, SVG), embedding video assets, and styling photo galleries.</p>
+        <!-- Project 2 -->
+        <article class="project-card">
+          <div class="project-content">
+            <span class="project-type">FULL-STACK PROTOTYPE</span>
+            <h3>Interactive Data Science Quiz & Labs</h3>
+            <p>An educational web tool designed to test intuition in probability, algorithmic complexity, and model evaluation metrics with dynamic client-side scripting.</p>
+            <div class="project-links">
+              <a href="portfolio.html" class="link-arrow">Launch App <span>→</span></a>
+              <a href="https://github.com/jasmita09" target="_blank" rel="noopener noreferrer" class="link-subtle">GitHub Repo ↗</a>
+            </div>
+          </div>
+        </article>
+      </div>
 
-      <h3>Client-Side Scripting & Hosting</h3>
-      <p>Writing vanilla JavaScript functions, handling user DOM events, constructing dynamic quizzes, and hosting websites on GitHub Pages using Git.</p>
+      <div class="section-cta">
+        <a href="projects.html" class="btn-outline-dark">View All Projects & Labs <span>→</span></a>
+      </div>
+    </section>
+
+    <section id="writing" class="section-container">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2>Notes, Books & Writing</h2>
+        <p class="section-subtext">Documenting books I read, paper takeaways, and lessons from building in public.</p>
+      </div>
+
+      <div class="writing-grid">
+        <!-- Post 1: Vivunote Shoutout -->
+        <article class="writing-card featured-post">
+          <div class="post-header">
+            <span class="badge badge-accent">REFLECTION</span>
+            <time class="post-date">October 2026</time>
+          </div>
+          <h3><a href="writing.html">On Building in Public & Finding Inspiration in Community</a></h3>
+          <p>
+            A shoutout to my friend and her work at <em>Vivunote</em>. Why having peers who document their thinking inspires me to build a living portfolio, read more deliberately, and share what I learn.
+          </p>
+          <a href="writing.html" class="read-link">Read reflection <span>→</span></a>
+        </article>
+
+        <!-- Post 2: Book / Paper Breakdown -->
+        <article class="writing-card">
+          <div class="post-header">
+            <span class="badge badge-tech">DATA SCIENCE</span>
+            <time class="post-date">Coming Soon</time>
+          </div>
+          <h3><a href="writing.html">From Paper to Code: What Financial Volatility Models Taught Me About Machine Learning</a></h3>
+          <p>
+            Key takeaways from recent papers in econometric modeling and how statistical intuition translates to modern deep learning workflows.
+          </p>
+          <a href="writing.html" class="read-link">Read article <span>→</span></a>
+        </article>
+      </div>
+
+      <div class="section-cta">
+        <a href="writing.html" class="btn-outline-dark">Explore The Writing Shelf <span>→</span></a>
+      </div>
+    </section>
+    
+    <section id="connect" class="section-container connect-section">
+      <div class="connect-box">
+        <span class="section-num">05 — LET'S CONNECT</span>
+        <h2>Interested in collaborating or discussing data science?</h2>
+        <p>I’m always open to discussing new research, open-source projects, or internship opportunities.</p>
+        
+        <div class="connect-actions">
+          <a href="mailto:jasmita.iragam09@gmail.com" class="btn-dark">
+            SAY HELLO VIA EMAIL <span>↗</span>
+          </a>
+          <a href="https://github.com/jasmita09" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            GITHUB <span>↗</span>
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+            LINKEDIN <span>↗</span>
+          </a>
+        </div>
+      </div>
     </section>
 
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <button onclick="alert('Contact Jasmita R. Iragam at:\n\nEmail: jasmita.iragam09@gmail.com')" class="btn btn-secondary" style="margin: 0; padding: 2px 8px; font-size: 0.85rem;">Contact Me</button></p>
+  <footer class="site-footer">
+    <div class="nav-container footer-content">
+      <p>Designed & built by <strong>Jasmita R. Iragam</strong> · Atlanta, GA</p>
+      <p class="footer-links">
+        <a href="#main-content">Back to Top ↑</a>
+      </p>
     </div>
   </footer>
 
