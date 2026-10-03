@@ -18,7 +18,7 @@
   </head>
 
   <body>
-    <!-- MULTI-PAGE NAVIGATION (Routes to separate files, not same-page scrolling) -->
+    <!-- MULTI-PAGE NAVIGATION -->
     <nav>
       <div class="wrap">
         <a class="brand" href="index.html"><i>JI</i> Jasmita Iragam</a>
@@ -46,7 +46,7 @@
           <p class="motto"><span>My motto:</span> "In a world of noise, become irreplaceable."</p>
           <div class="cta">
             <a class="btn fill" href="#projects">See my work ↓</a>
-            <button class="btn line js-open-code-modal" data-project="All Projects" type="button">GitHub Access ↗</button>
+            <button class="btn line js-open-code-modal" type="button">GitHub ↗</button>
             <a class="btn line" href="https://www.linkedin.com/in/jasmita-i-4946a0419/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
           </div>
         </div>
@@ -102,7 +102,7 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
+    <!-- PROJECTS (Chapter 2: 1 Completed, 3 In Progress) -->
     <section id="projects">
       <div class="wrap">
         <span class="sec-num reveal">02 / selected work</span>
@@ -116,7 +116,7 @@
         </div>
 
         <div class="proj-grid">
-          <!-- Project 1: Tara (v2 Rebuild) -->
+          <!-- 1. Tara (In Progress) -->
           <article class="proj feat reveal" data-s="wip">
             <div class="thumb">
               <svg viewBox="0 0 320 180" role="img" aria-label="Illustrative log-regression trend with scattered data points">
@@ -145,11 +145,10 @@
                 <li><b>Execution:</b> Deterministic math decoupled from conversational synthesis with on-chain DCA</li>
               </ul>
               <div class="tags"><span>Python</span><span>FastAPI</span><span>Solana</span><span>Tiger Data</span><span>Groq</span></div>
-              <button class="link-btn js-open-code-modal" data-project="Project Tara v2" type="button">Request Demo Access ↗</button>
             </div>
           </article>
 
-          <!-- Project 2: Cryptanalysis -->
+          <!-- 2. Cryptanalysis (Completed) -->
           <article class="proj reveal" data-s="done">
             <div class="thumb">
               <svg viewBox="0 0 320 180" role="img" aria-label="Illustrative bars of character frequency with an expected curve">
@@ -176,11 +175,10 @@
                 <li>Chi-Squared goodness-of-fit scoring across standard corpora</li>
               </ul>
               <div class="tags"><span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Statistics</span></div>
-              <button class="link-btn js-open-code-modal" data-project="Statistical Cryptanalysis Tool" type="button">Request Code Access ↗</button>
             </div>
           </article>
 
-          <!-- Project 3: Aegis Flow -->
+          <!-- 3. Aegis Flow (In Progress) -->
           <article class="proj reveal" data-s="wip">
             <div class="thumb">
               <svg viewBox="0 0 320 180" role="img" aria-label="Illustrative temperature drift rising toward a limit line">
@@ -201,11 +199,10 @@
                 <li>Anomaly detection to trigger virtual Kubernetes workload migration</li>
               </ul>
               <div class="tags"><span>Arduino / Pico</span><span>pySerial</span><span>Tiger Data</span><span>Isolation Forest</span></div>
-              <button class="link-btn js-open-code-modal" data-project="Aegis Flow Prototype" type="button">Preview Architecture Specs ↗</button>
             </div>
           </article>
 
-          <!-- Project 4: Market API -->
+          <!-- 4. Market API (In Progress) -->
           <article class="proj reveal" data-s="wip">
             <div class="thumb">
               <svg viewBox="0 0 320 180" role="img" aria-label="Illustrative price dipping below a baseline band">
@@ -226,7 +223,6 @@
                 <li>Sends automated webhook alerts when anomalies occur</li>
               </ul>
               <div class="tags"><span>FastAPI</span><span>NumPy</span><span>yfinance</span><span>Webhooks</span></div>
-              <button class="link-btn js-open-code-modal" data-project="Market Anomaly Alerting API" type="button">API Documentation Draft ↗</button>
             </div>
           </article>
         </div>
@@ -237,8 +233,10 @@
     <section id="notes">
       <div class="wrap">
         <span class="sec-num reveal">03 / cherri-picked notes</span>
-        <h2 class="reveal">Cherri-Picked Notes <span class="cherry-badge">🍒</span></h2>
-        <p class="sub reveal">Notes on data science research, mathematical models, and lessons learned while developing technical craft.</p>
+        <h2 class="reveal">🍒 Cherri-Picked Notes.</h2>
+        <p class="sub reveal">
+          My perspective on data science research, mathematical models, and developing technical projects. Special shoutout and credit to Vy and <b>ViVu Notes</b>, whose writing inspired this space.
+        </p>
 
         <a class="post reveal" href="research.html">
           <small>OCTOBER 2026 · ESSAY</small>
@@ -256,7 +254,6 @@
           </div>
           <span class="arrow">→</span>
         </a>
-        <p class="credit reveal">Special shoutout and credit to Vy and <b>ViVu Notes</b>, whose writing inspired this space.</p>
       </div>
     </section>
 
@@ -302,33 +299,23 @@
           <div class="cta">
             <a class="btn fill" href="mailto:jasmita.i1109@gmail.com">Email me ↗</a>
             <a class="btn line" href="https://www.linkedin.com/in/jasmita-i-4946a0419/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <button class="btn line js-open-code-modal" data-project="All Projects" type="button">Request Code / Demo ↗</button>
+            <button class="btn line js-open-code-modal" type="button">GitHub ↗</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CODE ACCESS / DEMO REQUEST MODAL -->
+    <!-- POP-UP MODAL (DIRECT ACCESS ONLY) -->
     <div class="modal-overlay" id="codeModal" aria-hidden="true">
       <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
         <button class="modal-close" id="modalClose" aria-label="Close dialog">&times;</button>
         <span class="modal-kicker">DIRECT ACCESS</span>
         <h3 id="modalTitle">Looking for a Project Demo?</h3>
         <p class="modal-desc">
-          I would love to share my work with you! To explore an interactive staging demo or review a guided walkthrough of the architecture, send me a quick email and I will gladly share access.
+          I would love to share my work with you! To explore an interactive staging demo or review a guided walkthrough of the architecture, send me a quick email and I will gladly share it.
         </p>
-        
-        <div class="modal-projects">
-          <h4>Active Projects Available Upon Request:</h4>
-          <ul>
-            <li><strong>Project Tara (v2 Architecture):</strong> Full-stack FastAPI rewrite, dual-LLM failover, and Solana DCA vault code.</li>
-            <li><strong>Statistical Cryptanalysis Engine:</strong> Vectorized Chi-Squared Pandas source and benchmarking test suites.</li>
-            <li><strong>Aegis Flow:</strong> Cyber-physical Python serial telemetry bridge and TimescaleDB hypertable setup.</li>
-          </ul>
-        </div>
-
         <div class="modal-actions">
-          <a class="btn fill" id="modalEmailBtn" href="mailto:jasmita.i1109@gmail.com?subject=Project%20Demo%20Request&body=Hi%20Jasmita,%20I'd%20love%20to%20see%20a%20demo%20of...">Email Jasmita for Demo Access ↗</a>
+          <a class="btn fill" id="modalEmailBtn" href="mailto:jasmita.i1109@gmail.com?subject=Project%20Demo%20Request&body=Hi%20Jasmita,%20I'd%20love%20to%20see%20a%20demo%20of%20your%20work!">Email Me ↗</a>
           <button class="btn line" id="modalCancelBtn" type="button">Close</button>
         </div>
       </div>
