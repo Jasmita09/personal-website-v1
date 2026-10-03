@@ -1,155 +1,91 @@
-// 1. SECURITY TIP GENERATOR
-var facts = [
-  "Use strong, unique passwords for every online account.",
-  "Enable Multi-Factor Authentication (MFA) whenever possible.",
-  "Never click on suspicious links or unexpected email attachments.",
-  "Keep your software and operating systems regularly updated.",
-  "Always lock your workstation screen when stepping away."
-];
-
-var factCount = 0;
-
-function showNextFact() {
-  var factDisplay = document.getElementById('fact-display');
-  if (factDisplay) {
-    factDisplay.innerHTML = facts[factCount];
-    factCount = (factCount + 1) % facts.length;
-  }
-}
-
-// 2. PERSONALITY QUIZ LOGIC
-var hardwareScore = 0;
-var softwareScore = 0;
-var questionCount = 0;
-
-function Builder() {
-  hardwareScore += 1;
-  questionCount += 1;
-  if (questionCount === 3) {
-    updateResult();
-  }
-}
-
-function Thinker() {
-  softwareScore += 1;
-  questionCount += 1;
-  if (questionCount === 3) {
-    updateResult();
-  }
-}
-
-function updateResult() {
-  var result = document.getElementById("result");
-  if (result) {
-    if (hardwareScore >= 2) {
-      result.innerHTML = "Result: You match Data Engineering & Infrastructure!";
-    } else if (softwareScore >= 2) {
-      result.innerHTML = "Result: You match Data Science & Predictive Analytics!";
-    }
-  }
-}
-
-function restartQuiz() {
-  var result = document.getElementById("result");
-  if (result) {
-    result.innerHTML = "Your result will appear here...";
-  }
-  hardwareScore = 0;
-  softwareScore = 0;
-  questionCount = 0;
-}
-
-// 3. CLOCK & ALERT UTILITIES
-function showAlert() {
-  alert("Welcome to Jasmita's Data Science Web Portfolio!");
-}
-
-function updateTime() {
-  var now = new Date();
-  var hours = now.getHours();
-  var minutes = now.getMinutes();
-  var seconds = now.getSeconds();
-  var timeofday = hours >= 12 ? 'pm' : 'am';
-
-  if (hours > 12) hours = hours - 12;
-  if (hours === 0) hours = 12;
-  if (minutes < 10) minutes = '0' + minutes;
-  if (seconds < 10) seconds = '0' + seconds;
-
-  var currentTime = hours + ':' + minutes + ':' + seconds + ' ' + timeofday;
-  var myClock = document.getElementById('clock');
-  if (myClock) {
-    myClock.innerHTML = currentTime;
-  }
-}
-
-function toggleClock() {
-  var myClock = document.getElementById('clock');
-  var clockButton = document.getElementById('clockButton');
-
-  if (myClock && clockButton) {
-    if (myClock.style.display === 'none') {
-      myClock.style.display = 'block';
-      clockButton.innerHTML = 'Hide Clock';
-    } else {
-      myClock.style.display = 'none';
-      clockButton.innerHTML = 'Show Clock';
-    }
-  }
-}
-
-// 4. VIDEO PLAYER API
-function playVideo() {
-  var video = document.getElementById('myvideo');
-  if (video) video.play();
-}
-
-function pauseVideo() {
-  var video = document.getElementById('myvideo');
-  if (video) video.pause();
-}
-
-function changeSpeed(direction) {
-  var video = document.getElementById('myvideo');
-  if (video) {
-    if (direction === 'up') video.playbackRate += 0.25;
-    else if (direction === 'down') video.playbackRate -= 0.25;
-  }
-}
-
-function changeVolume(direction) {
-  var video = document.getElementById('myvideo');
-  if (video) {
-    if (direction === 'up' && video.volume < 0.9) video.volume += 0.1;
-    else if (direction === 'down' && video.volume > 0.1) video.volume -= 0.1;
-  }
-}
-
-// SETUP EVENT LISTENERS
-document.addEventListener("DOMContentLoaded", function() {
-  var factBtn = document.getElementById('fact-btn');
-  if (factBtn) {
-    factBtn.addEventListener('click', showNextFact);
-  }
-
-  var q1a1 = document.getElementById("q1a1");
-  var q1a2 = document.getElementById("q1a2");
-  var q2a1 = document.getElementById("q2a1");
-  var q2a2 = document.getElementById("q2a2");
-  var q3a1 = document.getElementById("q3a1");
-  var q3a2 = document.getElementById("q3a2");
-  var restartBtn = document.getElementById("restart");
-
-  if (q1a1) {
-    q1a1.addEventListener("click", Builder);
-    q1a2.addEventListener("click", Thinker);
-    q2a1.addEventListener("click", Builder);
-    q2a2.addEventListener("click", Thinker);
-    q3a1.addEventListener("click", Builder);
-    q3a2.addEventListener("click", Thinker);
-  }
-
-  if (restartBtn) {
-    restartBtn.addEventListener("click", restartQuiz);
-  }
+// Scroll progress bar
+const bar = document.getElementById("progress");
+addEventListener("scroll", () => {
+  const h = document.documentElement;
+  bar.style.width = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100 + "%";
 });
+
+// Reveal on scroll
+const io = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      io.unobserve(e.target);
+    });
+  },
+  { threshold: 0.15 }
+);
+document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+// Count-up stats
+const countIO = new IntersectionObserver((entries) => {
+  entries.forEach((e) => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const end = parseFloat(el.dataset.count);
+    const dec = +el.dataset.dec || 0;
+    const t0 = performance.now();
+    const tick = (t) => {
+      const p = Math.min((t - t0) / 1200, 1);
+      el.textContent = (end * p).toFixed(dec);
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    countIO.unobserve(el);
+  });
+});
+document.querySelectorAll("[data-count]").forEach((el) => countIO.observe(el));
+
+// Project filter
+document.querySelectorAll(".filters button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filters button").forEach((b) => b.classList.remove("on"));
+    btn.classList.add("on");
+    document.querySelectorAll(".proj").forEach((p) => {
+      p.classList.toggle("hide", btn.dataset.f !== "all" && p.dataset.s !== btn.dataset.f);
+    });
+  });
+});
+
+// Hero animation: noisy data with a clean signal line
+const cv = document.getElementById("signal");
+const ctx = cv.getContext("2d");
+let t = 0;
+
+function resize() {
+  cv.width = cv.clientWidth * devicePixelRatio;
+  cv.height = cv.clientHeight * devicePixelRatio;
+}
+resize();
+addEventListener("resize", resize);
+
+function draw() {
+  const w = cv.width;
+  const h = cv.height;
+  ctx.clearRect(0, 0, w, h);
+
+  // noisy points (sage green)
+  ctx.fillStyle = "rgba(63, 115, 85, 0.35)";
+  for (let x = 0; x < w; x += 10 * devicePixelRatio) {
+    const base = h / 2 + Math.sin(x / 60 + t) * h * 0.25;
+    const y = base + (Math.random() - 0.5) * h * 0.5;
+    ctx.beginPath();
+    ctx.arc(x, y, 2.2 * devicePixelRatio, 0, 7);
+    ctx.fill();
+  }
+
+  // clean signal (rose)
+  ctx.strokeStyle = "#c4587a";
+  ctx.lineWidth = 3 * devicePixelRatio;
+  ctx.beginPath();
+  for (let x = 0; x <= w; x += 4) {
+    const y = h / 2 + Math.sin(x / 60 + t) * h * 0.25;
+    x ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
+  }
+  ctx.stroke();
+
+  t += 0.03;
+  setTimeout(() => requestAnimationFrame(draw), 60);
+}
+draw();
