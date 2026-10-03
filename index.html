@@ -3,10 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jasmita R. Iragam | Data Science Portfolio</title>
+    <title>Jasmita Iragam | Data Science Student at Georgia State</title>
     <meta
       name="description"
-      content="Computer Science student at Georgia State University focused on data science, applied statistics, and machine learning."
+      content="Jasmita Iragam is a Georgia State Honors College computer science student who turns messy sensor, market and text data into tested apps, APIs and prototypes."
+    />
+    <meta property="og:title" content="Jasmita Iragam | Data Science Portfolio" />
+    <meta
+      property="og:description"
+      content="Data science projects, writing and toolkit from a Georgia State Honors College student."
+    />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#fff3f6" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23fbe3e8'/><text x='50' y='68' font-size='52' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23c4587a'>JI</text></svg>"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
@@ -17,15 +28,20 @@
   </head>
 
   <body>
-    <!-- ================= NAV ================= -->
+    <div class="status-bar">
+      <span class="dot"></span>
+      <strong>Currently:</strong>
+      building Aegis Flow &amp; competing at Hacklanta (Fall 2026)
+    </div>
+
     <nav>
       <div class="wrap">
         <a class="brand" href="#top"><i>JI</i> Jasmita Iragam</a>
         <ul>
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="#projects">Work</a></li>
           <li><a href="#writing">Writing</a></li>
-          <li><a href="#skills">Skills</a></li>
+          <li><a href="#skills">Toolkit</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <a class="btn fill" href="#contact">Let's talk</a>
@@ -33,60 +49,87 @@
       <div class="progress" id="progress"></div>
     </nav>
 
-    <!-- ================= HERO ================= -->
+    <!-- ================= HOME ================= -->
     <header class="hero" id="top">
       <div class="wrap grid">
         <div class="reveal">
-          <span class="eyebrow">Data Science · GSU Honors College · Atlanta, GA</span>
+          <span class="eyebrow">Jasmita Iragam · Data Science · Georgia State</span>
           <h1>Finding <em>signal</em> in the infinite noise.</h1>
           <p class="lead">
-            Computer Science student at Georgia State University focused on data science,
-            applied statistics, and quantitative machine learning. I build reliable,
-            math-grounded tools.
+            I'm a computer science student who turns messy sensor, market and
+            text data into tested, usable tools: apps, APIs and working
+            prototypes.
           </p>
           <div class="cta">
-            <a class="btn fill" href="#projects">View my work ↓</a>
+            <a class="btn fill" href="#projects">See my work ↓</a>
+            <a class="btn line" href="resume.pdf">Download résumé</a>
             <a class="btn line" href="https://github.com/Jasmita09">GitHub ↗</a>
             <a class="btn line" href="https://www.linkedin.com/in/jasmita-i-4946a0419/">LinkedIn ↗</a>
           </div>
         </div>
 
-        <aside class="signal-card reveal">
+        <!-- Display-only checklist: change class "todo" to "done" to tick an item -->
+        <aside class="check-card reveal" aria-label="Milestones and roadmap">
           <header>
-            <span>Live · signal vs noise</span>
-            <span>2026</span>
+            <span>Milestones &amp; roadmap</span>
+            <span class="counter"><b id="done">0</b> / <b id="total">0</b> done</span>
           </header>
-          <canvas id="signal"></canvas>
-          <footer>"In a world of noise, become irreplaceable."</footer>
+          <div class="meter"><div id="meter-fill"></div></div>
+
+          <ul class="checklist" id="checklist">
+            <li class="done">
+              <span class="box"></span>
+              <span class="txt">Built Project Tara at HackHer GSU 2026</span>
+            </li>
+            <li class="done">
+              <span class="box"></span>
+              <span class="txt">Maintaining a 4.0 GPA at GSU Honors College</span>
+            </li>
+            <li class="done">
+              <span class="box"></span>
+              <span class="txt">Girls Who Code Scholar (11 certifications)</span>
+            </li>
+            <li class="todo">
+              <span class="box"></span>
+              <span class="txt">Compete at Hacklanta (Fall 2026)</span>
+            </li>
+            <li class="todo">
+              <span class="box"></span>
+              <span class="txt">Prototype the Aegis Flow thermal drift model</span>
+            </li>
+            <li class="todo">
+              <span class="box"></span>
+              <span class="txt">Publish my first data science breakdown</span>
+            </li>
+          </ul>
         </aside>
       </div>
     </header>
-
-    <!-- ================= TICKER ================= -->
-    <div class="ticker" aria-hidden="true">
-      <div>
-        <span>Python</span><span>Applied Statistics</span><span>Machine Learning</span>
-        <span>Time-Series</span><span>FastAPI</span><span>TimescaleDB</span>
-        <span>Python</span><span>Applied Statistics</span><span>Machine Learning</span>
-        <span>Time-Series</span><span>FastAPI</span><span>TimescaleDB</span>
-      </div>
-    </div>
 
     <!-- ================= ABOUT ================= -->
     <section id="about">
       <div class="wrap about">
         <div class="reveal">
           <span class="sec-num">01 / about me</span>
-          <h2>Math first, tools second.</h2>
+          <h2>Curious about what data is really saying.</h2>
+          <!-- Optional headshot:
+          <img class="headshot" src="headshot.jpg" alt="Portrait of Jasmita Iragam" />
+          -->
           <p>
-            I study Computer Science in the Honors College at Georgia State University.
-            Rather than skimming surface-level AI tools, I focus on the mathematical
-            foundations that make algorithms reliable: statistical distributions,
-            time-series telemetry, and deterministic validation.
+            I'm a Computer Science student in the Honors College at Georgia State
+            University, focusing on data science. I like taking messy, real-world
+            data, such as sensor readings, market prices and text, and finding the
+            patterns that actually hold up.
           </p>
           <p>
-            My goal is to uncover genuine patterns in complex data and translate
-            high-dimensional math into tools that solve real problems.
+            Rather than skimming surface-level AI tools, I care about understanding
+            why a model works: how to check it, test it and trust it. Then I turn it
+            into something people can use.
+          </p>
+          <p>
+            I'm honest about where I am: I know the machine learning basics and I'm
+            building depth with every project. That's why I build in public and
+            write about what I learn.
           </p>
           <p class="quote">In a world of noise, become irreplaceable.</p>
         </div>
@@ -95,12 +138,12 @@
           <div class="fact">
             <small>Education</small>
             <h4>Georgia State University</h4>
-            <span>B.S. Computer Science · Honors College · 4.00 GPA</span>
+            <span>B.S. Computer Science · Honors College</span>
           </div>
           <div class="fact">
             <small>Honor</small>
             <h4>President's List Scholar</h4>
-            <span>Awarded for multi-semester academic excellence</span>
+            <span>Summer 2025 · Summer 2026</span>
           </div>
           <div class="fact">
             <small>Fellowship</small>
@@ -111,51 +154,39 @@
       </div>
     </section>
 
-    <!-- ================= STATS ================= -->
-    <div class="stats">
-      <div class="wrap grid">
-        <div><b data-count="4" data-dec="2">0</b><span>GPA</span></div>
-        <div><b data-count="11">0</b><span>Certifications</span></div>
-        <div><b data-count="2">0</b><span>Projects shipped</span></div>
-        <div><b data-count="2">0</b><span>Prototypes building</span></div>
-      </div>
-    </div>
-
-    <!-- ================= FOCUS ================= -->
+    <!-- ================= HOW I WORK ================= -->
     <section>
       <div class="wrap">
-        <span class="sec-num reveal">02 / what I do</span>
-        <h2 class="reveal">Three things I care about.</h2>
-        <p class="sub reveal">The foundations behind the projects I choose to build.</p>
+        <span class="sec-num reveal">02 / how I work</span>
+        <h2 class="reveal">I build things end to end.</h2>
+        <p class="sub reveal">From raw data to something you can actually open and use.</p>
 
         <div class="focus">
           <article class="reveal">
             <em>01</em>
-            <h3>Statistics</h3>
-            <p>Distributions, goodness-of-fit tests, and regression models that make results trustworthy.</p>
+            <h3>Start with the data</h3>
+            <p>Sensor telemetry, market prices, text. I look for the pattern first and the tool second.</p>
           </article>
           <article class="reveal">
             <em>02</em>
-            <h3>Time-Series &amp; Anomalies</h3>
-            <p>Telemetry pipelines and anomaly detection for systems that need to act before failure.</p>
+            <h3>Ship it for real</h3>
+            <p>Hackathon builds, APIs and hardware prototypes, not just notebooks.</p>
           </article>
           <article class="reveal">
             <em>03</em>
-            <h3>Applied Engineering</h3>
-            <p>APIs, web apps, and hardware prototypes that turn models into real tools.</p>
+            <h3>Learn in public</h3>
+            <p>I write about what I learn and build alongside peers who keep me curious.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ================= PROJECTS ================= -->
-    <section id="projects" class="projects-bg">
+    <!-- ================= WORK ================= -->
+    <section id="projects">
       <div class="wrap">
         <span class="sec-num reveal">03 / selected work</span>
-        <h2 class="reveal">Projects &amp; prototypes.</h2>
-        <p class="sub reveal">
-          Shipped builds alongside research prototypes currently in progress.
-        </p>
+        <h2 class="reveal">Projects I'm proud of.</h2>
+        <p class="sub reveal">Two shipped builds and two prototypes in progress.</p>
 
         <div class="filters reveal">
           <button class="on" data-f="all">All</button>
@@ -166,24 +197,31 @@
         <div class="proj-grid">
           <article class="proj feat reveal" data-s="done">
             <div class="thumb">
-              <div>
-                Project Tara
-                <small>Add screenshot here</small>
-              </div>
+              <svg viewBox="0 0 320 180" role="img" aria-label="Illustrative log-regression trend with scattered data points">
+                <line x1="20" y1="150" x2="300" y2="150" class="axis" />
+                <line x1="20" y1="20" x2="20" y2="150" class="axis" />
+                <circle cx="40" cy="128" r="3" class="dot-a" />
+                <circle cx="75" cy="110" r="3" class="dot-a" />
+                <circle cx="110" cy="112" r="3" class="dot-a" />
+                <circle cx="150" cy="86" r="3" class="dot-a" />
+                <circle cx="190" cy="80" r="3" class="dot-a" />
+                <circle cx="230" cy="62" r="3" class="dot-a" />
+                <circle cx="270" cy="58" r="3" class="dot-a" />
+                <path d="M30 135 C 80 100, 140 80, 290 50" class="curve" />
+              </svg>
+              <small>Illustrative sketch · log-regression trend</small>
             </div>
             <div class="body">
               <span class="status">Completed · Featured</span>
               <h3>Project Tara: Autonomous Financial Assistant</h3>
               <p class="ctx">HackHer GSU 2026 · Sole developer</p>
-              <p>
-                An empathetic financial mentor web app with a dual-LLM failover pipeline
-                (Groq and Gemini via MCP), ElevenLabs voice synthesis with a Web Audio
-                visualizer, a 30-day logarithmic regression market radar, and on-chain
-                DCA execution via Solana Devnet.
-              </p>
+              <ul class="points">
+                <li><b>Core:</b> dual-LLM failover pipeline (Groq + Gemini via MCP)</li>
+                <li><b>Voice:</b> ElevenLabs synthesis with a live Web Audio visualizer</li>
+                <li><b>Math &amp; chain:</b> 30-day logarithmic regression market radar and on-chain DCA on Solana Devnet</li>
+              </ul>
               <div class="tags">
-                <span>Python</span><span>Flask</span><span>Solana</span>
-                <span>TimescaleDB</span><span>Groq</span>
+                <span>Python</span><span>Flask</span><span>Solana</span><span>Tiger Data</span><span>Groq</span>
               </div>
               <a class="link" href="https://github.com/Jasmita09/tara-finlit">View code ↗</a>
             </div>
@@ -191,20 +229,28 @@
 
           <article class="proj reveal" data-s="done">
             <div class="thumb alt">
-              <div>
-                Cryptanalysis Engine
-                <small>Chi-squared · O(N)</small>
-              </div>
+              <svg viewBox="0 0 320 180" role="img" aria-label="Illustrative bars of character frequency with an expected curve">
+                <line x1="20" y1="150" x2="300" y2="150" class="axis" />
+                <rect x="36" y="90" width="22" height="60" class="bar" />
+                <rect x="70" y="60" width="22" height="90" class="bar" />
+                <rect x="104" y="110" width="22" height="40" class="bar" />
+                <rect x="138" y="40" width="22" height="110" class="bar" />
+                <rect x="172" y="100" width="22" height="50" class="bar" />
+                <rect x="206" y="75" width="22" height="75" class="bar" />
+                <rect x="240" y="120" width="22" height="30" class="bar" />
+                <path d="M30 95 L 70 65 L 115 112 L 150 45 L 185 102 L 220 80 L 265 122" class="curve" />
+              </svg>
+              <small>Illustrative sketch · observed vs expected frequency</small>
             </div>
             <div class="body">
               <span class="status">Completed</span>
               <h3>Statistical Cryptanalysis Engine</h3>
               <p class="ctx">Girls Who Code project</p>
-              <p>
-                Turns cipher decryption into an automated statistical NLP pipeline using
-                Chi-Squared goodness-of-fit across 95 printable ASCII characters, with
-                single-pass O(N) scanning and vectorized Pandas calculations.
-              </p>
+              <ul class="points">
+                <li>Automates cipher decryption as a statistical NLP pipeline</li>
+                <li>Chi-Squared goodness-of-fit across 95 printable ASCII characters</li>
+                <li>Single-pass O(N) scanning with vectorized Pandas</li>
+              </ul>
               <div class="tags">
                 <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Statistics</span>
               </div>
@@ -214,23 +260,25 @@
 
           <article class="proj reveal" data-s="wip">
             <div class="thumb alt2">
-              <div>
-                Aegis Flow
-                <small>Hardware + ML</small>
-              </div>
+              <svg viewBox="0 0 320 180" role="img" aria-label="Illustrative temperature drift rising toward a limit line">
+                <line x1="20" y1="150" x2="300" y2="150" class="axis" />
+                <line x1="20" y1="55" x2="300" y2="55" class="thresh" />
+                <path d="M20 120 L 70 115 L 110 118 L 150 100 L 190 84 L 230 62 L 270 40" class="curve" />
+                <circle cx="270" cy="40" r="6" class="alert" />
+              </svg>
+              <small>Illustrative sketch · thermal drift vs limit</small>
             </div>
             <div class="body">
               <span class="status wip">In progress</span>
               <h3>Aegis Flow: Precision Cooling</h3>
               <p class="ctx">Hardware &amp; ML prototype</p>
-              <p>
-                A cyber-physical system addressing energy and water waste in AI server
-                rooms. Reads microcontroller sensor data, logs telemetry, and trains
-                anomaly detection models to migrate workloads before thermal limits are crossed.
-              </p>
+              <ul class="points">
+                <li>Targets energy and water waste in AI server rooms</li>
+                <li>Reads microcontroller sensor data, logs telemetry in Tiger Data</li>
+                <li>Anomaly detection to migrate workloads before thermal limits</li>
+              </ul>
               <div class="tags">
-                <span>Arduino / Pico</span><span>pySerial</span>
-                <span>TimescaleDB</span><span>Isolation Forest</span>
+                <span>Arduino / Pico</span><span>pySerial</span><span>Tiger Data</span><span>Isolation Forest</span>
               </div>
               <span class="note">Code coming soon</span>
             </div>
@@ -238,20 +286,23 @@
 
           <article class="proj reveal" data-s="wip">
             <div class="thumb">
-              <div>
-                Anomaly API
-                <small>Data-as-a-Service</small>
-              </div>
+              <svg viewBox="0 0 320 180" role="img" aria-label="Illustrative price dipping below a baseline band">
+                <line x1="20" y1="150" x2="300" y2="150" class="axis" />
+                <path d="M20 60 C 100 55, 200 50, 300 45 L 300 95 C 200 100, 100 105, 20 110 Z" class="band" />
+                <path d="M20 80 L 70 72 L 120 90 L 170 70 L 210 125 L 250 98 L 295 68" class="curve" />
+                <circle cx="210" cy="125" r="6" class="alert" />
+              </svg>
+              <small>Illustrative sketch · price vs baseline band</small>
             </div>
             <div class="body">
               <span class="status wip">In progress</span>
               <h3>Log-Regression Market Anomaly API</h3>
               <p class="ctx">Data-as-a-Service</p>
-              <p>
-                A headless REST API packaging 30-day logarithmic regression models to
-                calculate asset baselines and dispatch automated alerts when statistical
-                discounts appear.
-              </p>
+              <ul class="points">
+                <li>Headless REST API around 30-day log-regression models</li>
+                <li>Calculates asset baselines</li>
+                <li>Sends webhook alerts when statistical discounts appear</li>
+              </ul>
               <div class="tags">
                 <span>FastAPI</span><span>NumPy</span><span>yfinance</span><span>Webhooks</span>
               </div>
@@ -267,9 +318,7 @@
       <div class="wrap">
         <span class="sec-num reveal">04 / writing</span>
         <h2 class="reveal">Dispatches.</h2>
-        <p class="sub reveal">
-          Short thoughts on data science papers, books, and building in public.
-        </p>
+        <p class="sub reveal">Short thoughts on data science papers, books, and building in public.</p>
 
         <a class="post reveal" href="research.html">
           <small>OCTOBER 2026 · ESSAY</small>
@@ -289,34 +338,56 @@
           <span class="arrow">→</span>
         </a>
 
-        <p class="more">
-          <a class="btn line" href="research.html">View all posts →</a>
-        </p>
+        <p class="more"><a class="btn line" href="research.html">View all posts →</a></p>
       </div>
     </section>
 
-    <!-- ================= SKILLS ================= -->
-    <section id="skills" class="skills-bg">
+    <!-- ================= TOOLKIT ================= -->
+    <section id="skills">
       <div class="wrap">
         <span class="sec-num reveal">05 / toolkit</span>
-        <h2 class="reveal">Tools &amp; current focus.</h2>
-        <p class="sub reveal">What I use, and what I'm working through right now.</p>
+        <h2 class="reveal">Tools &amp; what I'm learning.</h2>
+        <p class="sub reveal">What I work with today, and where I'm still growing.</p>
 
         <div class="skill-grid">
           <div class="skill-box reveal">
             <h3>Data Science &amp; Analytics</h3>
-            <div class="chips">
-              <span>Python</span><span>NumPy</span><span>Pandas</span><span>SciPy</span>
-              <span>PySpark</span><span>Applied Statistics</span><span>Matplotlib</span>
-              <span>Seaborn</span><span>yfinance</span>
+            <div class="row">
+              <h4>Languages</h4>
+              <div class="chips"><span>Python</span><span>SQL</span></div>
+            </div>
+            <div class="row">
+              <h4>Data</h4>
+              <div class="chips"><span>NumPy</span><span>Pandas</span><span>SciPy</span><span>PySpark</span></div>
+            </div>
+            <div class="row">
+              <h4>Visualization</h4>
+              <div class="chips"><span>Matplotlib</span><span>Seaborn</span></div>
+            </div>
+            <div class="row">
+              <h4>Statistics &amp; ML</h4>
+              <div class="chips"><span>Applied Statistics</span><span>Scikit-Learn</span><span>Neural Networks</span></div>
+              <p class="learning">Still learning: I know the ML basics and I'm building depth every project.</p>
             </div>
           </div>
+
           <div class="skill-box reveal">
-            <h3>AI &amp; Systems</h3>
-            <div class="chips">
-              <span>Scikit-Learn</span><span>Neural Networks</span><span>FastAPI</span>
-              <span>Flask</span><span>SQL</span><span>TimescaleDB</span>
-              <span>Solana Devnet</span><span>Git</span>
+            <h3>Systems &amp; Backend</h3>
+            <div class="row">
+              <h4>APIs &amp; Web</h4>
+              <div class="chips"><span>FastAPI</span><span>Flask</span></div>
+            </div>
+            <div class="row">
+              <h4>Databases</h4>
+              <div class="chips"><span>Tiger Data</span><span>SQL</span></div>
+            </div>
+            <div class="row">
+              <h4>Blockchain &amp; Market</h4>
+              <div class="chips"><span>Solana Devnet</span><span>yfinance</span></div>
+            </div>
+            <div class="row">
+              <h4>Workflow</h4>
+              <div class="chips"><span>Git</span></div>
             </div>
           </div>
         </div>
@@ -324,11 +395,11 @@
         <div class="living">
           <div class="reveal">
             <h4>LEARNING</h4>
-            <p>PySpark for distributed datasets and Pydantic validation patterns in FastAPI.</p>
+            <p>ML fundamentals, PySpark for distributed datasets, and Pydantic validation in FastAPI.</p>
           </div>
           <div class="reveal">
             <h4>BUILDING</h4>
-            <p>Aegis Flow thermal drift telemetry and refining Project Tara v2.</p>
+            <p>Aegis Flow thermal drift telemetry and Project Tara v2.</p>
           </div>
           <div class="reveal">
             <h4>READING</h4>
@@ -345,14 +416,16 @@
           <span class="sec-num">06 / let's connect</span>
           <h2>Let's build something together.</h2>
           <p>
-            I'm always happy to discuss data science research, upcoming hackathons
-            (next up: Hacklanta, Fall 2026), or project collaborations.
+            I'm open to data science internships, hackathon teams and project
+            collaborations. Send me a note about what you're working on.
           </p>
           <div class="cta">
             <a class="btn solid" href="mailto:jasmita.i1109@gmail.com">Email me ↗</a>
             <a class="btn" href="https://www.linkedin.com/in/jasmita-i-4946a0419/">LinkedIn ↗</a>
             <a class="btn" href="https://github.com/Jasmita09">GitHub ↗</a>
+            <a class="btn" href="resume.pdf">Résumé</a>
           </div>
+          <p class="response">I typically reply within 2 business days.</p>
         </div>
       </div>
     </section>
