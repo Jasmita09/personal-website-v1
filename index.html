@@ -1,377 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Jasmita R. Iragam | Data Science Portfolio</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jasmita R. Iragam | Data Science Portfolio</title>
+    <meta
+      name="description"
+      content="Computer Science student at Georgia State University focused on data science, applied statistics, and machine learning."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- Google Fonts: Modern Sans + Editorial Serif + Monospace -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <div id="skipnav">
-    <a href="#main-content">Skip to content</a>
-  </div>
-
-  <!-- Pastel Sticky Header -->
-  <header class="site-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo">
-        Jasmita <span class="logo-accent">Iragam</span>
-      </a>
-      <nav aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
+  <body>
+    <!-- ================= NAV ================= -->
+    <nav>
+      <div class="wrap">
+        <a class="brand" href="#top"><i>JI</i> Jasmita Iragam</a>
+        <ul>
+          <li><a href="#about">About</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="research.html">Writing & Blog</a></li>
-          <li><a href="portfolio.html">Data Science Quiz</a></li>
-          <li><a href="tools.html">Tools</a></li>
-          <li><a href="#contact" class="nav-cta">Say Hello</a></li>
+          <li><a href="#writing">Writing</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+        <a class="btn fill" href="#contact">Let's talk</a>
+      </div>
+      <div class="progress" id="progress"></div>
+    </nav>
+
+    <!-- ================= HERO ================= -->
+    <header class="hero" id="top">
+      <div class="wrap grid">
+        <div class="reveal">
+          <span class="eyebrow">Data Science · GSU Honors College · Atlanta, GA</span>
+          <h1>Finding <em>signal</em> in the infinite noise.</h1>
+          <p class="lead">
+            Computer Science student at Georgia State University focused on data science,
+            applied statistics, and quantitative machine learning. I build reliable,
+            math-grounded tools.
+          </p>
+          <div class="cta">
+            <a class="btn fill" href="#projects">View my work ↓</a>
+            <a class="btn line" href="https://github.com/Jasmita09">GitHub ↗</a>
+            <a class="btn line" href="https://www.linkedin.com/in/jasmita-i-4946a0419/">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <aside class="signal-card reveal">
+          <header>
+            <span>Live · signal vs noise</span>
+            <span>2026</span>
+          </header>
+          <canvas id="signal"></canvas>
+          <footer>"In a world of noise, become irreplaceable."</footer>
+        </aside>
+      </div>
+    </header>
+
+    <!-- ================= TICKER ================= -->
+    <div class="ticker" aria-hidden="true">
+      <div>
+        <span>Python</span><span>Applied Statistics</span><span>Machine Learning</span>
+        <span>Time-Series</span><span>FastAPI</span><span>TimescaleDB</span>
+        <span>Python</span><span>Applied Statistics</span><span>Machine Learning</span>
+        <span>Time-Series</span><span>FastAPI</span><span>TimescaleDB</span>
+      </div>
     </div>
-  </header>
 
-  <main id="main-content">
-
-    <!-- HERO SECTION: FINDING SIGNAL + INTERACTIVE MILESTONE CHECKLIST -->
-    <section class="hero-wrapper">
-      <div class="hero-layout">
-        
-        <!-- Left: Narrative & Motto -->
-        <div class="hero-left">
-          <div class="status-pill">
-            <span class="pulse-dot"></span>
-            <span>DATA SCIENCE · GSU HONORS COLLEGE</span>
-          </div>
-
-          <h1 class="hero-title">
-            Finding signal<br>
-            in the<br>
-            <span class="serif-italic">infinite noise.</span>
-          </h1>
-
-          <p class="hero-description">
-            Computer Science student at Georgia State University focusing on Data Science, 
-            applied statistics, and quantitative machine learning.
-          </p>
-
-          <div class="motto-badge">
-            <span class="motto-tag">CORE MOTTO</span>
-            <p class="motto-quote">"In a world of noise, become irreplaceable."</p>
-          </div>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn-pink">
-              VIEW PROJECTS <span class="arrow">↓</span>
-            </a>
-            <a href="research.html" class="link-underlined">VISIT BLOG</a>
-            <a href="https://github.com/Jasmita09" target="_blank" rel="noopener noreferrer" class="link-tag">GITHUB ↗</a>
-            <a href="https://www.linkedin.com/in/jasmita-i-4946a0419/" target="_blank" rel="noopener noreferrer" class="link-tag">LINKEDIN ↗</a>
-          </div>
-        </div>
-
-        <!-- Right: Interactive Milestone Checklist -->
-        <div class="hero-right">
-          <div class="todo-card">
-            <div class="todo-header">
-              <div>
-                <span class="todo-kicker">MILESTONES & ROADMAP</span>
-                <h3>Progress Log</h3>
-              </div>
-              <span class="todo-counter" id="todo-counter">3 / 6 Done</span>
-            </div>
-            
-            <p class="todo-hint">A snapshot of my current roadmap:</p>
-
-            <ul class="todo-list" id="todo-list">
-              <li class="todo-item is-completed">
-                <label>
-                  <input type="checkbox" checked disabled>
-                  <span class="custom-checkbox"></span>
-                  <span class="item-text">Built Project Tara at HackHer GSU 2026</span>
-                </label>
-              </li>
-              <li class="todo-item is-completed">
-                <label>
-                  <input type="checkbox" checked disabled>
-                  <span class="custom-checkbox"></span>
-                  <span class="item-text">Maintained 4.0 GPA at GSU Honors College</span>
-                </label>
-              </li>
-              <li class="todo-item is-completed">
-                <label>
-                  <input type="checkbox" checked disabled>
-                  <span class="custom-checkbox"></span>
-                  <span class="item-text">Girls Who Code Scholar (11 Certifications)</span>
-                </label>
-              </li>
-              <li class="todo-item">
-                <label>
-                  <input type="checkbox" disabled>
-                  <span class="custom-checkbox"></span>
-                  <span class="item-text">Compete at Hacklanta (Fall 2026)</span>
-                </label>
-              </li>
-              <li class="todo-item">
-                <label>
-                  <input type="checkbox" disabled>
-                  <span class="custom-checkbox"></span>
-                  <span class="item-text">Prototype Aegis Flow thermal drift model</span>
-                </label>
-              </li>
-              <li class="todo-item">
-                <label>
-                  <input type="checkbox" disabled>
-                  <span class="custom-checkbox"></span>
-                  <span class="item-text">Publish inaugural data science breakdown</span>
-                </label>
-              </li>
-            </ul>
-
-            <div class="todo-footer">
-              <span>Updated for 2026</span>
-              <span class="heart-tag">Atlanta, GA</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ABOUT ME: SHORT & CRISP -->
-    <section id="about" class="section-container">
-      <div class="section-header-simple">
-        <h2>About Me</h2>
-        <p>A quick summary of my academic path and data science focus.</p>
-      </div>
-
-      <div class="about-grid">
-        <div class="about-card">
+    <!-- ================= ABOUT ================= -->
+    <section id="about">
+      <div class="wrap about">
+        <div class="reveal">
+          <span class="sec-num">01 / about me</span>
+          <h2>Math first, tools second.</h2>
           <p>
-            I study Computer Science in the Honors College at Georgia State University. Rather than skimming surface-level AI tools, I focus on the mathematical foundations that make algorithms reliable: statistical distributions, time-series telemetry, and deterministic validation.
+            I study Computer Science in the Honors College at Georgia State University.
+            Rather than skimming surface-level AI tools, I focus on the mathematical
+            foundations that make algorithms reliable: statistical distributions,
+            time-series telemetry, and deterministic validation.
           </p>
           <p>
-            My goal is to uncover genuine patterns in complex data and translate high-dimensional math into tools that solve real problems.
+            My goal is to uncover genuine patterns in complex data and translate
+            high-dimensional math into tools that solve real problems.
           </p>
+          <p class="quote">In a world of noise, become irreplaceable.</p>
         </div>
 
-        <div class="milestones-compact">
-          <div class="mini-stat-card">
-            <span class="stat-badge">EDUCATION</span>
+        <div class="facts reveal">
+          <div class="fact">
+            <small>Education</small>
             <h4>Georgia State University</h4>
-            <p>B.S. in Computer Science · Honors College (4.00 GPA)</p>
+            <span>B.S. Computer Science · Honors College · 4.00 GPA</span>
           </div>
-          <div class="mini-stat-card">
-            <span class="stat-badge">HONOR</span>
+          <div class="fact">
+            <small>Honor</small>
             <h4>President's List Scholar</h4>
-            <p>Awarded for multi-semester academic excellence.</p>
+            <span>Awarded for multi-semester academic excellence</span>
           </div>
-          <div class="mini-stat-card">
-            <span class="stat-badge">FELLOWSHIP</span>
+          <div class="fact">
+            <small>Fellowship</small>
             <h4>Girls Who Code Technical Scholar</h4>
-            <p>11 credentials across AI, ML, Data Science, and Security.</p>
+            <span>11 credentials across AI, ML, Data Science, and Security</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROJECTS: COMBINED LIVE & UNDER CONSTRUCTION -->
-    <section id="projects" class="section-container">
-      <div class="section-header-simple">
-        <h2>Selected Projects</h2>
-        <p>Completed builds alongside research prototypes currently in progress.</p>
+    <!-- ================= STATS ================= -->
+    <div class="stats">
+      <div class="wrap grid">
+        <div><b data-count="4" data-dec="2">0</b><span>GPA</span></div>
+        <div><b data-count="11">0</b><span>Certifications</span></div>
+        <div><b data-count="2">0</b><span>Projects shipped</span></div>
+        <div><b data-count="2">0</b><span>Prototypes building</span></div>
       </div>
+    </div>
 
-      <div class="projects-grid">
-        
-        <article class="project-box">
-          <div class="box-top">
-            <span class="tag-live">COMPLETED</span>
-            <span class="box-event">HackHer GSU 2026</span>
-          </div>
-          <h3>Project Tara: Autonomous Financial Assistant</h3>
-          <p>
-            Sole developer of an empathetic financial mentor web application. Engineered a dual-LLM failover pipeline (Groq and Gemini via MCP), ElevenLabs voice synthesis with a Web Audio visualizer, a 30-day logarithmic regression market radar, and on-chain DCA execution via Solana Devnet.
-          </p>
-          <div class="tech-pills">
-            <span>Python</span><span>Flask</span><span>Solana</span><span>TimescaleDB</span><span>Groq</span>
-          </div>
-          <div class="box-links">
-            <a href="https://github.com/Jasmita09/tara-finlit" target="_blank" rel="noopener noreferrer" class="btn-dark-sm">View Code ↗</a>
-          </div>
-        </article>
+    <!-- ================= FOCUS ================= -->
+    <section>
+      <div class="wrap">
+        <span class="sec-num reveal">02 / what I do</span>
+        <h2 class="reveal">Three things I care about.</h2>
+        <p class="sub reveal">The foundations behind the projects I choose to build.</p>
 
-        <article class="project-box">
-          <div class="box-top">
-            <span class="tag-live">COMPLETED</span>
-            <span class="box-event">Girls Who Code Project</span>
-          </div>
-          <h3>Vectorized Statistical Cryptanalysis Engine</h3>
-          <p>
-            Transforms cipher decryption into an automated statistical NLP pipeline. Uses Chi-Squared Goodness-of-Fit tests across 95 printable ASCII characters, optimizing string scanning down to single-pass O(N) complexity and vectorizing calculations via Pandas Series.
-          </p>
-          <div class="tech-pills">
-            <span>Python</span><span>Pandas (Vectorized)</span><span>Matplotlib</span><span>Statistics</span>
-          </div>
-          <div class="box-links">
-            <a href="https://github.com/Jasmita09/statistical-cryptanalysis-tool" target="_blank" rel="noopener noreferrer" class="btn-dark-sm">View Code ↗</a>
-          </div>
-        </article>
-
-        <article class="project-box box-construction">
-          <div class="box-top">
-            <span class="tag-wip">UNDER CONSTRUCTION</span>
-            <span class="box-event">Hardware & ML Prototype</span>
-          </div>
-          <h3>Aegis Flow: Data Center Precision Cooling</h3>
-          <p>
-            A cyber-physical system addressing energy and water waste in AI server rooms. Reads micro-controller sensor data via Python, logs telemetry in TimescaleDB, and trains anomaly detection models to migrate computing workloads before thermal limits are crossed.
-          </p>
-          <div class="tech-pills">
-            <span>Arduino / Pico</span><span>pySerial</span><span>TimescaleDB</span><span>Isolation Forest</span>
-          </div>
-          <div class="box-links">
-            <span class="status-note">Active Prototype · Code coming soon</span>
-          </div>
-        </article>
-
-        <article class="project-box box-construction">
-          <div class="box-top">
-            <span class="tag-wip">UNDER CONSTRUCTION</span>
-            <span class="box-event">Data-as-a-Service</span>
-          </div>
-          <h3>Log-Regression Market Anomaly API</h3>
-          <p>
-            A headless REST API packaging 30-day logarithmic regression models to calculate asset baselines and dispatch automated alerts when statistical discounts appear.
-          </p>
-          <div class="tech-pills">
-            <span>FastAPI</span><span>NumPy</span><span>yfinance</span><span>Webhooks</span>
-          </div>
-          <div class="box-links">
-            <span class="status-note">API design in progress</span>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- WRITING PREVIEW (Links to Blog Page) -->
-    <section id="writing" class="section-container">
-      <div class="section-header-simple">
-        <h2>Writing & Dispatches</h2>
-        <p>Short thoughts on data science papers, books, and building in public.</p>
-      </div>
-
-      <div class="writing-preview-grid">
-        <article class="dispatch-card">
-          <span class="dispatch-date">OCTOBER 2026 · ESSAY</span>
-          <h3><a href="research.html">On Building in Public and Peer Community</a></h3>
-          <p>
-            A personal tribute to my friend Vy's publication (ViVu Notes) and why surrounding yourself with curious peers changes the way you learn technical craft.
-          </p>
-          <a href="research.html" class="read-more-link">Read on Blog →</a>
-        </article>
-
-        <article class="dispatch-card">
-          <span class="dispatch-date">OCTOBER 2026 · TECHNICAL</span>
-          <h3><a href="research.html">Applying Chi-Squared Tests to Text Frequency</a></h3>
-          <p>
-            A look at how fundamental probability distributions can automate cryptanalysis and how vectorized Pandas operations drastically reduce computational runtime.
-          </p>
-          <a href="research.html" class="read-more-link">Read on Blog →</a>
-        </article>
-      </div>
-
-      <div class="center-cta">
-        <a href="research.html" class="btn-outline-pink">View All Blog Dispatches →</a>
-      </div>
-    </section>
-
-    <!-- SKILLS & CURRENT FOCUS -->
-    <section id="skills" class="section-container">
-      <div class="section-header-simple">
-        <h2>Toolkit & Current Focus</h2>
-        <p>The tools I use and what I am currently working through.</p>
-      </div>
-
-      <div class="skills-combined-grid">
-        
-        <div class="toolkit-column">
-          <h3 class="column-subtitle">Core Arsenal</h3>
-          
-          <div class="skill-group">
-            <span class="group-title">Data Science & Analytics</span>
-            <div class="pill-cloud">
-              <span>Python</span><span>NumPy</span><span>Pandas</span><span>SciPy</span><span>PySpark</span><span>Applied Statistics</span><span>Matplotlib</span><span>Seaborn</span><span>yfinance</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <span class="group-title">AI & Systems</span>
-            <div class="pill-cloud">
-              <span>Scikit-Learn</span><span>Neural Networks</span><span>FastAPI</span><span>Flask</span><span>SQL</span><span>TimescaleDB</span><span>Solana Devnet</span><span>Git</span>
-            </div>
-          </div>
+        <div class="focus">
+          <article class="reveal">
+            <em>01</em>
+            <h3>Statistics</h3>
+            <p>Distributions, goodness-of-fit tests, and regression models that make results trustworthy.</p>
+          </article>
+          <article class="reveal">
+            <em>02</em>
+            <h3>Time-Series &amp; Anomalies</h3>
+            <p>Telemetry pipelines and anomaly detection for systems that need to act before failure.</p>
+          </article>
+          <article class="reveal">
+            <em>03</em>
+            <h3>Applied Engineering</h3>
+            <p>APIs, web apps, and hardware prototypes that turn models into real tools.</p>
+          </article>
         </div>
-
-        <div class="currently-column">
-          <h3 class="column-subtitle">Current Living List</h3>
-          
-          <div class="live-status-list">
-            <div class="live-item">
-              <span class="live-badge badge-learning">LEARNING</span>
-              <p>PySpark for distributed datasets and Pydantic validation patterns in FastAPI.</p>
-            </div>
-            <div class="live-item">
-              <span class="live-badge badge-building">BUILDING</span>
-              <p>Aegis Flow thermal drift telemetry and refining Project Tara v2.</p>
-            </div>
-            <div class="live-item">
-              <span class="live-badge badge-reading">READING</span>
-              <p>Machine learning papers on time-series anomaly detection and systems modeling.</p>
-            </div>
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="section-container contact-section">
-      <div class="contact-card">
-        <h2>Let's Connect</h2>
-        <p>
-          I am always happy to discuss data science research, upcoming hackathons, or project collaborations.
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="projects-bg">
+      <div class="wrap">
+        <span class="sec-num reveal">03 / selected work</span>
+        <h2 class="reveal">Projects &amp; prototypes.</h2>
+        <p class="sub reveal">
+          Shipped builds alongside research prototypes currently in progress.
         </p>
 
-        <div class="contact-links">
-          <a href="mailto:jasmita.i1109@gmail.com" class="btn-pink">
-            EMAIL ME <span>↗</span>
-          </a>
-          <a href="https://www.linkedin.com/in/jasmita-i-4946a0419/" target="_blank" rel="noopener noreferrer" class="btn-outline-dark">
-            LINKEDIN ↗
-          </a>
-          <a href="https://github.com/Jasmita09" target="_blank" rel="noopener noreferrer" class="btn-outline-dark">
-            GITHUB ↗
-          </a>
+        <div class="filters reveal">
+          <button class="on" data-f="all">All</button>
+          <button data-f="done">Completed</button>
+          <button data-f="wip">In progress</button>
+        </div>
+
+        <div class="proj-grid">
+          <article class="proj feat reveal" data-s="done">
+            <div class="thumb">
+              <div>
+                Project Tara
+                <small>Add screenshot here</small>
+              </div>
+            </div>
+            <div class="body">
+              <span class="status">Completed · Featured</span>
+              <h3>Project Tara: Autonomous Financial Assistant</h3>
+              <p class="ctx">HackHer GSU 2026 · Sole developer</p>
+              <p>
+                An empathetic financial mentor web app with a dual-LLM failover pipeline
+                (Groq and Gemini via MCP), ElevenLabs voice synthesis with a Web Audio
+                visualizer, a 30-day logarithmic regression market radar, and on-chain
+                DCA execution via Solana Devnet.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>Flask</span><span>Solana</span>
+                <span>TimescaleDB</span><span>Groq</span>
+              </div>
+              <a class="link" href="https://github.com/Jasmita09/tara-finlit">View code ↗</a>
+            </div>
+          </article>
+
+          <article class="proj reveal" data-s="done">
+            <div class="thumb alt">
+              <div>
+                Cryptanalysis Engine
+                <small>Chi-squared · O(N)</small>
+              </div>
+            </div>
+            <div class="body">
+              <span class="status">Completed</span>
+              <h3>Statistical Cryptanalysis Engine</h3>
+              <p class="ctx">Girls Who Code project</p>
+              <p>
+                Turns cipher decryption into an automated statistical NLP pipeline using
+                Chi-Squared goodness-of-fit across 95 printable ASCII characters, with
+                single-pass O(N) scanning and vectorized Pandas calculations.
+              </p>
+              <div class="tags">
+                <span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Statistics</span>
+              </div>
+              <a class="link" href="https://github.com/Jasmita09/statistical-cryptanalysis-tool">View code ↗</a>
+            </div>
+          </article>
+
+          <article class="proj reveal" data-s="wip">
+            <div class="thumb alt2">
+              <div>
+                Aegis Flow
+                <small>Hardware + ML</small>
+              </div>
+            </div>
+            <div class="body">
+              <span class="status wip">In progress</span>
+              <h3>Aegis Flow: Precision Cooling</h3>
+              <p class="ctx">Hardware &amp; ML prototype</p>
+              <p>
+                A cyber-physical system addressing energy and water waste in AI server
+                rooms. Reads microcontroller sensor data, logs telemetry, and trains
+                anomaly detection models to migrate workloads before thermal limits are crossed.
+              </p>
+              <div class="tags">
+                <span>Arduino / Pico</span><span>pySerial</span>
+                <span>TimescaleDB</span><span>Isolation Forest</span>
+              </div>
+              <span class="note">Code coming soon</span>
+            </div>
+          </article>
+
+          <article class="proj reveal" data-s="wip">
+            <div class="thumb">
+              <div>
+                Anomaly API
+                <small>Data-as-a-Service</small>
+              </div>
+            </div>
+            <div class="body">
+              <span class="status wip">In progress</span>
+              <h3>Log-Regression Market Anomaly API</h3>
+              <p class="ctx">Data-as-a-Service</p>
+              <p>
+                A headless REST API packaging 30-day logarithmic regression models to
+                calculate asset baselines and dispatch automated alerts when statistical
+                discounts appear.
+              </p>
+              <div class="tags">
+                <span>FastAPI</span><span>NumPy</span><span>yfinance</span><span>Webhooks</span>
+              </div>
+              <span class="note">API design in progress</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-  </main>
+    <!-- ================= WRITING ================= -->
+    <section id="writing">
+      <div class="wrap">
+        <span class="sec-num reveal">04 / writing</span>
+        <h2 class="reveal">Dispatches.</h2>
+        <p class="sub reveal">
+          Short thoughts on data science papers, books, and building in public.
+        </p>
 
-  <footer class="site-footer">
-    <div class="nav-container footer-flex">
-      <p>Jasmita R. Iragam · Data Science Portfolio</p>
-      <a href="#main-content" class="top-anchor">Back to top ↑</a>
-    </div>
-  </footer>
+        <a class="post reveal" href="research.html">
+          <small>OCTOBER 2026 · ESSAY</small>
+          <div>
+            <h3>On Building in Public and Peer Community</h3>
+            <p>A tribute to Vy's publication (ViVu Notes) and why curious peers change how you learn technical craft.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
 
-</body>
+        <a class="post reveal" href="research.html">
+          <small>OCTOBER 2026 · TECHNICAL</small>
+          <div>
+            <h3>Applying Chi-Squared Tests to Text Frequency</h3>
+            <p>How probability distributions can automate cryptanalysis, and how vectorized Pandas cuts runtime.</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+
+        <p class="more">
+          <a class="btn line" href="research.html">View all posts →</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="skills-bg">
+      <div class="wrap">
+        <span class="sec-num reveal">05 / toolkit</span>
+        <h2 class="reveal">Tools &amp; current focus.</h2>
+        <p class="sub reveal">What I use, and what I'm working through right now.</p>
+
+        <div class="skill-grid">
+          <div class="skill-box reveal">
+            <h3>Data Science &amp; Analytics</h3>
+            <div class="chips">
+              <span>Python</span><span>NumPy</span><span>Pandas</span><span>SciPy</span>
+              <span>PySpark</span><span>Applied Statistics</span><span>Matplotlib</span>
+              <span>Seaborn</span><span>yfinance</span>
+            </div>
+          </div>
+          <div class="skill-box reveal">
+            <h3>AI &amp; Systems</h3>
+            <div class="chips">
+              <span>Scikit-Learn</span><span>Neural Networks</span><span>FastAPI</span>
+              <span>Flask</span><span>SQL</span><span>TimescaleDB</span>
+              <span>Solana Devnet</span><span>Git</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="living">
+          <div class="reveal">
+            <h4>LEARNING</h4>
+            <p>PySpark for distributed datasets and Pydantic validation patterns in FastAPI.</p>
+          </div>
+          <div class="reveal">
+            <h4>BUILDING</h4>
+            <p>Aegis Flow thermal drift telemetry and refining Project Tara v2.</p>
+          </div>
+          <div class="reveal">
+            <h4>READING</h4>
+            <p>ML papers on time-series anomaly detection and systems modeling.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact reveal">
+          <span class="sec-num">06 / let's connect</span>
+          <h2>Let's build something together.</h2>
+          <p>
+            I'm always happy to discuss data science research, upcoming hackathons
+            (next up: Hacklanta, Fall 2026), or project collaborations.
+          </p>
+          <div class="cta">
+            <a class="btn solid" href="mailto:jasmita.i1109@gmail.com">Email me ↗</a>
+            <a class="btn" href="https://www.linkedin.com/in/jasmita-i-4946a0419/">LinkedIn ↗</a>
+            <a class="btn" href="https://github.com/Jasmita09">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      © 2026 Jasmita R. Iragam · Atlanta, GA · <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
