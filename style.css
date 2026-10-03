@@ -6,7 +6,6 @@
   --sage-2: #bcd8c3;
   --butter: #fdf1c9;
   --rose: #c4587a;
-  --rose-dark: #a2446351;
   --plum: #3d2f3b;
   --sage-ink: #3f7355;
   --mute: #7b6a75;
@@ -312,12 +311,12 @@ h2 {
   color: #5a4a56;
 }
 
-.quote {
+.about p.quote {
   padding-left: 18px;
   border-left: 4px solid var(--sage-2);
   font-family: "DM Serif Display", serif;
   font-size: 1.4rem;
-  color: var(--rose) !important;
+  color: var(--rose);
 }
 
 .facts {
@@ -623,7 +622,6 @@ h2 {
   align-items: center;
   padding: 28px 20px;
   border-top: 1px solid var(--line);
-  border-radius: 0;
   transition: 0.2s;
 }
 
@@ -704,8 +702,8 @@ h2 {
   background: var(--sage);
 }
 
-.chips span:hover {
-  background: var(--butter) !important;
+.skill-box .chips span:hover {
+  background: var(--butter);
   transform: translateY(-2px);
 }
 
@@ -748,10 +746,6 @@ h2 {
   border-radius: 36px;
   background: linear-gradient(135deg, var(--blush), var(--sage));
   text-align: center;
-}
-
-.contact .sec-num {
-  color: var(--rose);
 }
 
 .contact h2 {
