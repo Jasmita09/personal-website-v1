@@ -150,7 +150,7 @@ h2 { max-width: 760px; margin-bottom: 16px; font-size: clamp(2.1rem, 4.5vw, 3.4r
 .proj-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
 .proj { display: flex; flex-direction: column; overflow: hidden; border-radius: 26px; transition: 0.25s; }
 .proj:hover { transform: translateY(-5px); }
-.proj.hide { display: none; }
+.proj.hide { display: none !important; }
 .proj.feat { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.1fr; }
 
 .thumb {
