@@ -1,123 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>UX & Audits | Jasmita R. Iragam</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cherri-Picked Notes | Jasmita Iragam</title>
+  <meta name="description" content="A notebook for books, data science, project lessons, and reflections by Jasmita Iragam.">
+  <meta name="theme-color" content="#fff6f7">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23fde8ec'/%3E%3Ctext x='50' y='68' font-size='52' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23b8435d'%3EJI%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
 
-  <div id="skipnav">
-    <a href="#main">Skip to main content</a>
-  </div>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container nav-container">
-      <a href="index.html" class="brand-logo">Jasmita <span>Iragam</span></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html">Data Projects</a></li>
-          <li><a href="graphics.html">Visualization</a></li>
-          <li><a href="research.html" class="active">UX & Audits</a></li>
-        </ul>
-      </nav>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JI</span>
+        Jasmita Iragam<span class="brand-dot">.</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        hidden
+      >
+        Menu <span aria-hidden="true">☰</span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Timeline</a></li>
+        <li>
+          <a href="research.html" aria-current="page">Cherri-Picked Notes</a>
+        </li>
+        <li><a href="tools.html">Activities</a></li>
+      </ul>
+
+      <a class="nav-contact" href="index.html#connect">Let’s connect ↗</a>
     </div>
-  </header>
 
-  <main id="main" class="container" style="padding-top: 2rem;">
+    <div class="progress" id="progress" aria-hidden="true"></div>
+  </nav>
 
-    <section class="card">
-      <h2>Accessible Data Visualization (WCAG Checklist)</h2>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">User Need</th>
-              <th scope="col">Accessible Design Implementation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Visual Impairment</td>
-              <td>Provide detailed alternative text (`alt`) and accessible data tables for charts.</td>
-            </tr>
-            <tr>
-              <td>Color Blindness</td>
-              <td>Use colorblind-safe palettes (e.g., Viridis) paired with distinct visual patterns.</td>
-            </tr>
-            <tr>
-              <td>Motor Impairment</td>
-              <td>Ensure dynamic dashboard filters are keyboard operable with visible focus states.</td>
-            </tr>
-            <tr>
-              <td>Auditory Loss</td>
-              <td>Provide captions, subtitles, and text transcripts for multimedia content.</td>
-            </tr>
-            <tr>
-              <td>Cognitive Focus</td>
-              <td>Maintain visual contrast ratios (WCAG AA standard) and predictable dashboard layouts.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+  <main id="main" tabindex="-1">
+    <header class="page-head wrap">
+      <span class="eyebrow">A notebook by Jasmita Iragam</span>
+      <h1>Cherri-Picked <em>Notes.</em></h1>
 
-    <section class="card">
-      <h2>Technical System Audit Remediation</h2>
-      <div class="table-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Audit Metric</th>
-              <th scope="col">Technical Findings & Remediation</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Missing Attributes</td>
-              <td>Remediated unlabelled form elements, missing alt attributes, and broken ARIA roles.</td>
-            </tr>
-            <tr>
-              <td>Contrast Ratios</td>
-              <td>Corrected text-to-background contrast to meet the minimum 4.5:1 ratio requirement.</td>
-            </tr>
-            <tr>
-              <td>Dynamic Live Regions</td>
-              <td>Integrated ARIA live regions to notify screen readers of real-time data table updates.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+      <p>
+        Things I’ve read. Ideas I’m sitting with.
+        Little discoveries at the intersection of data,
+        building, and being human.
+      </p>
+    </header>
 
-    <section class="card">
-      <h2>E-Commerce Usability Study (Task Analysis)</h2>
-      <div style="margin-top: 10px;">
-        <p><strong>Evaluation Platform:</strong> Amazon E-Commerce Navigation Flow</p>
-        <p><strong>Methodology:</strong> User task analysis focused on search efficiency and support access.</p>
-        <br>
-        <div class="grid-2">
-          <div class="focus-card">
-            <h3>Findings</h3>
-            <p>Users took an average of 8 distinct steps and 10 minutes to locate customer support, indicating friction in deep navigation layers.</p>
-          </div>
-          <div class="focus-card">
-            <h3>Recommendation</h3>
-            <p>Implement a persistent floating support button to streamline user assistance and reduce task completion drop-off.</p>
-          </div>
+    <section class="wrap" aria-label="Published notes">
+      <div class="notes-toolbar">
+        <div
+          class="note-filters"
+          role="group"
+          aria-label="Note categories"
+          hidden
+        >
+          <button
+            class="on"
+            type="button"
+            data-category="all"
+            aria-pressed="true"
+          >
+            All notes
+          </button>
+
+          <button
+            type="button"
+            data-category="reading"
+            aria-pressed="false"
+          >
+            Reading
+          </button>
+
+          <button
+            type="button"
+            data-category="data-science"
+            aria-pressed="false"
+          >
+            Data science
+          </button>
+
+          <button
+            type="button"
+            data-category="building"
+            aria-pressed="false"
+          >
+            Building
+          </button>
+
+          <button
+            type="button"
+            data-category="reflections"
+            aria-pressed="false"
+          >
+            Reflections
+          </button>
         </div>
-      </div>
-    </section>
 
+        <p id="note-count" role="status" aria-live="polite">
+          0 published notes
+        </p>
+      </div>
+
+      <div id="note-list"></div>
+
+      <div class="notes-empty" id="notes-empty">
+        <img
+          src="assets/cherri-picked.png"
+          width="593"
+          height="397"
+          alt="Cherri-Picked: Good things take a little growing. No published notes just yet. This is where the next idea will land."
+        >
+
+        <p id="empty-message">
+          This corner is for book notes, data science rabbit holes,
+          and lessons learned along the way.
+          My first note will appear when it’s ready.
+        </p>
+      </div>
+
+      <p class="notes-credit">
+        With a nod to Vy and
+        <a
+          href="https://vivunote.substack.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >ViVu’s writing</a>,
+        which inspired this space.
+      </p>
+    </section>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
-    </div>
+  <footer class="site-footer wrap">
+    <span>
+      © <span data-year>2026</span> Jasmita R. Iragam · Atlanta, GA
+    </span>
+    <span>A little more signal, a little less noise.</span>
+    <a href="#top">Back to top ↑</a>
   </footer>
-
 </body>
 </html>
