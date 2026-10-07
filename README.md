@@ -1,28 +1,52 @@
 # Personal Website (v1)
 
-This repository contains my first personal website, which I originally built as a high school project for my **AP Computer Science Principles (AP CSP)** class. It serves as an "about me" page and a showcase of the fundamental web concepts I learned during the course.
-Currently, I am in my first year of college. I maintain this repository as a "v1" legacy project to document my coding journey and show my technical progress over time.
+My personal portfolio website showcasing my projects, technical interests, and growth as a Computer Science student in the Honors College at Georgia State University, with a focus on data science.
+
+This site brings together my work, notes, and current learning goals—from exploring patterns in real-world data to building practical applications and APIs.
 
 ## Live Demo
-You can view the live version of this website here:  
-**[jasmita09.github.io/personal-website-v1](https://jasmita09.github.io/personal-website-v1/)**
+
+**[Visit my website](https://jasmita09.github.io/personal-website-v1/)**
 
 ## Built With
-* **HTML5** - For page structure and content.
-* **CSS3** - For styling, layouts, and basic design.
-* **JavaScript** - For adding basic interactivity and dynamic features.
-* **GitHub Pages** - For hosting and deploying the static site online.
 
-## Key Features 
-* **About Me Section:** An introduction to my background, interests, and academic goals.
-* **Learning Log:** A summary of foundational computer science concepts learned during my AP CSP course.
-* **Styling & Layout:** Basic CSS elements utilized to create a personalized user interface.
+- **HTML5** — Page structure and content.
+- **CSS3** — Styling, layouts, and visual design.
+- **JavaScript** — Interactivity and dynamic features.
+- **GitHub Pages** — Static website hosting and deployment.
+
+## Key Features
+
+- **About Me:** My academic background, technical interests, and approach to learning and building.
+- **Selected Work:** Featured projects with descriptions, technology stacks, and development statuses.
+- **Milestones & Roadmap:** Achievements and upcoming goals.
+- **Cherri-Picked Notes:** Writing on data science, mathematical models, technical projects, and building in public.
+- **Technical Toolkit:** The languages, libraries, and tools I work with, alongside areas I’m currently exploring.
+- **Contact & Collaboration:** Links to connect with me about internships, hackathons, and project opportunities.
+
+## Featured Projects
+
+- **Project Tara: Autonomous Financial Assistant (v2)** — An in-progress architectural rebuild combining financial analysis, conversational AI, and Solana devnet functionality.
+- **Statistical Cryptanalysis Engine** — A completed Python project that uses statistical scoring and text-frequency analysis to automate cipher decryption.
+- **Aegis Flow: Precision Cooling** — An in-progress hardware and software prototype exploring sensor telemetry, anomaly detection, and cooling efficiency.
+- **Log-Regression Market Anomaly API** — An in-progress API project focused on market baselines, regression models, and automated anomaly alerts.
 
 ## Growth & Next Steps
-Looking back at this project from my current perspective as a college student, I can see how my development skills have evolved. If I were to rebuild this website today, my next steps for improvement would be:
-1. **Semantic HTML:** Utilizing more structured HTML tags to improve web accessibility and SEO.
-2. **Modern Layouts:** Implementing CSS Flexbox or CSS Grid for a more robust, modern responsive design.
-3. **Interactivity:** Integrating JavaScript to add dynamic features and interactive elements to the user interface.
+
+I continue to evolve this website alongside my technical skills and portfolio. Future improvements include:
+
+1. **Accessibility:** Review semantic structure, keyboard navigation, and screen-reader support.
+2. **Responsive Design:** Refine layouts and usability across screen sizes.
+3. **Project Documentation:** Add deeper architecture breakdowns, demonstrations, and lessons learned.
+4. **Performance:** Review assets and loading behavior to keep the site fast.
+5. **New Content:** Expand my technical notes and keep project milestones current.
+
+## Connect
+
+- **GitHub:** [@jasmita09](https://github.com/jasmita09)
+- **LinkedIn:** [Jasmita Iragam](https://www.linkedin.com/in/jasmita-i-4946a0419/)
+- **Email:** [jasmita.i1109@gmail.com](mailto:jasmita.i1109@gmail.com)
 
 ---
-*Thank you for visiting! Feel free to explore my GitHub profile to see my newer college-level projects and check out my current development progress.*
+
+*Thank you for visiting! Explore my projects and notes to follow what I’m learning and building.*
