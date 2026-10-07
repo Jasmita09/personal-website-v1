@@ -3,95 +3,245 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Data Science Quiz | Jasmita Iragam</title>
+  <title>Timeline | Jasmita Iragam</title>
+  <meta name="description" content="Jasmita’s college journey: summer coursework, Statistical Cryptanalysis, fall classes, and Project Tara at HackHers GSU.">
+  <meta name="theme-color" content="#fff6f7">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23fde8ec'/%3E%3Ctext x='50' y='68' font-size='52' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23b8435d'%3EJI%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body>
 
-  <div id="skipnav">
-    <a href="#main">Skip to main content</a>
-  </div>
+<body id="top">
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-  <header class="site-header">
-    <div class="container nav-wrapper">
-      <a href="index.html" class="logo">Jasmita <span>Iragam</span></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="portfolio.html" class="active">Data Science Quiz</a></li>
-          <li><a href="accessibility.html">Accessibility</a></li>
-          <li><a href="usability.html">Usability</a></li>
-          <li><a href="graphics.html">Graphics</a></li>
-          <li><a href="javascript.html">Javascript</a></li>
-          <li><a href="tools.html">Tools</a></li>
-        </ul>
-      </nav>
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="wrap nav-wrap">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">JI</span>
+        Jasmita Iragam<span class="brand-dot">.</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        hidden
+      >
+        Menu <span aria-hidden="true">☰</span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html" aria-current="page">Timeline</a></li>
+        <li><a href="research.html">Cherri-Picked Notes</a></li>
+        <li><a href="tools.html">Activities</a></li>
+      </ul>
+
+      <a class="nav-contact" href="index.html#connect">Let’s connect ↗</a>
     </div>
-  </header>
 
-  <main id="main" class="container" style="padding-top: 2rem;">
+    <div class="progress" id="progress" aria-hidden="true"></div>
+  </nav>
 
-    <!-- Persona Quiz -->
-    <section class="card">
-      <h2>Data Science Persona Quiz</h2>
-      <p style="margin-bottom: 1.5rem;">Determine whether your strengths align with <strong>Data Analytics & Modeling</strong> or <strong>Data Engineering & Security</strong>.</p>
+  <main id="main" tabindex="-1">
+    <header class="page-head wrap">
+      <span class="eyebrow">The story so far</span>
+      <h1>One season,<br><em>many beginnings.</em></h1>
 
-      <div class="quiz-question">
-        <h3>1. Which workspace environment suits your workflow?</h3>
-        <div class="grid-2">
-          <div class="choice-box">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80" alt="Analytics dashboard">
-            <button id="q1a1" class="btn btn-outline">Analytics Dashboard</button>
-          </div>
-          <div class="choice-box">
-            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=500&q=80" alt="Server rack">
-            <button id="q1a2" class="btn btn-outline">Pipeline Infrastructure</button>
-          </div>
-        </div>
+      <p>
+        A living record of what I’m learning, building, and figuring
+        out—starting with my first summer at Georgia State.
+      </p>
+    </header>
+
+    <div class="wrap">
+      <div class="year-heading">
+        <strong>2026</strong>
+        <span>A year of firsts.</span>
       </div>
 
-      <div class="quiz-question">
-        <h3>2. What type of technical challenge excites you most?</h3>
-        <div class="grid-2">
-          <div class="choice-box">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=500&q=80" alt="Predictive code">
-            <button id="q2a1" class="btn btn-outline">Predictive Analytics</button>
-          </div>
-          <div class="choice-box">
-            <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=500&q=80" alt="Cybersecurity shield">
-            <button id="q2a2" class="btn btn-outline">Data Security Architecture</button>
-          </div>
-        </div>
-      </div>
+      <ol class="timeline" aria-label="College timeline">
 
-      <div class="quiz-question">
-        <h3>3. What output do you prefer delivering?</h3>
-        <div class="grid-2">
-          <div class="choice-box">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80" alt="Data chart report">
-            <button id="q3a1" class="btn btn-outline">Visual Data Reports</button>
+        <li class="timeline-event">
+          <div class="month-marker" aria-hidden="true">
+            <span>JUN</span>
+            <strong>06</strong>
           </div>
-          <div class="choice-box">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80" alt="Processor chip">
-            <button id="q3a2" class="btn btn-outline">Scalable Data Pipelines</button>
+
+          <article class="timeline-card">
+            <span class="eyebrow">
+              <time datetime="2026-06">June 2026</time> · Summer semester
+            </span>
+
+            <h2>A new chapter at GSU.</h2>
+
+            <p>
+              My first college semester. Foundations in computer science,
+              alongside new ways of understanding people and the world.
+            </p>
+
+            <details class="course-details" open>
+              <summary>On my syllabus · 6 courses</summary>
+
+              <ol class="courses">
+                <li>Principles of Computer Science II</li>
+                <li>Principles of Computer Science II Lab</li>
+                <li>Perspectives: Comparative Culture</li>
+                <li>Human Communication</li>
+                <li>Survey of World History Since 1500</li>
+                <li>American Government</li>
+              </ol>
+            </details>
+          </article>
+        </li>
+
+        <li class="timeline-event">
+          <div class="month-marker" aria-hidden="true">
+            <span>JUL</span>
+            <strong>07</strong>
           </div>
-        </div>
-      </div>
 
-      <div class="quiz-result-box">
-        <h3 id="result">Your result will appear here...</h3>
-        <button id="restart" class="btn">Reset Quiz</button>
-      </div>
-    </section>
+          <article class="timeline-card">
+            <span class="eyebrow">
+              <time datetime="2026-07">July 2026</time> · First build
+            </span>
 
+            <h2>Making sense of the code.</h2>
+
+            <p>
+              Summer classes wrapped up, and so did my Statistical
+              Cryptanalysis Engine—a Girls Who Code project that turns
+              character patterns into clues.
+            </p>
+
+            <div class="mini-metrics">
+              <div>
+                <strong>O(N)</strong>
+                <span>Single-pass analysis</span>
+              </div>
+              <div>
+                <strong>95</strong>
+                <span>ASCII characters</span>
+              </div>
+              <div>
+                <strong>χ²</strong>
+                <span>Goodness-of-fit scoring</span>
+              </div>
+            </div>
+
+            <p>
+              Python, vectorized Pandas, and a statistical approach
+              to cipher decryption.
+            </p>
+
+            <ul class="tags">
+              <li>Python</li>
+              <li>Pandas</li>
+              <li>Statistics</li>
+            </ul>
+
+            <span class="status complete">Completed</span>
+          </article>
+        </li>
+
+        <li class="timeline-event">
+          <div class="month-marker" aria-hidden="true">
+            <span>AUG</span>
+            <strong>08</strong>
+          </div>
+
+          <article class="timeline-card">
+            <span class="eyebrow">
+              <time datetime="2026-08">August 2026</time> · Fall semester
+            </span>
+
+            <h2>A little deeper into the why.</h2>
+
+            <p>
+              A new semester brings data structures, systems, physics,
+              and the probability behind the patterns.
+            </p>
+
+            <details class="course-details" open>
+              <summary>On my syllabus · 7 courses</summary>
+
+              <ol class="courses">
+                <li>Data Structures</li>
+                <li>Computer Organization &amp; Programming</li>
+                <li>Computer Organization &amp; Programming Lab</li>
+                <li>System-Level Programming</li>
+                <li>Introductory Physics II</li>
+                <li>Introductory Physics II Lab</li>
+                <li>Probability &amp; Statistics for Computer Science</li>
+              </ol>
+            </details>
+          </article>
+        </li>
+
+        <li class="timeline-event">
+          <div class="month-marker" aria-hidden="true">
+            <span>SEP</span>
+            <strong>09</strong>
+          </div>
+
+          <article class="timeline-card">
+            <span class="eyebrow">
+              <time datetime="2026-09">September 2026</time> · HackHers GSU
+            </span>
+
+            <h2>An idea became Tara.</h2>
+
+            <p>
+              At HackHers GSU, I built version one of Project Tara:
+              an autonomous financial assistant. A first version,
+              and the beginning of a bigger exploration.
+            </p>
+
+            <ul class="tags">
+              <li>Python</li>
+              <li>Financial tools</li>
+              <li>Hackathon</li>
+            </ul>
+
+            <span class="status complete">V1 built</span>
+
+            <div class="next-note">
+              <span>The next chapter</span>
+              <p>
+                A v2 architectural rebuild is planned.
+                More to learn, more to rethink.
+              </p>
+            </div>
+
+            <a class="text-link" href="tools.html">
+              Beyond the classroom ↗
+            </a>
+          </article>
+        </li>
+
+      </ol>
+
+      <div class="timeline-ending">
+        <span aria-hidden="true">✳</span>
+        <h2>The story is still being written.</h2>
+        <p>New months, new questions, new things to make.</p>
+        <a class="text-link" href="tools.html">What’s coming next →</a>
+      </div>
+    </div>
   </main>
 
-  <footer>
-    <div class="container">
-      <p>&copy; Jasmita R. Iragam | Data Science Portfolio | <a href="mailto:jasmita.iragam09@gmail.com">jasmita.iragam09@gmail.com</a></p>
-    </div>
+  <footer class="site-footer wrap">
+    <span>
+      © <span data-year>2026</span> Jasmita R. Iragam · Atlanta, GA
+    </span>
+    <span>A little more signal, a little less noise.</span>
+    <a href="#top">Back to top ↑</a>
   </footer>
-
 </body>
 </html>
