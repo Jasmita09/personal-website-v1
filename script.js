@@ -89,3 +89,49 @@ window.addEventListener("keydown", (e) => {
     closeCodeModal();
   }
 });
+
+// Interactive Note Expand / Collapse for research.html
+document.querySelectorAll(".toggle-note-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.dataset.target;
+    const drawer = document.getElementById(targetId);
+    if (!drawer) return;
+
+    const isHidden = drawer.hidden;
+    drawer.hidden = !isHidden;
+    btn.setAttribute("aria-expanded", isHidden ? "true" : "false");
+    btn.innerHTML = isHidden ? 'Close Note <span class="arrow-indicator">↑</span>' : 'Read Note <span class="arrow-indicator">↓</span>';
+  });
+});
+
+document.querySelectorAll(".collapse-note-btn").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const targetId = btn.dataset.target;
+    const drawer = document.getElementById(targetId);
+    const triggerBtn = document.querySelector(`.toggle-note-btn[data-target="${targetId}"]`);
+    if (drawer) drawer.hidden = true;
+    if (triggerBtn) {
+      triggerBtn.setAttribute("aria-expanded", "false");
+      triggerBtn.innerHTML = 'Read Note <span class="arrow-indicator">↓</span>';
+      triggerBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  });
+});
+
+// Note category filter on research.html
+const noteFilterBtns = document.querySelectorAll(".note-filter-pills button");
+if (noteFilterBtns.length > 0) {
+  noteFilterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      noteFilterBtns.forEach((b) => b.classList.remove("on"));
+      btn.classList.add("on");
+      const targetCategory = btn.dataset.tag;
+
+      document.querySelectorAll(".note-feed-card").forEach((card) => {
+        const categories = (card.dataset.category || "").split(" ");
+        const shouldShow = targetCategory === "all" || categories.includes(targetCategory);
+        card.style.display = shouldShow ? "block" : "none";
+      });
+    });
+  });
+}
