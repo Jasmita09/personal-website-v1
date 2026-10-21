@@ -692,3 +692,44 @@ button, a { -webkit-tap-highlight-color: transparent; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .proj:hover, .proj:focus-within, .btn:hover { transform: none; }
 }
+/* ==========================================================================
+   HIGHLIGHTED QUOTE BOX (Entry 02 in research.html)
+   ========================================================================== */
+.quote-box {
+  margin: 32px 0;
+  padding: 24px 28px;
+  background: #fbf2f3;
+  border: 1px solid #ebd9dc;
+  border-left: 4px solid var(--cherry);
+  border-radius: 0 12px 12px 0;
+  position: relative;
+}
+
+.quote-mark {
+  font-family: var(--serif);
+  font-size: 42px;
+  line-height: 1;
+  color: var(--cherry);
+  opacity: 0.35;
+  display: block;
+  margin-bottom: -10px;
+}
+
+.quote-text {
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--dark-cherry);
+  margin-bottom: 8px !important;
+  font-style: italic;
+}
+
+.quote-author {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: block;
+}
