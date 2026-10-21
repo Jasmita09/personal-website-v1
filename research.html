@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -37,9 +37,7 @@
 
   <main id="main" tabindex="-1">
     
-    <!-- ====================================================================
-         VIEW 1: ARCHIVE / POST FEED (Visible by default)
-         ==================================================================== -->
+    <!-- VIEW 1: ARCHIVE FEED -->
     <div id="archiveView">
       <header class="page-head wrap">
         <span class="eyebrow">A notebook by Jasmita Iragam</span>
@@ -85,7 +83,7 @@
             <button class="btn line view-post-trigger" data-post-id="midterm-setback" type="button">Read Note ↗</button>
           </article>
 
-          <!-- Card 3: Draft -->
+          <!-- Card 3 -->
           <article class="note-feed-card draft-card" data-category="data-science">
             <div class="card-meta-top">
               <span class="badge-pill draft-pill">03 · Data Science &amp; Systems</span>
@@ -101,17 +99,15 @@
       </section>
     </div>
 
-    <!-- ====================================================================
-         VIEW 2: DEDICATED READER (Opens dynamically with Sidebar & Comments)
-         ==================================================================== -->
+    <!-- VIEW 2: DEDICATED READER (Two-Column Layout) -->
     <div id="readerView" hidden>
       <div class="wrap dedicated-reader-layout">
         
-        <!-- Left: Active Article Content -->
+        <!-- Left: Article Content & Real Comments -->
         <article class="article-main-col">
           <button class="back-to-archive-btn" id="backToArchiveBtn" type="button">← Back to all notes</button>
           
-          <!-- Post 01 Container -->
+          <!-- Post 01 -->
           <div class="post-content-block" id="post-welcome" hidden>
             <header class="article-header">
               <span class="post-pill">01 · Welcome &amp; Personal Essay</span>
@@ -140,7 +136,7 @@
             </div>
           </div>
 
-          <!-- Post 02 Container -->
+          <!-- Post 02 -->
           <div class="post-content-block" id="post-midterm-setback" hidden>
             <header class="article-header">
               <span class="post-pill">02 · College &amp; Growth</span>
@@ -158,11 +154,13 @@
               <p class="drop-lead">There is a quiet, dangerous confidence that comes with a flawless high school transcript. Entering college with straight A’s made me assume my old study habits would always guarantee success. When I enrolled in CSC 1302 in Summer 2026, my first real computer science course at Georgia State, I carried that exact certainty into the lecture hall. The midterm was an immediate reality check.</p>
               <p>Receiving a 72 was a massive shock. To a student accustomed to scores above 95, that grade didn't just feel like a stumble: it felt like definitive proof that I wasn't cut out for computer science. I panicked. Terrified of ruining my GPA and letting down my parents, my immediate reaction wasn't to ask for help; it was to fold the exam paper in half, shove it into my backpack, and hide the evidence while quietly spiraling.</p>
               <p>But I couldn't hide from the syllabus. With my grade depending almost entirely on that midterm and the upcoming final, avoidance was a luxury I simply couldn't afford.</p>
+              
               <div class="quote-box">
                 <span class="quote-mark" aria-hidden="true">“</span>
                 <p class="quote-text">The greatest enemy of knowledge is not ignorance; it is the illusion of knowledge.</p>
                 <cite class="quote-author">: Daniel J. Boorstin</cite>
               </div>
+
               <p>Confronting that score forced me to admit that my study habits were fundamentally broken. In high school, I could read through lecture slides, memorize definitions like a history test, and walk into an exam confident. In computer science, that approach is a trap. Code isn't something you memorize; it is a system you have to build, break, and debug until the logic becomes second nature.</p>
               <p>I completely changed how I worked. I stopped passively skimming slides and started rebuilding lab assignments from a blank file. I sat down with scratch paper and traced variable values through loops step by step. I wrote test cases specifically designed to make my own programs crash, debugging late into the night until I understood the exact mechanics behind every error.</p>
               <p>The discipline paid off: I earned a <strong>98</strong> on the final exam.</p>
@@ -173,14 +171,14 @@
             </div>
           </div>
 
-          <!-- Comments Section (Email Registration Gated) -->
+          <!-- Comments Section (NO FAKE COMMENTS) -->
           <section class="comments-section" id="comments">
             <div class="comments-header">
               <h3>Discussion &amp; Reflections</h3>
-              <span class="comments-count" id="commentCount">2 comments</span>
+              <span class="comments-count" id="commentCount">0 comments</span>
             </div>
 
-            <!-- Gate Card -->
+            <!-- Email Registration Gate -->
             <div class="comment-gate-box" id="gateBox">
               <span class="gate-icon">🔒</span>
               <h4>Join the conversation</h4>
@@ -195,7 +193,7 @@
               <small class="gate-note">Your email is kept private and never shown publicly.</small>
             </div>
 
-            <!-- Unlocked Comment Input -->
+            <!-- Unlocked Comment Box (Shown after registration) -->
             <div class="comment-input-box" id="commentInputBox" hidden>
               <div class="user-status-bar">
                 <span>Commenting as <strong id="currentUserName">Reader</strong> (<span id="currentUserEmail">email</span>)</span>
@@ -207,27 +205,16 @@
               </form>
             </div>
 
-            <!-- Comment Thread -->
+            <!-- Real Comments Container -->
             <div class="comments-list" id="commentsList">
-              <article class="comment-card">
-                <div class="comment-top">
-                  <div class="comment-author"><span class="avatar-circle">V</span><strong>Vy</strong></div>
-                  <time>October 2026</time>
-                </div>
-                <p>This is so beautifully written! That transition from memorizing code to actually building mental models is the hardest hurdle in early CS. So proud of your turnaround!</p>
-              </article>
-              <article class="comment-card">
-                <div class="comment-top">
-                  <div class="comment-author"><span class="avatar-circle">A</span><strong>Alex (GSU CS)</strong></div>
-                  <time>October 2026</time>
-                </div>
-                <p>That 1302 midterm was brutal. Seeing you bounce back with a 98 is seriously inspiring. The Boorstin quote is so true.</p>
-              </article>
+              <div class="empty-comments" id="emptyComments">
+                <p>No reflections yet. Be the first to share your thoughts!</p>
+              </div>
             </div>
           </section>
         </article>
 
-        <!-- Right: Sticky Sidebar Index -->
+        <!-- Right: Styled Sidebar Index -->
         <aside class="notes-sidebar">
           <div class="sidebar-sticky-wrap">
             <div class="sidebar-block">
@@ -239,7 +226,7 @@
                 <li id="sideLink-welcome">
                   <button type="button" class="sidebar-note-link view-post-trigger" data-post-id="welcome">
                     <span class="note-num">01</span>
-                    <div>
+                    <div class="note-text-wrap">
                       <strong>Welcome to Cherri-Picked Notes</strong>
                       <small>October 2026 · Essay</small>
                     </div>
@@ -248,7 +235,7 @@
                 <li id="sideLink-midterm-setback">
                   <button type="button" class="sidebar-note-link view-post-trigger" data-post-id="midterm-setback">
                     <span class="note-num">02</span>
-                    <div>
+                    <div class="note-text-wrap">
                       <strong>From a 72 to a 98: The Midterm</strong>
                       <small>October 2026 · Growth</small>
                     </div>
@@ -257,7 +244,7 @@
                 <li>
                   <div class="sidebar-note-link draft-link">
                     <span class="note-num">03</span>
-                    <div>
+                    <div class="note-text-wrap">
                       <strong>DuckDB, AWS &amp; Modern Analytics</strong>
                       <small>Fall 2026 · In Progress</small>
                     </div>
@@ -319,6 +306,14 @@
           </ul>
         </div>
         <div class="tavy-col">
+          <h3>WRITING</h3>
+          <ul>
+            <li><a href="research.html">01 / Welcome Note</a></li>
+            <li><a href="research.html">02 / From a 72 to a 98</a></li>
+            <li><a href="https://vivunote.substack.com/" target="_blank" rel="noopener noreferrer">ViVuNote (Inspiration) ↗</a></li>
+          </ul>
+        </div>
+        <div class="tavy-col">
           <h3>CONNECT</h3>
           <ul>
             <li><a href="mailto:jasmita.i1109@gmail.com">Email Jasmita</a></li>
@@ -340,65 +335,6 @@
     </div>
   </footer>
 
-  <!-- View-Switching Router Script -->
-  <script>
-    const archiveView = document.getElementById("archiveView");
-    const readerView = document.getElementById("readerView");
-    const backBtn = document.getElementById("backToArchiveBtn");
-
-    function showReader(postId) {
-      archiveView.hidden = true;
-      readerView.hidden = false;
-      
-      // Hide all post blocks, show the chosen one
-      document.querySelectorAll(".post-content-block").forEach(p => p.hidden = true);
-      const activePost = document.getElementById(`post-${postId}`);
-      if (activePost) activePost.hidden = false;
-
-      // Update sidebar active state
-      document.querySelectorAll(".sidebar-index-list li").forEach(li => li.classList.remove("active-note"));
-      const sideLink = document.getElementById(`sideLink-${postId}`);
-      if (sideLink) sideLink.classList.add("active-note");
-
-      // Update URL hash without re-scrolling
-      window.location.hash = `#${postId}`;
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    function showArchive() {
-      readerView.hidden = true;
-      archiveView.hidden = false;
-      history.pushState("", document.title, window.location.pathname + window.location.search);
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-
-    // Attach click triggers to all buttons
-    document.querySelectorAll(".view-post-trigger").forEach(btn => {
-      btn.addEventListener("click", () => {
-        const postId = btn.dataset.postId;
-        showReader(postId);
-      });
-    });
-
-    if (backBtn) backBtn.addEventListener("click", showArchive);
-
-    // Support browser back/forward buttons and direct shared links
-    window.addEventListener("DOMContentLoaded", () => {
-      const hash = window.location.hash.replace("#", "");
-      if (hash === "welcome" || hash === "midterm-setback") {
-        showReader(hash);
-      }
-    });
-
-    window.addEventListener("popstate", () => {
-      const hash = window.location.hash.replace("#", "");
-      if (hash === "welcome" || hash === "midterm-setback") {
-        showReader(hash);
-      } else {
-        showArchive();
-      }
-    });
-  </script>
-  <script src="script.js?v=8" defer></script>
+  <script src="script.js?v=9" defer></script>
 </body>
 </html>
