@@ -6,18 +6,24 @@
   <title>Cherri-Picked Notes | Jasmita Iragam</title>
   <meta name="description" content="A living notebook of data science takeaways, systems research breakdowns, and reflections on college growth by Jasmita Iragam.">
   <meta name="theme-color" content="#fff6f7">
+  
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23fde8ec'/><text x='50' y='68' font-size='52' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23943e54'>JI</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=8">
-  <script src="script.js?v=6" defer></script>
+  <link rel="stylesheet" href="style.css?v=9">
+  <script src="script.js?v=7" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <!-- Navigation -->
   <nav class="site-nav" aria-label="Main navigation">
     <div class="wrap nav-wrap">
-      <a class="brand" href="index.html" aria-label="Jasmita Iragam home"><span class="brand-mark" aria-hidden="true">ji<span class="brand-star">✳</span></span><span>jasmita iragam<span class="brand-dot">.</span></span></a>
+      <a class="brand" href="index.html" aria-label="Jasmita Iragam home">
+        <span class="brand-mark" aria-hidden="true">ji<span class="brand-star">✳</span></span>
+        <span>jasmita iragam<span class="brand-dot">.</span></span>
+      </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" hidden>Menu ☰</button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -43,17 +49,16 @@
       <div class="archive-toolbar">
         <div class="note-filter-pills" role="group" aria-label="Filter notes">
           <button class="on" type="button" data-tag="all">All Dispatches</button>
-          <button type="button" data-tag="essays">Reflections</button>
-          <button type="button" data-tag="data-science">Data Science</button>
           <button type="button" data-tag="college">College &amp; Growth</button>
+          <button type="button" data-tag="data-science">Data Science</button>
+          <button type="button" data-tag="essays">Reflections</button>
         </div>
-        <span class="archive-count">1 Published · 2 In Draft</span>
+        <span class="archive-count">2 Published · 1 In Draft</span>
       </div>
 
-      <!-- List of Note Choices -->
       <div class="notes-feed">
         
-        <!-- Entry 01 (Published & Interactive Reader) -->
+        <!-- Entry 01 (Welcome & Personal Essay) -->
         <article class="note-feed-card" data-category="essays college" id="entry-01">
           <div class="card-meta-top">
             <span class="badge-pill">01 · Welcome &amp; Personal Essay</span>
@@ -68,7 +73,7 @@
             Read Note <span class="arrow-indicator">↓</span>
           </button>
 
-          <!-- Full Article Drawer -->
+          <!-- Full Article Drawer for Post 01 -->
           <div class="full-article-drawer" id="post-01" hidden>
             <div class="article-body">
               <p class="drop-lead">
@@ -106,17 +111,75 @@
           </div>
         </article>
 
-        <!-- Entry 02: The Midterm Setback (Draft in Progress) -->
-        <article class="note-feed-card draft-card" data-category="college essays">
+        <!-- Entry 02 (The Midterm Setback & Turning Points) -->
+        <article class="note-feed-card" data-category="college essays" id="entry-02">
           <div class="card-meta-top">
-            <span class="badge-pill draft-pill">02 · College &amp; Growth</span>
-            <span class="draft-date">Coming Soon</span>
+            <span class="badge-pill">02 · College &amp; Growth</span>
+            <time datetime="2026-10-21">October 2026 · 3 min read</time>
           </div>
           <h2 class="feed-note-title">From a 72 to a 98: The Midterm That Changed My Journey.</h2>
           <p class="feed-note-deck">
             How walking out of a first-semester CS exam in silent panic turned into late-night lab problem mastery, resilience, and an unexpected mentorship.
           </p>
-          <span class="draft-status-tag">Draft in progress</span>
+
+          <button class="btn line toggle-note-btn" type="button" aria-expanded="false" data-target="post-02">
+            Read Note <span class="arrow-indicator">↓</span>
+          </button>
+
+          <!-- Full Article Drawer for Post 02 -->
+          <div class="full-article-drawer" id="post-02" hidden>
+            <div class="article-body">
+              <p class="drop-lead">
+                There is a quiet, dangerous confidence that comes with a flawless high school transcript. Entering college with straight A’s made me assume my old study habits would always guarantee success. When I enrolled in CSC 1302 in Summer 2026, my first real computer science course at Georgia State, I carried that exact certainty into the lecture hall. The midterm was an immediate reality check.
+              </p>
+
+              <p>
+                Receiving a 72 was a massive shock. To a student accustomed to scores above 95, that grade didn't just feel like a stumble: it felt like definitive proof that I wasn't cut out for computer science. I panicked. Terrified of ruining my GPA and letting down my parents, my immediate reaction wasn't to ask for help; it was to fold the exam paper in half, shove it into my backpack, and hide the evidence while quietly spiraling.
+              </p>
+
+              <p>
+                But I couldn't hide from the syllabus. With my grade depending almost entirely on that midterm and the upcoming final, avoidance was a luxury I simply couldn't afford.
+              </p>
+
+              <!-- Highlighted Quote Box -->
+              <div class="quote-box">
+                <span class="quote-mark" aria-hidden="true">“</span>
+                <p class="quote-text">The greatest enemy of knowledge is not ignorance; it is the illusion of knowledge.</p>
+                <cite class="quote-author">: Daniel J. Boorstin</cite>
+              </div>
+
+              <p>
+                Confronting that score forced me to admit that my study habits were fundamentally broken. In high school, I could read through lecture slides, memorize definitions like a history test, and walk into an exam confident. In computer science, that approach is a trap. Code isn't something you memorize; it is a system you have to build, break, and debug until the logic becomes second nature.
+              </p>
+
+              <p>
+                I completely changed how I worked. I stopped passively skimming slides and started rebuilding lab assignments from a blank file. I sat down with scratch paper and traced variable values through loops step by step. I wrote test cases specifically designed to make my own programs crash, debugging late into the night until I understood the exact mechanics behind every error.
+              </p>
+
+              <p>
+                The discipline paid off: I earned a <strong>98</strong> on the final exam.
+              </p>
+
+              <p>
+                While the grade was a huge relief, the shift in my mindset was far more valuable. I had traded fragile memorization for genuine technical intuition. Even better, my professor noticed the turnaround. She recognized the work behind the score jump, and that initial failure actually opened the door to a lasting academic connection. I am taking advanced coursework with her right now in Fall 2026, and having her guidance has shaped how I view my entire path in tech.
+              </p>
+
+              <p>
+                Looking back, that 72 was never a final verdict on my capability. It was a necessary reality check. If I had breezed through that exam with an easy A, I would have carried a false sense of mastery into harder data science and systems classes, and I never would have connected with the mentor guiding me today.
+              </p>
+
+              <p>
+                In the end, resilience isn't passive. It isn't just about absorbing a hit and hoping for the best; it is a deliberate, active choice to rebuild the moment things fall apart.
+              </p>
+
+              <p class="signoff">
+                Warmly,<br>
+                <em>Jasmita</em>
+              </p>
+              
+              <button class="btn line collapse-note-btn" type="button" data-target="post-02">Close Note ↑</button>
+            </div>
+          </div>
         </article>
 
         <!-- Entry 03: DuckDB Paper Breakdown (Draft in Progress) -->
@@ -180,6 +243,7 @@
           <h3>WRITING</h3>
           <ul>
             <li><a href="research.html#entry-01">01 / Welcome Note</a></li>
+            <li><a href="research.html#entry-02">02 / From a 72 to a 98</a></li>
             <li><a href="https://vivunote.substack.com/" target="_blank" rel="noopener noreferrer">ViVuNote (Inspiration) ↗</a></li>
           </ul>
         </div>
