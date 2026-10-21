@@ -4,15 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Cherri-Picked Notes | Jasmita Iragam</title>
-  <meta name="description" content="A living notebook of data science takeaways, systems research breakdowns, and reflections on college growth by Jasmita Iragam.">
+  <meta name="description" content="A living notebook of data science takeaways, mathematical models, and reflections on college growth by Jasmita Iragam.">
   <meta name="theme-color" content="#fff6f7">
   
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23fde8ec'/><text x='50' y='68' font-size='52' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23943e54'>JI</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=9">
-  <script src="script.js?v=7" defer></script>
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -28,178 +27,258 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="portfolio.html">Timeline</a></li>
-        <li><a href="research.html" aria-current="page">Cherri-Picked Notes</a></li>
+        <li><a href="research.html" class="active" aria-current="page">Cherri-Picked Notes</a></li>
         <li><a href="tools.html">Activities</a></li>
       </ul>
-      <a class="nav-contact" href="mailto:jasmita.i1109@gmail.com" data-contact="connect">Let’s talk ↗</a>
+      <a class="nav-contact" href="mailto:jasmita.i1109@gmail.com">Let’s talk ↗</a>
     </div>
     <div class="progress" id="progress" aria-hidden="true"></div>
   </nav>
 
   <main id="main" tabindex="-1">
-    <!-- Archive Header -->
-    <header class="page-head wrap">
-      <span class="eyebrow">A notebook by Jasmita Iragam</span>
-      <h1>Cherri-Picked <em>Notes 🍒</em></h1>
-      <p>My perspective on data science research, mathematical models, and developing technical craft.</p>
-    </header>
+    
+    <!-- ====================================================================
+         VIEW 1: ARCHIVE / POST FEED (Visible by default)
+         ==================================================================== -->
+    <div id="archiveView">
+      <header class="page-head wrap">
+        <span class="eyebrow">A notebook by Jasmita Iragam</span>
+        <h1>Cherri-Picked <em>Notes 🍒</em></h1>
+        <p>My perspective on data science research, mathematical models, and developing technical craft.</p>
+      </header>
 
-    <!-- Notes Selection Feed -->
-    <section class="wrap notes-archive-section">
-      <div class="archive-toolbar">
-        <div class="note-filter-pills" role="group" aria-label="Filter notes">
-          <button class="on" type="button" data-tag="all">All Dispatches</button>
-          <button type="button" data-tag="college">College &amp; Growth</button>
-          <button type="button" data-tag="data-science">Data Science</button>
-          <button type="button" data-tag="essays">Reflections</button>
-        </div>
-        <span class="archive-count">2 Published · 1 In Draft</span>
-      </div>
-
-      <div class="notes-feed">
-        
-        <!-- Entry 01 (Welcome & Personal Essay) -->
-        <article class="note-feed-card" data-category="essays college" id="entry-01">
-          <div class="card-meta-top">
-            <span class="badge-pill">01 · Welcome &amp; Personal Essay</span>
-            <time datetime="2026-10-18">October 2026 · 3 min read</time>
+      <section class="wrap notes-archive-section">
+        <div class="archive-toolbar">
+          <div class="note-filter-pills" role="group" aria-label="Filter notes">
+            <button class="on" type="button" data-tag="all">All Dispatches</button>
+            <button type="button" data-tag="college">College &amp; Growth</button>
+            <button type="button" data-tag="data-science">Data Science</button>
+            <button type="button" data-tag="essays">Reflections</button>
           </div>
-          <h2 class="feed-note-title">Welcome to Cherri-Picked Notes.</h2>
-          <p class="feed-note-deck">
-            On handpicking signal from the noise, navigating college on an H4 visa, and learning out loud.
-          </p>
+          <span class="archive-count">2 Published · 1 In Draft</span>
+        </div>
 
-          <button class="btn line toggle-note-btn" type="button" aria-expanded="false" data-target="post-01">
-            Read Note <span class="arrow-indicator">↓</span>
-          </button>
+        <div class="notes-feed">
+          <!-- Card 1 -->
+          <article class="note-feed-card" data-category="essays college">
+            <div class="card-meta-top">
+              <span class="badge-pill">01 · Welcome &amp; Personal Essay</span>
+              <time datetime="2026-10-18">October 2026 · 3 min read</time>
+            </div>
+            <h2 class="feed-note-title">Welcome to Cherri-Picked Notes.</h2>
+            <p class="feed-note-deck">
+              On handpicking signal from the noise, navigating college on an H4 visa, and learning out loud.
+            </p>
+            <button class="btn line view-post-trigger" data-post-id="welcome" type="button">Read Note ↗</button>
+          </article>
 
-          <!-- Full Article Drawer for Post 01 -->
-          <div class="full-article-drawer" id="post-01" hidden>
+          <!-- Card 2 -->
+          <article class="note-feed-card" data-category="college essays">
+            <div class="card-meta-top">
+              <span class="badge-pill">02 · College &amp; Growth</span>
+              <time datetime="2026-10-21">October 2026 · 3 min read</time>
+            </div>
+            <h2 class="feed-note-title">From a 72 to a 98: The Midterm That Changed My Journey.</h2>
+            <p class="feed-note-deck">
+              How walking out of a first-semester CS exam in silent panic turned into late-night lab problem mastery, resilience, and an unexpected mentorship.
+            </p>
+            <button class="btn line view-post-trigger" data-post-id="midterm-setback" type="button">Read Note ↗</button>
+          </article>
+
+          <!-- Card 3: Draft -->
+          <article class="note-feed-card draft-card" data-category="data-science">
+            <div class="card-meta-top">
+              <span class="badge-pill draft-pill">03 · Data Science &amp; Systems</span>
+              <span class="draft-date">Coming Soon</span>
+            </div>
+            <h2 class="feed-note-title">DuckDB, AWS, and Why Single-Host Analytics Is the Future.</h2>
+            <p class="feed-note-deck">
+              Takeaways from Andy Warfield's paper on changing compute physics, the 'glibc of structured data', and why local in-memory queries beat 1,000-node clusters.
+            </p>
+            <span class="draft-status-tag">Draft in progress</span>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <!-- ====================================================================
+         VIEW 2: DEDICATED READER (Opens dynamically with Sidebar & Comments)
+         ==================================================================== -->
+    <div id="readerView" hidden>
+      <div class="wrap dedicated-reader-layout">
+        
+        <!-- Left: Active Article Content -->
+        <article class="article-main-col">
+          <button class="back-to-archive-btn" id="backToArchiveBtn" type="button">← Back to all notes</button>
+          
+          <!-- Post 01 Container -->
+          <div class="post-content-block" id="post-welcome" hidden>
+            <header class="article-header">
+              <span class="post-pill">01 · Welcome &amp; Personal Essay</span>
+              <h1 class="article-title">Welcome to Cherri-Picked Notes.</h1>
+              <p class="article-subtitle">On handpicking signal from the noise, navigating college on an H4 visa, and learning out loud.</p>
+              <div class="article-byline">
+                <div class="author-avatar" aria-hidden="true">🍒</div>
+                <div class="byline-details">
+                  <span class="author-name">Jasmita Iragam</span>
+                  <span class="byline-sub">October 2026 · 3 min read · Atlanta, GA</span>
+                </div>
+              </div>
+            </header>
             <div class="article-body">
-              <p class="drop-lead">
-                Hello and welcome! I’m so glad you stopped by this quiet corner of my site.
-              </p>
-              <p>
-                If you’re wondering about the name, it comes down to how I approach learning. Beyond the obvious nickname pun, I love the process of sifting through papers, codebases, and textbooks to handpick the best data science takeaways, AI research, and creative ideas I come across, then bringing them together in one place.
-              </p>
-              <p>
-                As a first-year Computer Science student at Georgia State University focusing on Data Science, Machine Learning, and Artificial Intelligence, I wanted a space that reflects both my technical side and my actual lived experience.
-              </p>
-              <blockquote class="article-quote">
-                “In a world of noise, the real challenge is cultivating depth: finding the quiet patterns that actually hold up.”
-              </blockquote>
-              <p>
-                The reality is that navigating college as a CS major on an H4 visa comes with its own unique set of unspoken hurdles, waiting games, and structural constraints. I started this notebook to document all of it openly: from late-night debugging victories to visa hurdles, coursework reflections, and the quiet milestones in between. My hope is that being honest about the journey serves as a helpful, reassuring guide for anyone walking a similar path.
-              </p>
+              <p class="drop-lead">Hello and welcome! I’m so glad you stopped by this quiet corner of my site.</p>
+              <p>If you’re wondering about the name, it comes down to how I approach learning. Beyond the obvious nickname pun, I love the process of sifting through papers, codebases, and textbooks to handpick the best data science takeaways, AI research, and creative ideas I come across, then bringing them together in one place.</p>
+              <p>As a first-year Computer Science student at Georgia State University focusing on Data Science, Machine Learning, and Artificial Intelligence, I wanted a space that reflects both my technical side and my actual lived experience.</p>
+              <blockquote class="article-quote">“In a world of noise, the real challenge is cultivating depth: finding the quiet patterns that actually hold up.”</blockquote>
+              <p>The reality is that navigating college as a CS major on an H4 visa comes with its own unique set of unspoken hurdles, waiting games, and structural constraints. I started this notebook to document all of it openly: from late-night debugging victories to visa hurdles, coursework reflections, and the quiet milestones in between. My hope is that being honest about the journey serves as a helpful, reassuring guide for anyone walking a similar path.</p>
               <div class="tribute-card">
                 <span class="tribute-label">A Note of Gratitude</span>
-                <p>
-                  I want to give a special shoutout to my close friend Vy and her blog, 
-                  <a href="https://vivunote.substack.com/" target="_blank" rel="noopener noreferrer">ViVuNote</a>. 
-                  Reading her posts and seeing how authentically and generously she shares her student journey gave me the exact push I needed to stop overthinking and finally launch this page. Having a friend like her to look up to means so much to me.
-                </p>
+                <p>I want to give a special shoutout to my close friend Vy and her blog, <a href="https://vivunote.substack.com/" target="_blank" rel="noopener noreferrer">ViVuNote</a>. Reading her posts and seeing how authentically and generously she shares her student journey gave me the exact push I needed to stop overthinking and finally launch this page. Having a friend like her to look up to means so much to me.</p>
               </div>
-              <p>
-                I plan to keep these posts short, honest, and easy to read as I build out this section. Thank you for being here, and I hope you enjoy following along!
-              </p>
-              <p class="signoff">
-                Warmly,<br>
-                <em>Jasmita</em>
-              </p>
-              <button class="btn line collapse-note-btn" type="button" data-target="post-01">Close Note ↑</button>
+              <p>I plan to keep these posts short, honest, and easy to read as I build out this section. Thank you for being here, and I hope you enjoy following along!</p>
+              <p class="signoff">Warmly,<br><em>Jasmita</em></p>
             </div>
           </div>
-        </article>
 
-        <!-- Entry 02 (The Midterm Setback & Turning Points) -->
-        <article class="note-feed-card" data-category="college essays" id="entry-02">
-          <div class="card-meta-top">
-            <span class="badge-pill">02 · College &amp; Growth</span>
-            <time datetime="2026-10-21">October 2026 · 3 min read</time>
-          </div>
-          <h2 class="feed-note-title">From a 72 to a 98: The Midterm That Changed My Journey.</h2>
-          <p class="feed-note-deck">
-            How walking out of a first-semester CS exam in silent panic turned into late-night lab problem mastery, resilience, and an unexpected mentorship.
-          </p>
-
-          <button class="btn line toggle-note-btn" type="button" aria-expanded="false" data-target="post-02">
-            Read Note <span class="arrow-indicator">↓</span>
-          </button>
-
-          <!-- Full Article Drawer for Post 02 -->
-          <div class="full-article-drawer" id="post-02" hidden>
+          <!-- Post 02 Container -->
+          <div class="post-content-block" id="post-midterm-setback" hidden>
+            <header class="article-header">
+              <span class="post-pill">02 · College &amp; Growth</span>
+              <h1 class="article-title">From a 72 to a 98: The Midterm That Changed My Journey.</h1>
+              <p class="article-subtitle">How walking out of a first-semester CS exam in silent panic turned into late-night lab problem mastery, resilience, and an unexpected mentorship.</p>
+              <div class="article-byline">
+                <div class="author-avatar" aria-hidden="true">🍒</div>
+                <div class="byline-details">
+                  <span class="author-name">Jasmita Iragam</span>
+                  <span class="byline-sub">October 2026 · 3 min read · Atlanta, GA</span>
+                </div>
+              </div>
+            </header>
             <div class="article-body">
-              <p class="drop-lead">
-                There is a quiet, dangerous confidence that comes with a flawless high school transcript. Entering college with straight A’s made me assume my old study habits would always guarantee success. When I enrolled in CSC 1302 in Summer 2026, my first real computer science course at Georgia State, I carried that exact certainty into the lecture hall. The midterm was an immediate reality check.
-              </p>
-
-              <p>
-                Receiving a 72 was a massive shock. To a student accustomed to scores above 95, that grade didn't just feel like a stumble: it felt like definitive proof that I wasn't cut out for computer science. I panicked. Terrified of ruining my GPA and letting down my parents, my immediate reaction wasn't to ask for help; it was to fold the exam paper in half, shove it into my backpack, and hide the evidence while quietly spiraling.
-              </p>
-
-              <p>
-                But I couldn't hide from the syllabus. With my grade depending almost entirely on that midterm and the upcoming final, avoidance was a luxury I simply couldn't afford.
-              </p>
-
-              <!-- Highlighted Quote Box -->
+              <p class="drop-lead">There is a quiet, dangerous confidence that comes with a flawless high school transcript. Entering college with straight A’s made me assume my old study habits would always guarantee success. When I enrolled in CSC 1302 in Summer 2026, my first real computer science course at Georgia State, I carried that exact certainty into the lecture hall. The midterm was an immediate reality check.</p>
+              <p>Receiving a 72 was a massive shock. To a student accustomed to scores above 95, that grade didn't just feel like a stumble: it felt like definitive proof that I wasn't cut out for computer science. I panicked. Terrified of ruining my GPA and letting down my parents, my immediate reaction wasn't to ask for help; it was to fold the exam paper in half, shove it into my backpack, and hide the evidence while quietly spiraling.</p>
+              <p>But I couldn't hide from the syllabus. With my grade depending almost entirely on that midterm and the upcoming final, avoidance was a luxury I simply couldn't afford.</p>
               <div class="quote-box">
                 <span class="quote-mark" aria-hidden="true">“</span>
                 <p class="quote-text">The greatest enemy of knowledge is not ignorance; it is the illusion of knowledge.</p>
                 <cite class="quote-author">: Daniel J. Boorstin</cite>
               </div>
-
-              <p>
-                Confronting that score forced me to admit that my study habits were fundamentally broken. In high school, I could read through lecture slides, memorize definitions like a history test, and walk into an exam confident. In computer science, that approach is a trap. Code isn't something you memorize; it is a system you have to build, break, and debug until the logic becomes second nature.
-              </p>
-
-              <p>
-                I completely changed how I worked. I stopped passively skimming slides and started rebuilding lab assignments from a blank file. I sat down with scratch paper and traced variable values through loops step by step. I wrote test cases specifically designed to make my own programs crash, debugging late into the night until I understood the exact mechanics behind every error.
-              </p>
-
-              <p>
-                The discipline paid off: I earned a <strong>98</strong> on the final exam.
-              </p>
-
-              <p>
-                While the grade was a huge relief, the shift in my mindset was far more valuable. I had traded fragile memorization for genuine technical intuition. Even better, my professor noticed the turnaround. She recognized the work behind the score jump, and that initial failure actually opened the door to a lasting academic connection. I am taking advanced coursework with her right now in Fall 2026, and having her guidance has shaped how I view my entire path in tech.
-              </p>
-
-              <p>
-                Looking back, that 72 was never a final verdict on my capability. It was a necessary reality check. If I had breezed through that exam with an easy A, I would have carried a false sense of mastery into harder data science and systems classes, and I never would have connected with the mentor guiding me today.
-              </p>
-
-              <p>
-                In the end, resilience isn't passive. It isn't just about absorbing a hit and hoping for the best; it is a deliberate, active choice to rebuild the moment things fall apart.
-              </p>
-
-              <p class="signoff">
-                Warmly,<br>
-                <em>Jasmita</em>
-              </p>
-              
-              <button class="btn line collapse-note-btn" type="button" data-target="post-02">Close Note ↑</button>
+              <p>Confronting that score forced me to admit that my study habits were fundamentally broken. In high school, I could read through lecture slides, memorize definitions like a history test, and walk into an exam confident. In computer science, that approach is a trap. Code isn't something you memorize; it is a system you have to build, break, and debug until the logic becomes second nature.</p>
+              <p>I completely changed how I worked. I stopped passively skimming slides and started rebuilding lab assignments from a blank file. I sat down with scratch paper and traced variable values through loops step by step. I wrote test cases specifically designed to make my own programs crash, debugging late into the night until I understood the exact mechanics behind every error.</p>
+              <p>The discipline paid off: I earned a <strong>98</strong> on the final exam.</p>
+              <p>While the grade was a huge relief, the shift in my mindset was far more valuable. I had traded fragile memorization for genuine technical intuition. Even better, my professor noticed the turnaround. She recognized the work behind the score jump, and that initial failure actually opened the door to a lasting academic connection. I am taking advanced coursework with her right now in Fall 2026, and having her guidance has shaped how I view my entire path in tech.</p>
+              <p>Looking back, that 72 was never a final verdict on my capability. It was a necessary reality check. If I had breezed through that exam with an easy A, I would have carried a false sense of mastery into harder data science and systems classes, and I never would have connected with the mentor guiding me today.</p>
+              <p>In the end, resilience isn't passive. It isn't just about absorbing a hit and hoping for the best; it is a deliberate, active choice to rebuild the moment things fall apart.</p>
+              <p class="signoff">Warmly,<br><em>Jasmita</em></p>
             </div>
           </div>
+
+          <!-- Comments Section (Email Registration Gated) -->
+          <section class="comments-section" id="comments">
+            <div class="comments-header">
+              <h3>Discussion &amp; Reflections</h3>
+              <span class="comments-count" id="commentCount">2 comments</span>
+            </div>
+
+            <!-- Gate Card -->
+            <div class="comment-gate-box" id="gateBox">
+              <span class="gate-icon">🔒</span>
+              <h4>Join the conversation</h4>
+              <p>To leave a reflection or ask a question, please register with your name and email address.</p>
+              <form class="gate-form" id="registerForm">
+                <div class="gate-input-row">
+                  <input type="text" id="regName" placeholder="Your name" required aria-label="Your name">
+                  <input type="email" id="regEmail" placeholder="Your email address" required aria-label="Your email address">
+                </div>
+                <button class="btn fill" type="submit">Register to Comment ↗</button>
+              </form>
+              <small class="gate-note">Your email is kept private and never shown publicly.</small>
+            </div>
+
+            <!-- Unlocked Comment Input -->
+            <div class="comment-input-box" id="commentInputBox" hidden>
+              <div class="user-status-bar">
+                <span>Commenting as <strong id="currentUserName">Reader</strong> (<span id="currentUserEmail">email</span>)</span>
+                <button type="button" id="logoutBtn" class="link-subtle-btn">Switch Account</button>
+              </div>
+              <form id="commentForm">
+                <textarea id="commentText" rows="3" placeholder="Share your thoughts or reflections..." required aria-label="Comment text"></textarea>
+                <button class="btn fill" type="submit">Post Reflection</button>
+              </form>
+            </div>
+
+            <!-- Comment Thread -->
+            <div class="comments-list" id="commentsList">
+              <article class="comment-card">
+                <div class="comment-top">
+                  <div class="comment-author"><span class="avatar-circle">V</span><strong>Vy</strong></div>
+                  <time>October 2026</time>
+                </div>
+                <p>This is so beautifully written! That transition from memorizing code to actually building mental models is the hardest hurdle in early CS. So proud of your turnaround!</p>
+              </article>
+              <article class="comment-card">
+                <div class="comment-top">
+                  <div class="comment-author"><span class="avatar-circle">A</span><strong>Alex (GSU CS)</strong></div>
+                  <time>October 2026</time>
+                </div>
+                <p>That 1302 midterm was brutal. Seeing you bounce back with a 98 is seriously inspiring. The Boorstin quote is so true.</p>
+              </article>
+            </div>
+          </section>
         </article>
 
-        <!-- Entry 03: DuckDB Paper Breakdown (Draft in Progress) -->
-        <article class="note-feed-card draft-card" data-category="data-science">
-          <div class="card-meta-top">
-            <span class="badge-pill draft-pill">03 · Data Science &amp; Systems</span>
-            <span class="draft-date">Coming Soon</span>
+        <!-- Right: Sticky Sidebar Index -->
+        <aside class="notes-sidebar">
+          <div class="sidebar-sticky-wrap">
+            <div class="sidebar-block">
+              <span class="sidebar-kicker">DISPATCH INDEX</span>
+              <h3 class="sidebar-title">Cherri-Picked Notes 🍒</h3>
+              <p class="sidebar-desc">Switch between entries:</p>
+
+              <ul class="sidebar-index-list">
+                <li id="sideLink-welcome">
+                  <button type="button" class="sidebar-note-link view-post-trigger" data-post-id="welcome">
+                    <span class="note-num">01</span>
+                    <div>
+                      <strong>Welcome to Cherri-Picked Notes</strong>
+                      <small>October 2026 · Essay</small>
+                    </div>
+                  </button>
+                </li>
+                <li id="sideLink-midterm-setback">
+                  <button type="button" class="sidebar-note-link view-post-trigger" data-post-id="midterm-setback">
+                    <span class="note-num">02</span>
+                    <div>
+                      <strong>From a 72 to a 98: The Midterm</strong>
+                      <small>October 2026 · Growth</small>
+                    </div>
+                  </button>
+                </li>
+                <li>
+                  <div class="sidebar-note-link draft-link">
+                    <span class="note-num">03</span>
+                    <div>
+                      <strong>DuckDB, AWS &amp; Modern Analytics</strong>
+                      <small>Fall 2026 · In Progress</small>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card">
+              <h4>About the Author</h4>
+              <p>Jasmita Iragam is a Computer Science Honors student at Georgia State University focusing on Data Science, ML, and resilient systems.</p>
+              <a class="text-link" href="index.html#about">Learn more about Jasmita →</a>
+            </div>
           </div>
-          <h2 class="feed-note-title">DuckDB, AWS, and Why Single-Host Analytics Is the Future.</h2>
-          <p class="feed-note-deck">
-            Takeaways from Andy Warfield's paper on changing compute physics, the 'glibc of structured data', and why local in-memory queries beat 1,000-node clusters.
-          </p>
-          <span class="draft-status-tag">Draft in progress</span>
-        </article>
+        </aside>
 
       </div>
-    </section>
+    </div>
   </main>
 
-  <!-- TAVY-STYLE FOOTER -->
+  <!-- TAVY-Style Footer -->
   <footer class="tavy-footer">
     <div class="wrap tavy-grid">
       <div class="tavy-subscribe-col">
@@ -240,14 +319,6 @@
           </ul>
         </div>
         <div class="tavy-col">
-          <h3>WRITING</h3>
-          <ul>
-            <li><a href="research.html#entry-01">01 / Welcome Note</a></li>
-            <li><a href="research.html#entry-02">02 / From a 72 to a 98</a></li>
-            <li><a href="https://vivunote.substack.com/" target="_blank" rel="noopener noreferrer">ViVuNote (Inspiration) ↗</a></li>
-          </ul>
-        </div>
-        <div class="tavy-col">
           <h3>CONNECT</h3>
           <ul>
             <li><a href="mailto:jasmita.i1109@gmail.com">Email Jasmita</a></li>
@@ -268,5 +339,66 @@
       <div class="tavy-copyright">Copyright © 2026 Jasmita Iragam. All rights reserved.</div>
     </div>
   </footer>
+
+  <!-- View-Switching Router Script -->
+  <script>
+    const archiveView = document.getElementById("archiveView");
+    const readerView = document.getElementById("readerView");
+    const backBtn = document.getElementById("backToArchiveBtn");
+
+    function showReader(postId) {
+      archiveView.hidden = true;
+      readerView.hidden = false;
+      
+      // Hide all post blocks, show the chosen one
+      document.querySelectorAll(".post-content-block").forEach(p => p.hidden = true);
+      const activePost = document.getElementById(`post-${postId}`);
+      if (activePost) activePost.hidden = false;
+
+      // Update sidebar active state
+      document.querySelectorAll(".sidebar-index-list li").forEach(li => li.classList.remove("active-note"));
+      const sideLink = document.getElementById(`sideLink-${postId}`);
+      if (sideLink) sideLink.classList.add("active-note");
+
+      // Update URL hash without re-scrolling
+      window.location.hash = `#${postId}`;
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function showArchive() {
+      readerView.hidden = true;
+      archiveView.hidden = false;
+      history.pushState("", document.title, window.location.pathname + window.location.search);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // Attach click triggers to all buttons
+    document.querySelectorAll(".view-post-trigger").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const postId = btn.dataset.postId;
+        showReader(postId);
+      });
+    });
+
+    if (backBtn) backBtn.addEventListener("click", showArchive);
+
+    // Support browser back/forward buttons and direct shared links
+    window.addEventListener("DOMContentLoaded", () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash === "welcome" || hash === "midterm-setback") {
+        showReader(hash);
+      }
+    });
+
+    window.addEventListener("popstate", () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash === "welcome" || hash === "midterm-setback") {
+        showReader(hash);
+      } else {
+        showArchive();
+      }
+    });
+  </script>
+  <script src="script.js?v=8" defer></script>
 </body>
 </html>
