@@ -2,7 +2,7 @@
 
 My personal portfolio website showcasing my projects, technical interests, and growth as a Computer Science student in the Honors College at Georgia State University, with a focus on data science.
 
-This site brings together my work, notes, and current learning goals—from exploring patterns in real-world data to building practical applications and APIs.
+This site brings together my work, milestones, and current learning goals—from exploring patterns in real-world data to building practical applications and APIs.
 
 ## Live Demo
 
@@ -19,9 +19,9 @@ This site brings together my work, notes, and current learning goals—from expl
 
 - **About Me:** My academic background, technical interests, and approach to learning and building.
 - **Selected Work:** Featured projects with descriptions, technology stacks, and development statuses.
-- **Milestones & Roadmap:** Achievements and upcoming goals.
-- **Cherri-Picked Notes:** Writing on data science, mathematical models, technical projects, and building in public.
+- **Milestones & Roadmap:** Completed achievements and upcoming technical targets.
 - **Technical Toolkit:** The languages, libraries, and tools I work with, alongside areas I’m currently exploring.
+- **College Timeline:** Semester-by-semester coursework, milestones, and project histories.
 - **Contact & Collaboration:** Links to connect with me about internships, hackathons, and project opportunities.
 
 ## Featured Projects
@@ -39,7 +39,7 @@ I continue to evolve this website alongside my technical skills and portfolio. F
 2. **Responsive Design:** Refine layouts and usability across screen sizes.
 3. **Project Documentation:** Add deeper architecture breakdowns, demonstrations, and lessons learned.
 4. **Performance:** Review assets and loading behavior to keep the site fast.
-5. **New Content:** Expand my technical notes and keep project milestones current.
+5. **Project Demonstrations:** Expand interactive walkthroughs and keep technical milestones current.
 
 ## Connect
 
@@ -49,4 +49,4 @@ I continue to evolve this website alongside my technical skills and portfolio. F
 
 ---
 
-*Thank you for visiting! Explore my projects and notes to follow what I’m learning and building.*
+*Thank you for visiting! Explore my projects to follow what I’m learning and building.*
